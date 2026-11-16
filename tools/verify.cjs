@@ -87,6 +87,19 @@ const plan6=sixth.match(/<div class="rows">([\s\S]*?)<\/section>/)[1];
 assert.equal((plan6.match(/<div class="row">/g)||[]).length,2,'Train and hotel unlinked');
 assert.deepEqual([...plan6.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:8},(_,i)=>'#d06-s'+String(i+1).padStart(2,'0')));
 const fifth=read('days/day-05.html');
+const seventh=read('days/day-07.html');
+assert(seventh.includes('День 7 · понедельник, 17 мая'),'Day 7 date');
+assert.deepEqual([...seventh.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['утро','утро','утро','11:45','днём','днём','днём','днём','19:00'],'Day 7 schedule');
+assert.equal((seventh.match(/class="stop"/g)||[]).length,8,'Day 7: two alternative walks and six required places');
+assert.equal((seventh.match(/class="optb"/g)||[]).length,2,'Only the two morning alternatives are optional');
+assert(seventh.includes('замок с Майдзуру или Охори'),'Morning choice missing');
+for(const note of ['💡 Обед здесь!','Лучший кадр — смотреть вдоль всей линии ворот сверху','180212-north-kyushu-day-tour-karato-market-motonosumi-shrine-mt-saraku/'])assert(seventh.includes(note),'Day 7 missing note '+note);
+const plan7=seventh.match(/<div class="rows">([\s\S]*?)<\/section>/)[1];
+assert.equal((plan7.match(/<div class="row">/g)||[]).length,1,'Gathering is not a sightseeing card');
+assert.deepEqual([...plan7.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:8},(_,i)=>'#d07-s'+String(i+1).padStart(2,'0')),'Day 7 order');
+assert.equal((seventh.match(/class="back"/g)||[]).length,2);
+for(let i=1;i<=8;i++)assert(seventh.includes('Остановка '+i+' из 8'),'Day 7 plate');
+assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-06.html'))).digest('hex'),'167a38b57bcdffce3077ee4df96be360ea7c11b2655a831a216b02fe99b2c854','Prior day 6 changed');
 assert.deepEqual([...fifth.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['10:50','16:13','19:30','вечер'],'Day 5 schedule');
 assert(fifth.includes('День 5 · суббота, 15 мая'),'Day 5 date');
 assert.equal((fifth.match(/class="stop"/g)||[]).length,2,'Only volcano and Kitahama have sightseeing cards');
@@ -103,5 +116,12 @@ for(const [file,hash] of Object.entries({'days/day-03.html':'635711809ec9688030b
 for(const file of dayFiles){const nn=file.match(/day-(\d+)/)[1],section=read(file).match(new RegExp('<!-- DAY-'+nn+' START -->[\\s\\S]*?<!-- DAY-'+nn+' END -->'))[0];assert(read('brochure.html').includes(rootPaths(section).replaceAll('index.html#index','#index')),'Combined day differs '+nn);}
 const usedPhotos=dayFiles.flatMap(f=>[...read(f).matchAll(/src="\.\.\/assets\/photos\/([^"]+)"/g)].map(m=>m[1]));assert.equal(new Set(usedPhotos).size,usedPhotos.length,'Repeated photograph in itinerary');
 for(const file of fs.readdirSync(path.join(root,'assets/photos'))){const b=fs.readFileSync(path.join(root,'assets/photos',file));assert.equal(b.readUInt16BE(0),0xffd8,'Not JPEG '+file);}
+
+const manifest=JSON.parse(read('tools/photo-manifest.json'));
+const day7Photos=[...seventh.matchAll(/src="\.\.\/assets\/photos\/([^"]+)"/g)].map(m=>m[1]);
+assert.equal(day7Photos.length,9,'Day 7 cover and eight stop images');
+for(const name of day7Photos){const p=manifest.find(x=>x.name===name);assert(p,'Day 7 photo missing from manifest: '+name);assert.equal(p.day,7);assert(p.providedByUser===true||typeof p.attributionRequired==='boolean','Missing photo provenance: '+name);assert(p.outputWidth<=p.width&&p.outputHeight<=p.height,'Upscaled photograph '+name);}
+assert(!fs.existsSync(path.join(root,'photo-credits.html')),'Removed photo page recreated');
+for(const file of files)assert(!/photo-credits\.html|Фотографии и лицензии/.test(read(file)),'Removed photo links in '+file);
 console.log('All links, IDs, HTML nesting, styles, schedules and local JPEG files verified.');
 

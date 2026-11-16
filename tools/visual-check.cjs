@@ -4,7 +4,7 @@ const {chromium}=require('../.tmp/node_modules/playwright');
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const page=await browser.newPage();
 const report=[];
-const selected=process.argv.slice(2).length?process.argv.slice(2):['03','04','05','06'];
+const selected=process.argv.slice(2).length?process.argv.slice(2):['03','04','05','06','07'];
 const dayFiles=fs.readdirSync(path.join(__dirname,'../days')).filter(n=>/^day-\d{2}\.html$/.test(n));
 const totalStops=dayFiles.reduce((sum,f)=>sum+(fs.readFileSync(path.join(__dirname,'../days',f),'utf8').match(/class="stop"/g)||[]).length,0);
 for(const width of [320,390,820,1180])for(const n of selected){
@@ -31,6 +31,11 @@ await page.locator('.back').last().click();assert(page.url().endsWith('index.htm
 await page.goto('file:///E:/japan-travel/brochure.html');await page.locator('a.tile[href="#day-'+n+'"]').click();assert(page.url().endsWith('#day-'+n));assert.equal(await page.locator('.stop').count(),totalStops);
 const first=await page.locator('#d'+n+'-plan a.row').first().getAttribute('href');await page.locator('#d'+n+'-plan a.row').first().click();assert(page.url().endsWith(first));
 await page.locator('#day-'+n+' .back').last().click();assert(page.url().endsWith('#index'));
+assert.equal(await page.locator('a[href*="photo-credits.html"]').count(),0,'Removed photo link in brochure');
+await page.goto('file:///E:/japan-travel/days/day-'+n+'.html');
+assert.equal(await page.locator('a[href*="photo-credits.html"]').count(),0,'Removed photo link in day');
+await page.goto('file:///E:/japan-travel/index.html');
+assert.equal(await page.locator('a[href*="photo-credits.html"]').count(),0,'Removed photo link on index');
 }
 fs.writeFileSync('.tmp/visual-report-'+selected.join('-')+'.json',JSON.stringify(report,null,2));await browser.close();console.log('Phone and iPad layouts, images, disclosures and navigation verified.');
 })().catch(e=>{console.error(e);process.exit(1)});

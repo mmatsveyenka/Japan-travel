@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 7 · Фукуока · 17 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-07 START -->
+<section class="day" id="day-07"><div class="photo cv"><img src="../assets/photos/fukuoka-user-panorama-v2.jpg" alt="Панорама Фукуоки с парком Охори, городской застройкой и заливом Хаката" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 7 · понедельник, 17 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Фукуока</h1><div class="cjp">福岡</div><p class="lead">Утром — замковый парк или вода Охори, затем Нандзо-ин. После сбора — рынок Карато, мост Каммон, красные тории Мотоносуми и старый порт Модзико; вечером — панорама с Саракуры.</p></div><section class="in plan" id="d07-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Утреннюю прогулку выбираете из двух вариантов: замок с Майдзуру или Охори. Далее — Нандзо-ин и экскурсия со сбором в 11:45.</p><div class="rows"><a class="row" href="#d07-s01"><div class="tm g">утро</div><div class="tx"><div class="nm">Замок Фукуока и парк Майдзуру<span class="opt">Опционально</span></div><div class="jp">福岡城跡・舞鶴公園</div><div class="ch">Каменные стены среди зелени Майдзуру</div></div><div class="ar">›</div></a><a class="row" href="#d07-s02"><div class="tm g">утро</div><div class="tx"><div class="nm">Парк Охори<span class="opt">Опционально</span></div><div class="jp">大濠公園</div><div class="ch">Острова, мостики и простор воды</div></div><div class="ar">›</div></a><a class="row" href="#d07-s03"><div class="tm g">утро</div><div class="tx"><div class="nm">Храм Нандзо-ин</div><div class="jp">南蔵院</div><div class="ch">Лежащий Будда среди лесных склонов</div></div><div class="ar">›</div></a><div class="row"><div class="tm">11:45</div><div class="tx"><div class="nm">Быть у места отправления</div><div class="ch"><a href="https://www.klook.com/activity/180212-north-kyushu-day-tour-karato-market-motonosumi-shrine-mt-saraku/?dd_referrer=https%3A%2F%2Fchatgpt.com%2F" target="_blank" rel="noopener"><u>Экскурсия на Klook →</u></a></div></div></div><a class="row" href="#d07-s04"><div class="tm g">днём</div><div class="tx"><div class="nm">Рынок Карато</div><div class="jp">唐戸市場</div><div class="ch">Рыбный рынок у пролива<br>💡 Обед здесь!</div></div><div class="ar">›</div></a><a class="row" href="#d07-s05"><div class="tm g">днём</div><div class="tx"><div class="nm">Мост Каммон</div><div class="jp">関門橋</div><div class="ch">Два острова над судоходным проливом</div></div><div class="ar">›</div></a><a class="row" href="#d07-s06"><div class="tm g">днём</div><div class="tx"><div class="nm">Святилище Мотоносуми</div><div class="jp">元乃隅神社</div><div class="ch">Красные ворота над Японским морем</div></div><div class="ar">›</div></a><a class="row" href="#d07-s07"><div class="tm g">днём</div><div class="tx"><div class="nm">Модзико-Ретро</div><div class="jp">門司港レトロ</div><div class="ch">Кирпичные фасады старого порта</div></div><div class="ar">›</div></a><a class="row" href="#d07-s08"><div class="tm">19:00</div><div class="tx"><div class="nm">Гора Саракура</div><div class="jp">皿倉山</div><div class="ch">Огни города с высоты 622 метров</div></div><div class="ar">›</div></a></div></section><article class="stop" id="d07-s01"><div class="hero"><div class="photo"><img src="../assets/photos/fukuoka-castle-user-v2.jpg" alt="Каменные стены, белая башня и ворота замка Фукуока" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">福岡城跡</div><div class="plate"><div class="cap">Остановка 1 из 8</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Фукуока · замковый парк</span></div><h2 class="nm2">Замок Фукуока и парк Майдзуру</h2><div class="jp2">福岡城跡・舞鶴公園</div><p class="ann">Среди деревьев сохранились каменные укрепления и башни замка Курода: по уступам холма читается устройство старой крепости.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E5%B2%A1%E5%9F%8E%E4%B8%89%E3%81%AE%E4%B8%B8%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%20%E3%80%92810-0043%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%9F%8E%E5%86%852-5%20%E7%A6%8F%E5%B2%A1%E5%9F%8E%E4%B8%89%E3%81%AE%E4%B8%B8%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%EF%BC%88%E5%9C%92%E5%86%85%E3%81%AE%E7%9B%AE%E5%8D%B0%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">福岡城跡・舞鶴公園</div><div class="l2" lang="ja">ふくおかじょうあと・まいづるこうえん</div><div class="l3">Fukuoka Castle Ruins · Maizuru Park</div><div class="l4" lang="ja">福岡市<br>〒810-0043 福岡県福岡市中央区城内2-5 福岡城三の丸スクエア（園内の目印）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Руины замка рода Курода на территории парка Майдзуру.</p><p><b>Главное</b>Каменные стены, ворота и основание главной башни.</p><p><b>Не пропустите</b>Вид на город с верхней площадки замковых укреплений.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Тэнсюдай — каменное основание главной башни в верхней части замка.</li><li>Тамон-ягура — длинную белую башню на южной стороне внутреннего замка.</li><li>Рвы — вдоль северной границы парка, рядом с сохранившимися воротами.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Для каменных лестниц и неровных дорожек наденьте устойчивую обувь.</li><li>Осматривайте укрепления с открытых дорожек и площадок; на кладку не забирайтесь.</li><li>Карта и адрес указывают на Санномару-сквер — ориентир на территории замкового парка.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Майдзуру замок узнаётся по рельефу: дорожки поднимаются между каменными стенами, а открытые площадки отмечают прежние дворы. Здесь сохранились отдельные башни и ворота, но главный масштаб задаёт кладка. Наверху, у основания тэнсю, к старым линиям укреплений добавляется панорама современной Фукуоки.</p><div class="sh"><span class="cap">Замок, давший имя городу</span></div><p>Курода Нагамаса начал строительство в 1601 году после получения владений в Тикудзэне. Работы продолжались около семи лет. Название «Фукуока» выбрали в память о земле, связанной с родом Курода, в нынешней префектуре Окаяма. Замок стал резиденцией двенадцати поколений семьи.</p><div class="sh"><span class="cap">Что осталось от крепости</span></div><p>После начала эпохи Мэйдзи большинство построек было утрачено. Уцелевшая Тамон-ягура помогает представить, как белые стены над каменным основанием соединяли оборону с повседневной службой гарнизона. Тэнсюдай стоит рассматривать как сохранившееся основание: нынешний вид не следует мысленно достраивать по аналогии с другими японскими замками. Парк объединил эти фрагменты с прогулочными дорожками и зелёными пространствами.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1601–1607</b> — строительство замка Фукуока.</li><li><b>1957</b> — руины получают статус национального исторического памятника.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d07-s02"><div class="hero"><div class="photo"><img src="../assets/photos/ohori-ukimido-user-v2.jpg" alt="Красный павильон Укимидо над прудом Охори, сосна и городские здания на дальнем берегу" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">大濠公園</div><div class="plate"><div class="cap">Остановка 2 из 8</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Фукуока · парк у воды</span></div><h2 class="nm2">Парк Охори</h2><div class="jp2">大濠公園</div><p class="ann">Большой пруд раскрывает небо над городом, а мостики и острова создают тихий внутренний маршрут между берегами.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92%20%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8B%99%E6%89%80%20%E3%80%92810-0051%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%921-2%20%E5%A4%A7%E6%BF%A0%E3%83%BB%E8%A5%BF%E5%85%AC%E5%9C%92%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8B%99%E6%89%80%EF%BC%88%E5%9C%92%E5%86%85%E3%81%AE%E7%9B%AE%E5%8D%B0%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">大濠公園</div><div class="l2" lang="ja">おおほりこうえん</div><div class="l3">Ohori Park</div><div class="l4" lang="ja">福岡市<br>〒810-0051 福岡県福岡市中央区大濠公園1-2 大濠・西公園管理事務所（園内の目印）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Городской парк вокруг пруда, связанного с внешним рвом замка Фукуока.</p><p><b>Главное</b>Цепочка островов и мостов посреди воды.</p><p><b>Не пропустите</b>Павильон Укимидо, выступающий над прудом.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Укимидо — небольшой павильон над водой у центральной цепочки островов.</li><li>Четыре моста — на проходе через острова между берегами.</li><li>Кольцевую дорожку — вдоль внешнего берега пруда.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>На общей дорожке пропускайте бегунов и следите за разметкой для разных потоков.</li><li>На мостиках не перекрывайте проход ради фотографии.</li><li>Карта и адрес указывают на управление парка — ориентир у пруда. Прогулка по открытой территории бесплатна.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Охори главное пространство занято водой. Городские здания остаются по краям, а в центре пруда острова соединены мостами. С берега они выглядят как отдельный зелёный мир; на мостиках меняется точка зрения, и вместо широкой панорамы появляются отражения, ветви над водой и небольшой павильон Укимидо.</p><div class="sh"><span class="cap">От внешнего рва к парку</span></div><p>При строительстве замка Курода использовали существовавший здесь морской залив как внешний ров. Название Охори буквально связано с «большим рвом». Позднее водоём стал основой общественного парка: преобразование территории сопровождало Восточноазиатскую промышленную выставку 1927 года, а в 1929 году парк открылся для горожан.</p><div class="sh"><span class="cap">Пейзаж в движении</span></div><p>Вокруг пруда устроена прогулочная дорожка длиной около двух километров; островной проход даёт другой взгляд на ту же воду. На одном берегу видны мосты в перспективе, на другом — деревья и город за ними. Здесь интересно наблюдать, как небольшие изменения точки обзора перестраивают спокойный пейзаж.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1927</b> — выставка становится поводом для преобразования территории.</li><li><b>1929</b> — открывается префектуральный парк Охори.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d07-s03"><div class="hero"><div class="photo"><img src="../assets/photos/nanzoin-reclining-buddha.jpg" alt="Бронзовый лежащий Будда Нандзо-ин и небольшие каменные статуи перед ним" loading="lazy" decoding="async"></div><div class="vt">南蔵院</div><div class="plate"><div class="cap">Остановка 3 из 8</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Сасагури · буддийский храм</span></div><h2 class="nm2">Храм Нандзо-ин</h2><div class="jp2">南蔵院</div><p class="ann">Лесные дорожки ведут от храмовых залов к огромной бронзовой фигуре Будды, лежащего на правом боку в позе ухода в нирвану.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8D%97%E8%94%B5%E9%99%A2%20%E3%80%92811-2405%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%9F%E5%B1%8B%E9%83%A1%E7%AF%A0%E6%A0%97%E7%94%BA%E5%A4%A7%E5%AD%97%E7%AF%A0%E6%A0%971035" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">南蔵院</div><div class="l2" lang="ja">なんぞういん</div><div class="l3">Nanzoin Temple</div><div class="l4" lang="ja">篠栗町<br>〒811-2405 福岡県糟屋郡篠栗町大字篠栗1035</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">¥500</div></div><div><div class="k">Последний вход</div><div class="v">16:45</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Буддийский храм школы Сингон, центр паломничества Сасагури.</p><p><b>Главное</b>Бронзовый лежащий Будда длиной 41 метр.</p><p><b>Не пропустите</b>Рельефные узоры на ступнях статуи.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Сяка-Нэхандзо — лежащего Будду на площадке за туннелем.</li><li>Узоры на ступнях — у ног большой статуи.</li><li>Туннель семи богов счастья — между главным залом и стороной лежащего Будды.</li><li>Главный зал — в нижней части храмового комплекса.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Закройте плечи, колени и татуировки: у храма действуют требования к одежде.</li><li>Фотографируйте только там, где это разрешено указателями; штативы, селфи-палки и стабилизаторы запрещены.</li><li>Не снимайте видео на ходу, не ешьте во время прогулки и не занимайте ступени для длительной съёмки.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Нандзо-ин расположен среди лесных склонов Сасагури. За храмовыми залами и переходом через туннель открывается большая площадка с бронзовым Буддой. Фигура лежит на правом боку: это образ паринирваны, окончательного освобождения Будды от круга перерождений. Спокойное лицо и огромные ступни воспринимаются по-разному вблизи и с противоположного края площадки.</p><div class="sh"><span class="cap">Место паломничества</span></div><p>Храм относится к школе Сингон и является главным храмом местного паломнического круга Сасагури, включающего 88 святынь по образцу Сикоку. Поэтому рядом с известной статуей продолжается обычная религиозная жизнь: прихожане молятся, получают храмовые печати и посещают отдельные залы.</p><div class="sh"><span class="cap">Бронза и масштаб</span></div><p>Лежащую фигуру завершили в 1995 году. При длине 41 метр и высоте 11 метров она особенно выразительна на фоне леса. Разглядывайте не только лицо: знаки на подошвах отсылают к традиционным благоприятным признакам Будды. Главный зал и туннель помогают увидеть Нандзо-ин как целый храмовый комплекс, а не одну скульптуру.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1995</b> — появляется большая бронзовая статуя лежащего Будды.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Сбор → экскурсия</div><p>11:45 — быть у места отправления. <a href="https://www.klook.com/activity/180212-north-kyushu-day-tour-karato-market-motonosumi-shrine-mt-saraku/?dd_referrer=https%3A%2F%2Fchatgpt.com%2F" target="_blank" rel="noopener"><u>Экскурсия на Klook →</u></a></p></div></div>
+<article class="stop" id="d07-s04"><div class="hero"><div class="photo"><img src="../assets/photos/karato-sushi-user-v2.jpg" alt="Рыночный прилавок с разными суши и японскими ценниками в Карато" loading="lazy" decoding="async"></div><div class="vt">唐戸市場</div><div class="plate"><div class="cap">Остановка 4 из 8</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Симоносеки · рыбный рынок</span></div><h2 class="nm2">Рынок Карато</h2><div class="jp2">唐戸市場</div><p class="ann">У самого пролива работает рынок морепродуктов: торговые ряды связывают портовый город с рыбаками, поварами и покупателями.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%94%90%E6%88%B8%E5%B8%82%E5%A0%B4%20%E3%80%92750-0005%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E5%94%90%E6%88%B8%E7%94%BA5-50" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">唐戸市場</div><div class="l2" lang="ja">からといちば</div><div class="l3">Karato Market</div><div class="l4" lang="ja">下関市<br>〒750-0005 山口県下関市唐戸町5-50</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По магазинам</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Рыбный рынок Симоносеки с оптовой и розничной торговлей.</p><p><b>Главное</b>Местные морепродукты и портовая атмосфера.</p><p><b>Не пропустите</b>Вывески с фугу — рыбой, особенно связанной с Симоносеки.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Название 唐戸市場 — на фасаде со стороны набережной.</li><li>Рыбные ряды — внутри большого торгового зала.</li><li>Фугу — в вывесках и предложениях работающих продавцов.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Обед здесь!</li><li>На понедельник уточните работающие точки питания: обычная суши-ярмарка проводится по пятницам, выходным и праздникам.</li><li>Смотрите цены у конкретного продавца; еда оплачивается отдельно от свободного входа.</li><li>Не стойте в проходах с товаром и не трогайте рыбу без приглашения продавца.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Карато стоит у воды, и рынок остаётся частью действующего портового города. Внутри соседствуют торговля для профессионалов и продажа обычным покупателям. Прилавки, коробки и надписи помогают увидеть местную еду до того, как она окажется в ресторанной тарелке. Ваш обед связан именно с этим местом; выбор блюда зависит от открытых в день визита заведений.</p><div class="sh"><span class="cap">Рынок и суши-ярмарка</span></div><p>Известные фотографии с рядами готовых суши обычно показывают событие «Икиики-Бакангай». Его часы и дни отличаются от работы рыбного рынка. Ярмарка проводится по пятницам, субботам, воскресеньям и праздникам; понедельник требует отдельной проверки продавцов и точек питания.</p><div class="sh"><span class="cap">Почему повсюду фугу</span></div><p>Для Симоносеки фугу — один из узнаваемых продуктов. В местном произношении можно услышать «фуку», созвучное слову «счастье». На рынке интересно замечать, как этот городской символ появляется в рисунках и торговых названиях, даже если для обеда вы выберете другую рыбу.</p></div></details></div></div></div></article>
+<article class="stop" id="d07-s05"><div class="hero"><div class="photo"><img src="../assets/photos/kanmon-bridge-strait.jpg" alt="Белые башни и подвесные тросы моста Каммон над синим проливом" loading="lazy" decoding="async"></div><div class="vt">関門橋</div><div class="plate"><div class="cap">Остановка 5 из 8</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Пролив Каммон · подвесной мост</span></div><h2 class="nm2">Мост Каммон</h2><div class="jp2">関門橋</div><p class="ann">Белые башни и тонкие подвески связывают Хонсю с Кюсю над узким морским проходом, по которому непрерывно идут суда.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%96%A2%E9%96%80%E6%A9%8B%20%E3%80%92801-0855%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E9%96%80%E5%8F%B8%EF%BC%88%E9%96%A2%E9%96%80%E6%A9%8B%E3%83%BB%E9%96%80%E5%8F%B8%E5%81%B4%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">関門橋</div><div class="l2" lang="ja">かんもんきょう</div><div class="l3">Kanmon Bridge</div><div class="l4" lang="ja">北九州市・下関市<br>〒801-0855 福岡県北九州市門司区門司（関門橋・門司側）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Автомобильный подвесной мост между Симоносеки и Китакюсю.</p><p><b>Главное</b>Высокий пролёт над оживлённым морским путём.</p><p><b>Не пропустите</b>Крупные суда под решётчатым дорожным полотном.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Две главные башни — на противоположных берегах пролива.</li><li>Подвески — вертикальные тросы между несущим кабелем и дорожным полотном.</li><li>Корабли — в судоходном проходе под центральным пролётом.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Наблюдайте за мостом с разрешённой береговой территории; пешеходного прохода по нему нет.</li><li>Карта показывает сам мост, японский адрес — его сторону в Модзи; точка остановки определяется вашей экскурсией.</li><li>Бесплатен осмотр с берега; автомобильный проезд оплачивается отдельно.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Каммонском проливе мост и суда постоянно меняют масштаб друг друга. Подвесная конструкция кажется лёгкой, пока под ней не проходит крупный корабль. Вода отделяет Симоносеки на Хонсю от района Модзи на Кюсю, а мост делает эту границу видимой: берега стоят близко, но между ними проходит важный морской путь.</p><div class="sh"><span class="cap">Дорога над водой</span></div><p>Мост открылся 14 ноября 1973 года как часть скоростной автомобильной сети. Его общая длина — 1 068 метров, расстояние между главными башнями — 712 метров. Дорожное полотно поднято примерно на 61 метр над водой, чтобы оставлять проход судам.</p><div class="sh"><span class="cap">Как читать конструкцию</span></div><p>Толстый несущий кабель изгибается между башнями; более тонкие вертикальные подвески передают ему нагрузку от дороги. С берега хорошо виден этот повторяющийся ритм. Мост остаётся автомобильной магистралью: наблюдение за ним и переход через пролив — разные виды посещения.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1973</b> — 14 ноября начинается движение по мосту Каммон.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d07-s06"><div class="hero"><div class="photo"><img src="../assets/photos/motonosumi-torii-user-v2.jpg" alt="Красные тории Мотоносуми вдоль зелёного склона, скалистый берег и розовое небо над морем" loading="lazy" decoding="async"></div><div class="vt">元乃隅神社</div><div class="plate"><div class="cap">Остановка 6 из 8</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Нагато · святилище у моря</span></div><h2 class="nm2">Святилище Мотоносуми</h2><div class="jp2">元乃隅神社</div><p class="ann">Красная линия тории спускается по зелёному склону к Японскому морю: здесь архитектура святилища становится частью берегового пейзажа.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%83%E4%B9%83%E9%9A%85%E7%A5%9E%E7%A4%BE%20%E3%80%92759-4712%20%E5%B1%B1%E5%8F%A3%E7%9C%8C%E9%95%B7%E9%96%80%E5%B8%82%E6%B2%B9%E8%B0%B7%E6%B4%A5%E9%BB%84498" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">元乃隅神社</div><div class="l2" lang="ja">もとのすみじんじゃ</div><div class="l3">Motonosumi Shrine</div><div class="l4" lang="ja">長門市<br>〒759-4712 山口県長門市油谷津黄498</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:30–16:30</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Прибрежное синтоистское святилище, основанное в 1955 году.</p><p><b>Главное</b>Линия из 123 красных ворот тории.</p><p><b>Не пропустите</b>Вид сверху вдоль всей линии ворот.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Линию тории — на склоне между верхней частью территории и морем.</li><li>Контраст красного, зелёного и синего — с разрешённой верхней площадки.</li><li>Скалистый берег — ниже ворот, со стороны моря.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>📸 Лучший кадр — смотреть вдоль всей линии ворот сверху.</li><li>Следуйте ограждениям и указателям у тории; фотографируйте с открытых площадок.</li><li>На берегу держитесь подальше от края скал, особенно при ветре.</li><li>К закрытию территория должна быть освобождена; ночное посещение и съёмка запрещены.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Мотоносуми узнаётся по красному ритму ворот на фоне открытого моря. Тории обозначают переход к священному пространству; здесь они следуют изгибам склона и складываются в одну длинную линию. Верхняя точка позволяет увидеть её целиком, вместе с зеленью, скалами и горизонтом.</p><div class="sh"><span class="cap">Современное святилище</span></div><p>Святилище основано в 1955 году. Его образ создавался постепенно: 123 тории установили за десять лет, начиная с 1987 года. Поэтому известный пейзаж сочетает местную религиозную традицию и сравнительно недавнюю историю благоустройства.</p><div class="sh"><span class="cap">Берег и ворота</span></div><p>Для фотографии важен не один портал крупным планом, а то, как цепочка поворачивает к морю. Взгляд сверху подчёркивает рисунок красных перекладин. На открытых участках заметно, насколько сильно святилище связано с рельефом берега; линии ограждений определяют, откуда этот пейзаж доступен посетителю.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1955</b> — основано святилище.</li><li><b>1987–1997</b> — формируется линия из 123 ворот тории.</li><li><b>2019</b> — название сокращается с Мотоносуми-Инари до Мотоносуми.</li></ul></div><div class="leg"><div class="cap">По преданию</div><p>Местному рыбопромышленнику Окамуре Хитоси явилась во сне белая лиса и велела устроить здесь святилище. Так рассказывают о его основании.</p></div></details></div></div></div></article>
+<article class="stop" id="d07-s07"><div class="hero"><div class="photo"><img src="../assets/photos/mojiko-retro-waterfront.jpg" alt="Портовый бассейн и исторические здания района Модзико-Ретро с высоты" loading="lazy" decoding="async"></div><div class="vt">門司港</div><div class="plate"><div class="cap">Остановка 7 из 8</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Китакюсю · исторический порт</span></div><h2 class="nm2">Модзико-Ретро</h2><div class="jp2">門司港レトロ</div><p class="ann">Краснокирпичные здания и светлый вокзал окружают старую гавань: торговое прошлое Модзи читается по фасадам у воды.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A7%E9%96%80%E5%8F%B8%E7%A8%8E%E9%96%A2%20%E9%96%80%E5%8F%B8%E6%B8%AF%E3%83%AC%E3%83%88%E3%83%AD%20%E3%80%92801-0852%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E6%9D%B1%E6%B8%AF%E7%94%BA1-24%20%E6%97%A7%E9%96%80%E5%8F%B8%E7%A8%8E%E9%96%A2%EF%BC%88%E8%A1%97%E6%AD%A9%E3%81%8D%E3%81%AE%E7%9B%AE%E5%8D%B0%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">門司港レトロ</div><div class="l2" lang="ja">もじこうれとろ</div><div class="l3">Mojiko Retro</div><div class="l4" lang="ja">北九州市<br>〒801-0852 福岡県北九州市門司区東港町1-24 旧門司税関（街歩きの目印）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Исторический портовый квартал Китакюсю.</p><p><b>Главное</b>Сочетание европейской архитектуры и действующей гавани.</p><p><b>Не пропустите</b>Старую таможню и деревянное здание вокзала Модзико.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Старую таможню — краснокирпичное здание на набережной.</li><li>Вокзал Модзико — симметричный светлый фасад у южной части квартала.</li><li>Блю-Уинг-Модзи — разводной пешеходный мост у портового бассейна.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Рассматривайте здания с набережной: у каждого интерьера собственные часы и условия входа.</li><li>Карта и адрес указывают на старую таможню — ориентир внутри квартала.</li><li>У разводного моста следуйте сигналам и ограждениям; подъём не привязан к вашему времени посещения.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Модзико-Ретро вода остаётся центром квартала. По краям гавани стоят здания таможни, торговых компаний и вокзал: их фасады рассказывают о времени, когда морской путь связывал север Кюсю с соседними странами. Кирпич, каменные детали и деревянная станционная архитектура делают прогулку разнообразной даже без посещения интерьеров.</p><div class="sh"><span class="cap">Город международной торговли</span></div><p>Порт Модзи открылся в 1889 году и вырос благодаря внешней торговле и экспорту угля. Старая таможня получила нынешнее кирпичное здание в 1912 году; вокзал, построенный в 1914 году, стал парадным входом в порт для железнодорожных пассажиров.</p><div class="sh"><span class="cap">Ретро у действующего порта</span></div><p>Сегодня исторические здания соединены общественными пространствами и прогулкой вдоль воды. Разводной мост Блю-Уинг-Модзи напоминает, что гавань должна оставаться проходимой для судов. Интересно сравнивать представительские фасады с техническими деталями: причалами, лестницами к воде и линиями мостовых механизмов.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1889</b> — открытие порта Модзи.</li><li><b>1912</b> — построено сохранившееся здание старой таможни.</li><li><b>1914</b> — открывается нынешнее здание вокзала Модзико.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d07-s08"><div class="hero"><div class="photo"><img src="../assets/photos/sarakura-night-city.jpg" alt="Огни Китакюсю и портовые берега в сумерках с горы Саракура" loading="lazy" decoding="async"></div><div class="vt">皿倉山</div><div class="plate"><div class="cap">Остановка 8 из 8</div><div class="t">19:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Китакюсю · горная панорама</span></div><h2 class="nm2">Гора Саракура</h2><div class="jp2">皿倉山</div><p class="ann">С вершины видны городские кварталы, заводские огни и изгибы побережья: к вечеру они складываются в широкую световую панораму Китакюсю.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%9A%BF%E5%80%89%E5%B1%B1%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%82%AB%E3%83%BC%20%E5%B1%B1%E9%BA%93%E9%A7%85%20%E3%80%92805-0000%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E5%85%AB%E5%B9%A1%E6%9D%B1%E5%8C%BA%E5%A4%A7%E5%AD%97%E5%B0%BE%E5%80%891481-1%20%E7%9A%BF%E5%80%89%E5%B1%B1%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%82%AB%E3%83%BC%E5%B1%B1%E9%BA%93%E9%A7%85" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">皿倉山</div><div class="l2" lang="ja">さらくらやま</div><div class="l3">Mount Sarakura</div><div class="l4" lang="ja">北九州市<br>〒805-0000 福岡県北九州市八幡東区大字尾倉1481-1 皿倉山ケーブルカー山麓駅</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">10:00–22:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 230</div></div><div><div class="k">Последний вход</div><div class="v">21:20</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Гора высотой 622 метра с обзором Китакюсю.</p><p><b>Главное</b>Порт, промышленные зоны и жилые кварталы в одной панораме.</p><p><b>Не пропустите</b>Переход от вечернего неба к огням побережья.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Портовые линии — среди освещённых берегов под горой.</li><li>Промышленные огни — в панораме Яхаты и залива Докай.</li><li>Смотровую площадку — у верхней станции подъёмника.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Возьмите лёгкий тёплый слой: на вершине ветер ощущается сильнее, чем в городе.</li><li>Стоимость указана за взрослый билет туда и обратно на фуникулёр и склоновый подъёмник.</li><li>Последний вход в полосе — последний подъём; часы относятся к работе подъёмников.</li><li>Карта ведёт к нижней станции. Видимость и работа подъёмников зависят от погоды.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Саракура поднимается над промышленной и жилой частью Китакюсю. Сверху видны не отдельные достопримечательности, а устройство города: кварталы у подножия, тёмная вода, линии дорог и освещённые производственные территории. Вечером цвет неба постепенно меняется, а берег становится заметнее благодаря огням.</p><div class="sh"><span class="cap">Пейзаж промышленного города</span></div><p>Высота вершины — 622 метра. Под ней лежит район Яхата, связанный с промышленной историей северного Кюсю. Здесь свет создают не только витрины и дороги: заводские площадки и портовые сооружения добавляют собственный рисунок. Поэтому панорама отличается от видов городского центра с башни.</p><div class="sh"><span class="cap">Два подъёмника</span></div><p>На Саракуре работают фуникулёр с кабелем и отдельный склоновый вагон до вершины. Последний имеет стеклянные стены, позволяющие наблюдать, как постепенно раскрывается горизонт. Вечерний свет постепенно сменяется огнями; видимость и рисунок неба зависят от погоды.</p></div></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-07 END -->
+</body></html>

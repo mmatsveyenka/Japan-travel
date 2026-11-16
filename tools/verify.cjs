@@ -75,7 +75,33 @@ for(const [nn,times] of [['03',['10:00','11:00','днём','13:40','14:40','17:1
 }
 for(const note of ['Забронируйте экскурсию заранее','Hakata Station → Canal City → Nakasu','Nakasu Yatai'])assert(read('days/day-03.html').includes(note));
 for(const note of ['снизу','шаттл','прощаетесь с группой','129204-takachiho'])assert(read('days/day-04.html').includes(note));
+const sixth=read('days/day-06.html');
+assert.deepEqual([...sixth.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['9:20','10:10','10:35','11:33','12:30','13:45','14:20','15:56','18:20','вечер'],'Day 6 schedule');
+assert(sixth.includes('День 6 · воскресенье, 16 мая'));
+assert.equal((sixth.match(/class="stop"/g)||[]).length,8);
+assert.equal((sixth.match(/class="optb"/g)||[]).length,0);
+assert.equal((sixth.match(/class="back"/g)||[]).length,2);
+for(const note of ['13:40','Tenso Shrine','Mt. Yufu','Yufuin no Mori','Canal City → Naka River → Fukuoka Deai Bridge → Nakasu yatai'])assert(sixth.includes(note),'Day 6 missing note '+note);
+for(let i=1;i<=8;i++)assert(sixth.includes('Остановка '+i+' из 8'));
+const plan6=sixth.match(/<div class="rows">([\s\S]*?)<\/section>/)[1];
+assert.equal((plan6.match(/<div class="row">/g)||[]).length,2,'Train and hotel unlinked');
+assert.deepEqual([...plan6.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:8},(_,i)=>'#d06-s'+String(i+1).padStart(2,'0')));
+const fifth=read('days/day-05.html');
+assert.deepEqual([...fifth.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['10:50','16:13','19:30','вечер'],'Day 5 schedule');
+assert(fifth.includes('День 5 · суббота, 15 мая'),'Day 5 date');
+assert.equal((fifth.match(/class="stop"/g)||[]).length,2,'Only volcano and Kitahama have sightseeing cards');
+assert.equal((fifth.match(/class="optb"/g)||[]).length,0);
+assert.equal((fifth.match(/class="back"/g)||[]).length,2);
+for(const note of ['💡 В 9:14 автобус','💡 В 15:38 автобус','💡 В 16:48 автобус','Погулять по Kitahama'])assert(fifth.includes(note),'Day 5 note: '+note);
+for(let i=1;i<=2;i++)assert(fifth.includes('Остановка '+i+' из 2'));
+const fifthPlan=fifth.match(/<div class="rows">([\s\S]*?)<\/section>/)[1];
+assert.deepEqual([...fifthPlan.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),['#d05-s01','#d05-s02'],'Day 5 sightseeing links');
+assert.equal((fifthPlan.match(/<div class="row">/g)||[]).length,2,'City arrivals remain unlinked');
+assert(fifth.indexOf('Переезд → Асо → Беппу')>fifth.indexOf('id="d05-s01"'));
+assert(fifth.indexOf('Переезд → Асо → Беппу')<fifth.indexOf('id="d05-s02"'));
+for(const [file,hash] of Object.entries({'days/day-03.html':'635711809ec9688030bf9b2d167054ae55ee8bb05bc8c8c03c2119499d2d2dc6','days/day-04.html':'ed1967c60150d4906f53ac6bc49f12ac5d189991c4b2136d11109a7f00876c9b','days/day-05.html':'cb6c49e473af4fa8137c109e6ef2f83dd9ebdb185a4753b5c36f2b0b3317c715'}))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),hash,'Prior day changed: '+file);
 for(const file of dayFiles){const nn=file.match(/day-(\d+)/)[1],section=read(file).match(new RegExp('<!-- DAY-'+nn+' START -->[\\s\\S]*?<!-- DAY-'+nn+' END -->'))[0];assert(read('brochure.html').includes(rootPaths(section).replaceAll('index.html#index','#index')),'Combined day differs '+nn);}
 const usedPhotos=dayFiles.flatMap(f=>[...read(f).matchAll(/src="\.\.\/assets\/photos\/([^"]+)"/g)].map(m=>m[1]));assert.equal(new Set(usedPhotos).size,usedPhotos.length,'Repeated photograph in itinerary');
 for(const file of fs.readdirSync(path.join(root,'assets/photos'))){const b=fs.readFileSync(path.join(root,'assets/photos',file));assert.equal(b.readUInt16BE(0),0xffd8,'Not JPEG '+file);}
 console.log('All links, IDs, HTML nesting, styles, schedules and local JPEG files verified.');
+

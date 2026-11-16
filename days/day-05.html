@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 5 · Вулкан Асо → Беппу · 15 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-05 START -->
+<section class="day" id="day-05"><div class="photo cv"><img src="../assets/photos/beppu-bay-night-cover.jpg" alt="Ночная панорама Беппу и огни города вдоль залива" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 5 · суббота, 15 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Вулкан Асо → Беппу</h1><div class="cjp">阿蘇山 → 別府</div><p class="lead">От слоистых стен действующего вулкана Асо — к приморскому Беппу. Вечером — прогулка по Kitahama, среди городских огней и улиц у залива.</p></div><section class="in plan" id="d05-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Вулкан Асо, затем дорога через город Асо в Беппу и вечерняя Kitahama.</p><div class="rows"><a class="row" href="#d05-s01"><div class="tm">10:50</div><div class="tx"><div class="nm">Вулкан Асо</div><div class="jp">阿蘇山・中岳火口</div><div class="ch">Слоистые стены действующего кратера<br>💡 В 9:14 автобус</div></div><div class="ar">›</div></a><div class="row"><div class="tm">16:13</div><div class="tx"><div class="nm">Город Асо</div><div class="jp">阿蘇市</div><div class="ch">💡 В 15:38 автобус</div></div></div><div class="row"><div class="tm">19:30</div><div class="tx"><div class="nm">Город Беппу</div><div class="jp">別府市</div><div class="ch">💡 В 16:48 автобус</div></div></div><a class="row" href="#d05-s02"><div class="tm g">вечер</div><div class="tx"><div class="nm">Прогулка по Kitahama</div><div class="jp">北浜</div><div class="ch">Вывески, городские огни и залив</div></div><div class="ar">›</div></a></div></section><div class="in"><div class="way"><div class="cap">Переезд → вулкан Асо</div><p>💡 В 9:14 автобус. В 10:50 — вулкан Асо.</p></div></div><article class="stop" id="d05-s01"><div class="hero"><div class="photo"><img src="../assets/photos/aso-nakadake-crater.jpg" alt="Слоистые стены кратера Накадакэ, вулканические газы и бирюзовый водоём на дне" loading="lazy" decoding="async"></div><div class="vt">阿蘇山</div><div class="plate"><div class="cap">Остановка 1 из 2</div><div class="t">10:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Асо · действующий вулкан</span></div><h2 class="nm2">Вулкан Асо</h2><div class="jp2">阿蘇山・中岳火口</div><p class="ann">Над обнажёнными стенами Накадакэ поднимаются вулканические газы; слои пород и меняющийся водоём на дне показывают жизнь действующего кратера.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%98%BF%E8%98%87%E5%B1%B1%E4%B8%8A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%20%E3%80%92869-2225%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E9%98%BF%E8%98%87%E5%B8%82%E9%BB%92%E5%B7%9D1808%20%E9%98%BF%E8%98%87%E5%B1%B1%E4%B8%8A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%EF%BC%88%E6%A1%88%E5%86%85%E6%8B%A0%E7%82%B9%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">阿蘇山・中岳火口</div><div class="l2" lang="ja">あそさん・なかだけかこう</div><div class="l3">Mount Aso · Nakadake Crater</div><div class="l4" lang="ja">阿蘇市<br>〒869-2225 熊本県阿蘇市黒川1808 阿蘇山上ターミナル（案内拠点）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По допуску</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Действующий кратер Накадакэ внутри большой кальдеры Асо.</p><p><b>Главное</b>Открытые вулканические породы, газовые выбросы и глубина кратера.</p><p><b>Не пропустите</b>Полосы на стенах: следы последовательных извержений.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Слоистые стенки — на противоположной стороне кратера, если их не скрывают газовые облака.</li><li>Обнажённые лавовые породы — вокруг разрешённой смотровой зоны.</li><li>Водоём на дне — если он присутствует и позволяет видимость; его состояние меняется.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Перед выездом и на месте проверьте допуск к кратеру. Газ, ветер и вулканическая активность могут закрыть доступ в течение дня.</li><li>При астме, заболеваниях бронхов или сердца и плохом самочувствии посещение кратера запрещено правилами оператора из-за вулканического газа.</li><li>Оставайтесь в открытых для посетителей зонах и сразу выполняйте указания сотрудников. Возьмите защиту от ветра и устойчивую обувь.</li><li>Карта и адрес ведут к терминалу Асо-Сандзё — месту, где уточняют доступ к кратеру. Проезд оплачивается отдельно от бесплатного осмотра.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Накадакэ встречает открытыми склонами, резкими уступами и стеной, словно разрезанной на горизонтальные полосы. В этой чаше хорошо видна работа вулкана: породы накапливались во время разных эпизодов активности, а затем оказались обнажены. Газовые облака могут закрыть дно и через несколько мгновений снова открыть часть стен. Поэтому фотография с прозрачным бирюзовым водоёмом передаёт лишь одно из возможных состояний места.</p><div class="sh"><span class="cap">Кратер внутри кальдеры</span></div><p>Асо — целая вулканическая система. Большая кальдера, то есть обширная впадина, связанная с обрушением после огромных извержений, вытянута примерно на 25 километров с севера на юг и на 18 с востока на запад. Её формирование связывают с четырьмя крупными извержениями между приблизительно 270 и 90 тысячами лет назад. Уже внутри этой впадины выросли более молодые вулканические горы. Накадакэ — одна из них; большая кальдера и видимый перед вами кратер относятся к разным масштабам и этапам истории Асо.</p><div class="sh"><span class="cap">Почему меняется дно</span></div><p>Накадакэ имеет семь кратеров, расположенных цепочкой почти с севера на юг. В историческое время центр активности перемещался между ними. Сейчас основной действующий участок — первый кратер. В сравнительно спокойные периоды в нём может накапливаться горячая, очень кислая вода. Её уровень и вид зависят от состояния вулкана: знакомое по фотографиям зелёное озеро нельзя считать постоянной частью пейзажа.</p><p>Для наблюдения важны и стены, и пустое пространство над чашей. Выделение газа продолжается даже тогда, когда нет зрелищного выброса пепла. Видимая дымка не позволяет оценить опасность по одному только внешнему виду, поэтому порядок допуска определяют службы наблюдения. Открытая площадка даёт возможность увидеть действующий вулкан близко при разрешённых условиях.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>Около 270–90 тысяч лет назад</b> — четыре крупных извержения формируют большую кальдеру Асо.</li><li><b>1923–1930</b> — центром активности становится четвёртый кратер Накадакэ.</li><li><b>1932</b> — 4 сентября активность возвращается к первому кратеру.</li><li><b>2020</b> — начинается работа автобусного сообщения к кратеру взамен прежней канатной дороги, пострадавшей в 2016 году.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → Асо → Беппу</div><p>💡 В 15:38 автобус. В 16:13 — город Асо. 💡 В 16:48 автобус. В 19:30 — город Беппу.</p></div></div>
+<article class="stop" id="d05-s02"><div class="hero"><div class="photo"><img src="../assets/photos/kitahama-street.jpg" alt="Улица квартала Kitahama в Беппу: вывески ресторанов и нижняя часть башни Беппу" loading="lazy" decoding="async"></div><div class="vt">北浜</div><div class="plate"><div class="cap">Остановка 2 из 2</div><div class="t">вечер</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Беппу · приморский квартал</span></div><h2 class="nm2">Прогулка по Kitahama</h2><div class="jp2">北浜</div><p class="ann">Улицы с ресторанами и гостиницами выходят к заливу: после дороги здесь можно увидеть вечерний Беппу на уровне витрин, вывесок и огней у воды.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8C%97%E6%B5%9C%E5%85%AC%E5%9C%92%20%E5%88%A5%E5%BA%9C%E5%B8%82%20%E3%80%92874-0920%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%88%A5%E5%BA%9C%E5%B8%82%E5%8C%97%E6%B5%9C1%E4%B8%81%E7%9B%AE%20%E5%8C%97%E6%B5%9C%E5%85%AC%E5%9C%92%EF%BC%88%E6%B5%B7%E6%B2%BF%E3%81%84%E3%81%AE%E7%9B%AE%E5%8D%B0%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">北浜</div><div class="l2" lang="ja">きたはま</div><div class="l3">Kitahama, Beppu</div><div class="l4" lang="ja">別府市<br>〒874-0920 大分県別府市北浜1丁目 北浜公園（海沿いの目印）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Приморский квартал центрального Беппу.</p><p><b>Главное</b>Вечерние улицы и выход к воде у небольшого порта.</p><p><b>Не пропустите</b>Цветную светящуюся башню в парке Китахама у яхтенной гавани.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Вывески ресторанов и небольших заведений — вдоль улиц квартала.</li><li>Башню Беппу — городской ориентир на участке Китахама 3-тёмэ, заметный с окрестных улиц.</li><li>Невысокую цветную башню Watertower 10 — в парке Китахама возле яхтенной гавани.</li><li>Деревянный настил и скамейки — у воды в том же парке.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Погулять по Kitahama. Время прогулки — вечер, после прибытия в Беппу в 19:30.</li><li>Карта и японский адрес указывают на парк Китахама — ориентир у воды внутри квартала.</li><li>Пользуйтесь пешеходными переходами через прибрежную дорогу и не выходите на причалы с ограниченным доступом.</li><li>Прогулка по улицам и парку бесплатна; еда и посещение заведений оплачиваются отдельно.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Китахаме рядом существуют два масштаба города: узкие улицы с вывесками у входов и открытое пространство залива. Здесь расположены гостиницы и рестораны, а у яхтенной гавани небольшой парк даёт возможность остановиться у воды. Для вечерней прогулки интересна сама смена впечатлений — от освещённых фасадов к тёмной поверхности моря и обратно к городским огням.</p><div class="sh"><span class="cap">Две разные башни</span></div><p>Высокая решётчатая башня Беппу появилась в 1957 году по проекту Найто Татю — инженера, создавшего несколько известных японских телебашен. Её силуэт стал одним из ориентиров курортного города. В 2023 году завершилась большая реконструкция: восстановили первоначальную окраску и высоту 100 метров. Во время прогулки башня служит ориентиром в городском пейзаже.</p><p>У воды находится другая, гораздо меньшая башня — работа «Watertower 10: Beppu City, 2023». Её разноцветные панели изготовлены с использованием акрила, собранного в префектуре Оита для повторного использования. Конструкция напоминает водонапорную башню; свет превращает её в яркий объём, похожий на витраж. Она установлена в парке Китахама, где рядом с гаванью есть газон, настил и скамейки.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1957</b> — построена башня Беппу, ставшая ориентиром приморского центра.</li><li><b>2023</b> — после реконструкции башня возвращается к высоте 100 метров; в парке Китахама появляется современная работа Watertower 10.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-05 END -->
+</body></html>

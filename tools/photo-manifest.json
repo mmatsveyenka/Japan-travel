@@ -126,5 +126,151 @@
     "local": "assets/photos/takachiho-kagura.jpg",
     "outputWidth": 3200,
     "outputHeight": 2125
+  },
+  {
+    "name": "aso-nakadake-crater.jpg",
+    "source": "https://unsplash.com/photos/volcanic-crater-with-steam-rising-and-a-turquoise-lake-CeXtGregBIc",
+    "sourceImage": "https://images.unsplash.com/photo-1785648259247-c43df544ed5c",
+    "width": 6000,
+    "height": 4000,
+    "local": "assets/photos/aso-nakadake-crater.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "beppu-bay-night-cover.jpg",
+    "source": "https://beppu-tourism.com/photo/4144/",
+    "sourceImage": "https://beppu-tourism.com/wp-content/uploads/gallery/0057.jpg",
+    "license": "https://beppu-tourism.com/terms/",
+    "width": 3872,
+    "height": 2592,
+    "local": "assets/photos/beppu-bay-night-cover.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2142
+  },
+  {
+    "name": "kitahama-street.jpg",
+    "source": "https://unsplash.com/photos/tall-white-tower-overlooking-a-city-street-ahsf83lrwJ8",
+    "sourceImage": "https://images.unsplash.com/photo-1769177609233-615884bbb597",
+    "width": 4000,
+    "height": 6000,
+    "crop": {
+      "left": 0,
+      "top": 3000,
+      "width": 4000,
+      "height": 3000
+    },
+    "local": "assets/photos/kitahama-street.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2400
+  },
+  {
+    "name": "umi-blue-pond.jpg",
+    "source": "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-trees-yWnewPB2EwU",
+    "sourceImage": "https://images.unsplash.com/photo-1706334345372-659f20e9bbe8",
+    "license": "https://unsplash.com/license",
+    "width": 8256,
+    "height": 5504,
+    "local": "assets/photos/umi-blue-pond.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "yufuin-yufu-cover.jpg",
+    "source": "https://unsplash.com/photos/green-and-brown-mountain-under-white-sky-during-daytime-7jywUWoiw8Y",
+    "sourceImage": "https://images.unsplash.com/photo-1624517608555-a13406f05041",
+    "license": "https://unsplash.com/license",
+    "width": 4896,
+    "height": 3264,
+    "local": "assets/photos/yufuin-yufu-cover.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "fukuoka-naka-river-evening.jpg",
+    "source": "https://unsplash.com/photos/cityscape-with-illuminated-buildings-reflecting-in-water-at-night-cAKKzIgOKEQ",
+    "sourceImage": "https://images.unsplash.com/photo-1777555526537-57ad1286fa99",
+    "license": "https://unsplash.com/license",
+    "width": 12647,
+    "height": 5315,
+    "local": "assets/photos/fukuoka-naka-river-evening.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 1345
+  },
+  {
+    "name": "kinrin-lake.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3ALake%20Kinrin%20in%20Yufuin%2C%20Oita%20-%20Aug%2024%2C%202018%20(1).jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/9/95/Lake_Kinrin_in_Yufuin%2C_Oita_-_Aug_24%2C_2018_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "Public domain",
+    "width": 4256,
+    "height": 2832,
+    "local": "assets/photos/kinrin-lake.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2129
+  },
+  {
+    "name": "beppu-ropeway-view.jpg",
+    "source": "https://beppu-tourism.com/photo/4136/",
+    "sourceImage": "https://beppu-tourism.com/wp-content/uploads/gallery/0052.jpg",
+    "license": "https://beppu-tourism.com/terms/",
+    "width": 3872,
+    "height": 2592,
+    "local": "assets/photos/beppu-ropeway-view.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2142
+  },
+  {
+    "name": "yufuin-floral-village.jpg",
+    "source": "https://www.flickr.com/photos/200118688@N04/55585682447/",
+    "sourceImage": "https://live.staticflickr.com/65535/55585682447_a14ccf1b4b_o.jpg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "width": 3083,
+    "height": 2312,
+    "local": "assets/photos/yufuin-floral-village.jpg",
+    "outputWidth": 3083,
+    "outputHeight": 2312
+  },
+  {
+    "name": "yunotsubo-lane.jpg",
+    "source": "https://www.flickr.com/photos/200118688@N04/55586906109/",
+    "sourceImage": "https://live.staticflickr.com/65535/55586906109_997995825f_o.jpg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "width": 3264,
+    "height": 2448,
+    "local": "assets/photos/yunotsubo-lane.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2400
+  },
+  {
+    "name": "chinoike-red-pond.jpg",
+    "source": "https://www.flickr.com/photos/200118688@N04/55591695917/",
+    "sourceImage": "https://live.staticflickr.com/65535/55591695917_1336a314f6_o.jpg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "width": 3191,
+    "height": 2122,
+    "local": "assets/photos/chinoike-red-pond.jpg",
+    "outputWidth": 3191,
+    "outputHeight": 2122,
+    "note": "Оригинальная чёрно-белая фотография; цвет не восстанавливался."
+  },
+  {
+    "name": "kamado-oni-crop.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AOni%20of%20Kamado%20Jigoku.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Oni_of_Kamado_Jigoku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "license": "CC0 1.0",
+    "width": 2268,
+    "height": 4032,
+    "local": "assets/photos/kamado-oni-crop.jpg",
+    "crop": {
+      "left": 0,
+      "top": 800,
+      "width": 2268,
+      "height": 1701
+    },
+    "outputWidth": 2268,
+    "outputHeight": 1701
   }
 ]

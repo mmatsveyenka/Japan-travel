@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 8 · Фукуока → Хиросима · 18 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-08 START -->
+<section class="day" id="day-08"><div class="photo cv"><img src="../assets/photos/d08-fukuoka-tower-user.jpg" alt="Вечерняя панорама Фукуоки с башней, пляжем Момоти и заливом" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 8 · вторник, 18 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Фукуока → Хиросима</h1><div class="cjp">福岡 → 広島</div><p class="lead">Утром — Дадзайфу Тэммангу, кофе и лавки перед святилищем. Днём — пальмы и парные скалы у моря; затем опциональные святилища и храм Хакаты, а в 18:45 — поезд в Хиросиму.</p></div><section class="in plan" id="d08-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Дадзайфу и побережье — в первой части дня; Кусида, Тотё-дзи и Сумиёси — опциональные остановки перед поездом в Хиросиму.</p><div class="rows"><a class="row" href="#d08-s01"><div class="tm">9:50</div><div class="tx"><div class="nm">Дадзайфу Тэммангу</div><div class="jp">太宰府天満宮</div><div class="ch">Мосты, священный бык и святилище Тэндзина<br>☕ Starbucks Dazaifu · 🍡 Monzen-machi</div></div><div class="ar">›</div></a><a class="row" href="#d08-s02"><div class="tm">13:15</div><div class="tx"><div class="nm">Palm Tree Swing</div><div class="jp">ヤシの木ブランコ</div><div class="ch">Качели между пальмами у моря<br>💡 Быстрая фототочка.</div></div><div class="ar">›</div></a><a class="row" href="#d08-s03"><div class="tm">14:00</div><div class="tx"><div class="nm">Парные скалы Футамигаура</div><div class="jp">桜井二見ヶ浦 夫婦岩</div><div class="ch">Белые тории и две связанные скалы<br>💡 отсюда до аэропорта полтора часа</div></div><div class="ar">›</div></a><a class="row" href="#d08-s03"><div class="tm g">днём</div><div class="tx"><div class="nm">Прогулка по берегу</div><div class="jp">桜井二見ヶ浦</div><div class="ch">Море у парных скал Футамигаура</div></div><div class="ar">›</div></a><a class="row" href="#d08-s04"><div class="tm">16:43</div><div class="tx"><div class="nm">Святилище Кусида<span class="opt">Опционально</span></div><div class="jp">櫛田神社</div><div class="ch">Декоративная платформа праздника Ямакаса</div></div><div class="ar">›</div></a><a class="row" href="#d08-s05"><div class="tm g">днём</div><div class="tx"><div class="nm">Храм Тотё-дзи<span class="opt">Опционально</span></div><div class="jp">東長寺</div><div class="ch">Храм Кукая и деревянный Большой Будда</div></div><div class="ar">›</div></a><a class="row" href="#d08-s06"><div class="tm g">днём</div><div class="tx"><div class="nm">Святилище Сумиёси<span class="opt">Опционально</span></div><div class="jp">住吉神社</div><div class="ch">Прямая крыша и морские покровители</div></div><div class="ar">›</div></a><div class="row"><div class="tm">18:45</div><div class="tx"><div class="nm">🚂 Едем в Хиросиму</div><div class="jp">広島へ</div><div class="ch"></div></div></div></div></section><article class="stop" id="d08-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d08-dazaifu-hall-user.jpg" alt="Главный зал Дадзайфу Тэммангу с широкой крышей и цветущими сливами по сторонам" loading="lazy" decoding="async"></div><div class="vt">太宰府天満宮</div><div class="plate"><div class="cap">Остановка 1 из 6</div><div class="t">9:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Дадзайфу · святилище учёности</span></div><h2 class="nm2">Дадзайфу Тэммангу</h2><div class="jp2">太宰府天満宮</div><p class="ann">Красные мосты ведут через пруд к святилищу учёного Сугавары Митидзанэ, которого почитают как покровителя знаний и искусств.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%B8%82%E5%AE%B0%E5%BA%9C4%E4%B8%81%E7%9B%AE7-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">太宰府天満宮</div><div class="l2" lang="ja">だざいふてんまんぐう</div><div class="l3">Dazaifu Tenmangu</div><div class="l4" lang="ja">太宰府市<br>福岡県太宰府市宰府4丁目7-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">6:00–19:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Святилище на месте погребения Сугавары Митидзанэ.</p><p><b>Главное</b>Главный зал, посвящённый Тэндзину — божеству учёности.</p><p><b>Не пропустите</b>Три красных моста над прудом Синдзи-икэ.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Бронзового быка — за тории у входа на территорию.</li><li>Три моста — над прудом по дороге к воротам ромон.</li><li>Главный зал — во внутреннем дворе за воротами.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Перед молитвой дайте пройти тем, кто уже стоит у зала; не перекрывайте подход ради фотографии.</li><li>☕ Starbucks Dazaifu — 太宰府天満宮表参道店, 宰府3-2-43: кофейня с деревянной конструкцией Кэнго Кумы.</li><li>🍡 Monzen-machi — лавки на подходе к святилищу; попробуйте рисовые лепёшки умэгаэ-моти.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Дадзайфу путь к главному залу проходит через воду: два выгнутых и один плоский красный мост соединяют берега пруда. Их связывают с прошлым, настоящим и будущим. За воротами ромон находится зал, посвящённый Тэндзину. Здесь особенно заметны посетители с пожеланиями успеха в учёбе: святилище выросло вокруг памяти о человеке, чья жизнь была связана с поэзией и государственной службой.</p><div class="sh"><span class="cap">Учёный, ставший божеством</span></div><p>Сугавара Митидзанэ жил в 845–903 годах. Придворный учёный и поэт оказался в Дадзайфу после утраты положения при дворе и умер здесь. Над его могилой в 905 году появилось небольшое святилище; в 919 году его заменил более крупный зал. Со временем Митидзанэ стали почитать как Тэндзина, покровителя знаний, культуры и искусств.</p><div class="sh"><span class="cap">Архитектура главного зала</span></div><p>Нынешний главный зал построен в 1591 году. Обратите внимание на широкие свесы крыши и резные детали: они создают выразительный силуэт даже при взгляде с площади. В 2023 году началась крупная реставрация, а в сентябре 2026 года возобновилось посещение перед фасадом.</p><div class="sh"><span class="cap">Starbucks Dazaifu</span></div><p>Кофейня на подходе к святилищу оформлена по проекту Кэнго Кумы. Деревянные элементы выходят к улице и продолжаются на потолке и стенах внутри, образуя объёмную решётку. Посмотрите на неё сначала снаружи, затем от входа: плотность пересечений меняется вместе с точкой зрения.</p><div class="sh"><span class="cap">Мондзэн-мати и умэгаэ-моти</span></div><p>Мондзэн-мати означает квартал перед воротами храма или святилища. Здесь это торговый подход между станцией и Дадзайфу Тэммангу, с чайными, сувенирами и лавками сладостей. Местные умэгаэ-моти пекут из рисового теста с начинкой из сладкой фасоли адзуки. Цветок сливы отпечатан на поверхности лепёшки; сливовая начинка из названия не следует. Кофе, еда и покупки оплачиваются отдельно.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>903</b> — в Дадзайфу умирает Сугавара Митидзанэ.</li><li><b>1591</b> — построен сохранившийся главный зал.</li><li><b>2026</b> — 19 сентября возобновлено посещение перед главным залом.</li></ul></div><div class="leg"><div class="cap">По преданию</div><p>Бык, вёзший останки Митидзанэ, лёг и отказался идти дальше. На этом месте его похоронили, и здесь возникло святилище. Бронзовые быки на территории напоминают об этом рассказе.</p></div></details></div></div></div></article>
+<article class="stop" id="d08-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d08-palm-swing-user.jpg" alt="Качели между двумя пальмами на песчаном берегу у Zauo, на фоне моря" loading="lazy" decoding="async"></div><div class="vt sm">ヤシの木ブランコ</div><div class="plate"><div class="cap">Остановка 2 из 6</div><div class="t">13:15</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Фукуока · побережье Ода</span></div><h2 class="nm2">Palm Tree Swing</h2><div class="jp2">ヤシの木ブランコ</div><p class="ann">Качели подвешены между двумя пальмами над песком: за ними открывается море, и весь сюжет помещается в один кадр.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%A4%E3%82%B7%E3%81%AE%E6%9C%A8%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B3%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%A4%A7%E5%AD%97%E5%B0%8F%E7%94%B079-6" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">ヤシの木ブランコ</div><div class="l2" lang="ja">やしのきぶらんこ</div><div class="l3">Palm Tree Swing</div><div class="l4" lang="ja">福岡市<br>福岡県福岡市西区大字小田79-6</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Не указаны</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Фототочка на берегу у Zauo BBQ Garden.</p><p><b>Главное</b>Две пальмы, качели и море в одном кадре.</p><p><b>Не пропустите</b>Наклон стволов, образующих естественную рамку.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Качели между двумя пальмами — на песчаном берегу у заведения.</li><li>Открытый горизонт — за качелями со стороны суши.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Быстрая фототочка.</li><li>Дождитесь свободных качелей; при съёмке не стойте на траектории их движения.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Здесь главный объект — сама пара пальм с качелями. Песок и открытая вода создают простой фон, на котором хорошо читаются наклонённые стволы. Для вашего дня это короткая фототочка, как и указано в расписании.</p><div class="sh"><span class="cap">Как узнать нужное место</span></div><p>Качели находятся на территории заведения у берега Ода в западной части города Фукуока. Старое название «Zauo Honten» ещё встречается на картах и в путеводителях; туристическая ассоциация указывает нынешнее «Zauo BBQ Garden». Это помогает не спутать точку с другими качелями побережья.</p></div></details></div></div></div></article>
+<article class="stop" id="d08-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d08-futamigaura-user.jpg" alt="Белые тории у воды и две скалы Футамигаура, соединённые ритуальным канатом" loading="lazy" decoding="async"></div><div class="vt">二見ヶ浦</div><div class="plate"><div class="cap">Остановка 3 из 6</div><div class="t">14:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Итосима · священный морской пейзаж</span></div><h2 class="nm2">Парные скалы Футамигаура</h2><div class="jp2">桜井二見ヶ浦 夫婦岩</div><p class="ann">За белыми тории в море стоят две скалы, связанные ритуальным канатом симэнава; вдоль берега открываются разные ракурсы этой пары.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A1%9C%E4%BA%95%E4%BA%8C%E8%A6%8B%E3%83%B6%E6%B5%A6%20%E5%A4%AB%E5%A9%A6%E5%B2%A9%20%E3%80%92819-1304%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%B3%B8%E5%B3%B6%E5%B8%82%E5%BF%97%E6%91%A9%E6%A1%9C%E4%BA%95" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">桜井二見ヶ浦 夫婦岩</div><div class="l2" lang="ja">さくらいふたみがうら めおといわ</div><div class="l3">Sakurai Futamigaura Couple Stones</div><div class="l4" lang="ja">糸島市<br>〒819-1304 福岡県糸島市志摩桜井</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Священный участок побережья Сакураи в Итосиме.</p><p><b>Главное</b>Парные скалы, соединённые канатом симэнава.</p><p><b>Не пропустите</b>Белые тории на фоне моря и прогулку по берегу.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Белые тории — у воды перед парными скалами.</li><li>Канат симэнава — между двумя скалами в море.</li><li>Изменение ракурса — при прогулке вдоль доступного берега.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>🌊 Прогулка по берегу.</li><li>Оставайтесь на доступной части берега; у воды следите за волнами и мокрым песком.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На Футамигаура белые тории на берегу и две скалы в море образуют несколько планов одного пейзажа. Пройдите вдоль воды: взаимное положение ворот и камней меняется, хотя сами объекты остаются на месте. Ваше время здесь дневное, поэтому основной сюжет — берег, скалы и море.</p><div class="sh"><span class="cap">Канат между скалами</span></div><p>Скалы находятся примерно в 150 метрах от берега. Симэнава — ритуальный канат, обозначающий священное пространство; здесь он соединяет два природных камня. Этот участок побережья относится к священной территории святилища Сакураи.</p><div class="sh"><span class="cap">Живой ритуальный пейзаж</span></div><p>Большой канат периодически заменяют во время местного обряда. Туристическая ассоциация связывает его с весенними сизигийными отливами. Вид солнца между скалами относится к периоду летнего солнцестояния, а не к дневному визиту 18 мая.</p></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Заметка о переезде → аэропорт</div><p>💡 отсюда до аэропорта полтора часа</p></div></div>
+<article class="stop" id="d08-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d08-kushida-hall-user.jpg" alt="Главное здание святилища Кусида с большим канатом симэнава и каменными фонарями" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">櫛田神社</div><div class="plate"><div class="cap">Остановка 4 из 6</div><div class="t">16:43</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Хаката · святилище и Ямакаса</span></div><h2 class="nm2">Святилище Кусида</h2><div class="jp2">櫛田神社</div><p class="ann">В святилище Хакаты выставлена высокая кадзари-яма: ярусы фигур и декораций сохраняют образ летнего праздника Ямакаса.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AB%9B%E7%94%B0%E7%A5%9E%E7%A4%BE%20%E3%80%92812-0026%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E4%B8%8A%E5%B7%9D%E7%AB%AF%E7%94%BA1-41" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">櫛田神社</div><div class="l2" lang="ja">くしだじんじゃ</div><div class="l3">Kushida Shrine</div><div class="l4" lang="ja">福岡市<br>〒812-0026 福岡県福岡市博多区上川端町1-41</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">4:00–22:00</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Святилище-покровитель старой Хакаты.</p><p><b>Главное</b>Высокая декоративная кадзари-яма на территории.</p><p><b>Не пропустите</b>Фигуры и сюжетные сцены с двух сторон платформы.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Кадзари-яма — в специальном павильоне на территории.</li><li>Резной диск с двенадцатью животными — под потолком входных ворот.</li><li>Большое дерево гинкго — рядом с воротами.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Обязательно посмотреть огромный Kazariyama — праздничную платформу Yamakasa</li><li>Сравните лицевую и обратную стороны кадзари-яма: декорации составляют разные сцены.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Кадзари-яма устроена как высокая сцена: фигуры, здания и волны поднимаются ярусами, и сюжет приходится рассматривать снизу вверх. Декоративная платформа позволяет увидеть работу мастеров вне самого праздника. У Кусиды её обычно показывают круглый год, кроме июньской подготовки нового оформления.</p><div class="sh"><span class="cap">Городское святилище</span></div><p>Кусида связана с защитой Хакаты и её праздничной жизнью. Существующие здания относятся к восстановлению города при Тоётоми Хидэёси в 1587 году. Дерево гинкго и резной календарный диск в воротах дают повод задержаться и после осмотра платформы.</p><div class="sh"><span class="cap">Украшать и нести</span></div><p>У Ямакаса есть высокие декоративные платформы и платформы для праздничного бега, которые несут участники. Экспонат у святилища раскрывает прежде всего декоративную сторону традиции. Сам праздник проходит летом; майское посещение не предполагает шествия.</p></div></details></div></div></div></article>
+<article class="stop" id="d08-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d08-tochoji-pagoda-user.jpg" alt="Красная пятиярусная пагода и здания храма Тотё-дзи среди зелени" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">東長寺</div><div class="plate"><div class="cap">Остановка 5 из 6</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Хаката · буддийский храм</span></div><h2 class="nm2">Храм Тотё-дзи</h2><div class="jp2">東長寺</div><p class="ann">За воротами старой Хакаты стоят храмовые залы и пагода, а внутри отдельного зала находится деревянный Большой Будда Фукуоки.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E9%95%B7%E5%AF%BA%20%E3%80%92812-0037%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E5%BE%A1%E4%BE%9B%E6%89%80%E7%94%BA2-4" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">東長寺</div><div class="l2" lang="ja">とうちょうじ</div><div class="l3">Tochoji Temple</div><div class="l4" lang="ja">福岡市<br>〒812-0037 福岡県福岡市博多区御供所町2-4</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Буддийский храм традиции Сингон в старой Хакате.</p><p><b>Главное</b>Деревянный сидящий Будда высотой 10,8 метра.</p><p><b>Не пропустите</b>Шестигранный зал Роккакудо на территории.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Пятиярусную пагоду — на территории за входом.</li><li>Роккакудо — небольшой шестигранный зал во дворе.</li><li>Зал Большого Будды — отдельную внутреннюю часть комплекса.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Внутри следуйте указателям о съёмке и доступе к залам.</li><li>Осматривайте здания с открытых дорожек; закрытые двери не означают разрешение войти.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У Тотё-дзи два масштаба: небольшие здания храмового двора и большая деревянная фигура Будды в отдельном зале. Если рассматривать комплекс снаружи, обратите внимание на шестигранный Роккакудо и вертикальный силуэт пагоды. Внутренний осмотр зависит от доступа в залы.</p><div class="sh"><span class="cap">Кукай и Хаката</span></div><p>По храмовому преданию, Тотё-дзи основан Кукаем в 806 году после возвращения из Китая. Его традиция Сингон связана с передачей буддийского учения из Китая в Японию. Позднее храм перенесли с приморского участка на нынешнее место при правителе Куроде Тадаюки.</p><div class="sh"><span class="cap">Большой Будда</span></div><p>Создание деревянной статуи началось в 1988 году и заняло четыре года. Её высота — 10,8 метра; 16,1 метра относится к высоте ореола за фигурой. Роккакудо значительно старше: он построен в 1842 году на средства торговцев.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1842</b> — построен шестигранный зал Роккакудо.</li><li><b>1988</b> — начинается создание деревянного Большого Будды.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d08-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d08-sumiyoshi-hall-user.jpg" alt="Красное здание святилища Сумиёси с широкой прямой крышей среди деревьев" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">住吉神社</div><div class="plate"><div class="cap">Остановка 6 из 6</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Хаката · морские божества</span></div><h2 class="nm2">Святилище Сумиёси</h2><div class="jp2">住吉神社</div><p class="ann">Прямые линии крыши и красные деревянные детали выделяют главное здание среди деревьев — здесь почитают божеств, связанных с морем.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AD%91%E5%89%8D%E5%9C%8B%E4%B8%80%E4%B9%8B%E5%AE%AE%20%E4%BD%8F%E5%90%89%E7%A5%9E%E7%A4%BE%20%E3%80%92812-0018%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E4%BD%8F%E5%90%893%E4%B8%81%E7%9B%AE1-51" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">住吉神社</div><div class="l2" lang="ja">すみよしじんじゃ</div><div class="l3">Sumiyoshi Shrine, Hakata</div><div class="l4" lang="ja">福岡市<br>〒812-0018 福岡県福岡市博多区住吉3丁目1-51</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">6:00–19:00</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Святилище Сумиёси в Хакате, Фукуока.</p><p><b>Главное</b>Архитектура сумиёси-дзукури с прямой двускатной крышей.</p><p><b>Не пропустите</b>Статую древнего борца сумо на территории.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Главное здание — прямую двускатную крышу и белые стены с красными деталями.</li><li>Статую борца — на территории, по схеме святилища.</li><li>Сцену театра но — отдельное здание внутри комплекса.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Осмотрите главное здание с общедоступного подхода, не заходя за ограждения.</li><li>Участки с церемониями обходите спокойно, не мешая участникам.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У Сумиёси полезно начать с формы крыши: её скаты идут прямо, без привычного изгиба по краям. Вместе с белыми стенами и красными деревянными деталями это создаёт строгий облик главного здания. Внутри территории находятся также театральная сцена и памятники, связанные с сумо.</p><div class="sh"><span class="cap">Море и архитектура</span></div><p>Трёх божеств Сумиёси почитают как покровителей мореплавания. Эта связь напоминает о значении моря для Хакаты. Стиль главного здания называется сумиёси-дзукури: характерны прямая двускатная крыша и вход с торцевой стороны. Здание признано важным культурным достоянием Японии.</p><div class="sh"><span class="cap">Борец во дворе</span></div><p>Статуя древнего борца отсылает к связям святилища с сумо. Рассмотрите позу и открытую ладонь: на ней линии складываются в знак, напоминающий иероглиф «сила». Это деталь скульптуры, которую легко не заметить при общем осмотре.</p></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → Хиросима</div><p>18:45 — 🚂 Едем в Хиросиму.</p></div></div><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-08 END -->
+</body></html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 9 · Миядзима · 19 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-09 START -->
+<section class="day" id="day-09"><div class="photo cv"><img src="../assets/photos/d09-miyajima-user-cover.jpg" alt="Красные галереи Ицукусимы над водой и большие тории между зданиями" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 9 · среда, 19 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Миядзима</h1><div class="cjp">宮島</div><p class="lead">Утром — галереи Ицукусимы, большие тории и храмы у подножия Мисэна. После обеда — клёны, канатная дорога и вершина; вечером — прогулка по Хиросиме и ресторан в честь дня рождения.</p></div><section class="in plan" id="d09-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Десять остановок на Миядзиме, затем вечер в Хиросиме. Утренний подход к тории зависит от воды; спуск на канатной дороге — до 16:30.</p><div class="rows"><a class="row" href="#d09-s01"><div class="tm">9:00</div><div class="tx"><div class="nm">Святилище Ицукусима</div><div class="jp">嚴島神社</div><div class="ch">Галереи над приливной бухтой</div></div><div class="ar">›</div></a><a class="row" href="#d09-s02"><div class="tm">9:50</div><div class="tx"><div class="nm">Большие тории — О-тории</div><div class="jp">嚴島神社 大鳥居</div><div class="ch">Красные ворота и меняющийся берег<br>💡 При уровне воды ниже ~100 см.<br>💡 Поэтому ближе к поездке обязательно проверим прилив именно 19 мая 2027 года и при необходимости переставим утренние точки.</div></div><div class="ar">›</div></a><a class="row" href="#d09-s03"><div class="tm">10:20</div><div class="tx"><div class="nm">Пятиярусная пагода Ицукусимы</div><div class="jp">嚴島神社 五重塔</div><div class="ch">Пять ярусов над береговым ансамблем<br>💡 Очень фотогеничная связка пагоды с зелёным склоном Мисэна.</div></div><div class="ar">›</div></a><a class="row" href="#d09-s04"><div class="tm">10:30</div><div class="tx"><div class="nm">Хококу-дзиндзя — Сэндзёкаку</div><div class="jp">豊国神社（千畳閣）</div><div class="ch">Большой незавершённый деревянный зал<br>💡 Обязательно выйдите на открытую веранду — именно там ощущается масштаб павильона.</div></div><div class="ar">›</div></a><a class="row" href="#d09-s05"><div class="tm">11:00</div><div class="tx"><div class="nm">Храм Дайсё-ин</div><div class="jp">大聖院</div><div class="ch">Лестницы, храмовые залы и статуи<br>💡 Не просто пройти храм: поднимайтесь по лестнице и рассматривайте маленькие статуи вдоль пути.</div></div><div class="ar">›</div></a><a class="row" href="#d09-s06"><div class="tm">11:45</div><div class="tx"><div class="nm">Торговая улица Омотэсандо</div><div class="jp">宮島表参道商店街</div><div class="ch">Обед, момидзи-мандзю и устрицы<br>💡 Обед + Momiji Manju + местные устрицы.</div></div><div class="ar">›</div></a><a class="row" href="#d09-s07"><div class="tm">13:00</div><div class="tx"><div class="nm">Парк Момидзидани</div><div class="jp">紅葉谷公園</div><div class="ch">Клёны и ручей у подножия Мисэна</div></div><div class="ar">›</div></a><a class="row" href="#d09-s08"><div class="tm">14:00</div><div class="tx"><div class="nm">Канатная дорога Миядзимы</div><div class="jp">宮島ロープウエー</div><div class="ch">Над лесом к морской панораме<br>💡 спуск до 16:30</div></div><div class="ar">›</div></a><a class="row" href="#d09-s09"><div class="tm g">днём</div><div class="tx"><div class="nm">Обзорная площадка Сисиива</div><div class="jp">獅子岩展望台</div><div class="ch">Острова Внутреннего Японского моря</div></div><div class="ar">›</div></a><a class="row" href="#d09-s10"><div class="tm">15:00</div><div class="tx"><div class="nm">Вершина Мисэн</div><div class="jp">弥山山頂</div><div class="ch">Гранитные валуны и обзорный павильон</div></div><div class="ar">›</div></a><div class="row"><div class="tm g">вечер</div><div class="tx"><div class="nm">Прогулка по вечерней Хиросиме и ресторан</div><div class="jp">広島</div><div class="ch">Отметить день рождения</div></div></div></div></section><article class="stop" id="d09-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d09-itsukushima-user-shrine.jpg" alt="Здания святилища Ицукусима над морской бухтой на фоне зелёных склонов Миядзимы" loading="lazy" decoding="async"></div><div class="vt">嚴島神社</div><div class="plate"><div class="cap">Остановка 1 из 10</div><div class="t">9:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Миядзима · святилище у моря</span></div><h2 class="nm2">Святилище Ицукусима</h2><div class="jp2">嚴島神社</div><p class="ann">Красные галереи соединяют залы над приливной бухтой: между колоннами видны вода, берег и большие тории.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9A%B4%E5%B3%B6%E7%A5%9E%E7%A4%BE%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA1-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">嚴島神社</div><div class="l2" lang="ja">いつくしまじんじゃ</div><div class="l3">Itsukushima Shrine</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町1-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">6:30–18:00</div></div><div><div class="k">Стоимость</div><div class="v">¥300</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Синтоистское святилище на берегу священного острова.</p><p><b>Главное</b>Деревянные галереи и залы над приливной бухтой.</p><p><b>Не пропустите</b>Подвесные фонари вдоль галерей и вид на тории.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Подвесные фонари — между колоннами крытых галерей.</li><li>Высокую открытую сцену — перед основными залами со стороны моря.</li><li>Большие тории — в бухте, на оси святилища.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Смотрите на бухту с разных участков галереи: колонны каждый раз обрамляют другой вид.</li><li>Выбирайте устойчивую обувь: между досками настила есть зазоры.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Ицукусиме море становится частью архитектуры. Крытые галереи связывают отдельные залы, а открытые площадки выводят взгляд к бухте. При высокой воде опоры скрываются и постройки кажутся стоящими на её поверхности; при отливе становится виден грунт. Оба состояния принадлежат одному месту, но утренний уровень воды заранее не обещан.</p><div class="sh"><span class="cap">Остров и придворная архитектура</span></div><p>По традиции святилища, его основание относят к 593 году; первое письменное упоминание датируется 811 годом. В 1168 году при поддержке Тайры-но Киёмори комплекс расширили в духе синдэн-дзукури — архитектуры аристократических усадеб. Морская бухта получила ансамбль, напоминающий дворец с соединительными галереями. Нынешние здания относятся к разным восстановлениям, а не все одновременно к XII веку.</p><div class="sh"><span class="cap">Что связывает постройки</span></div><p>Здесь почитают трёх богинь Мунаката, связанных с покровительством мореплавателям. Важен весь пейзаж: святилище, море перед ним и лесистая гора за ним. В 1996 году ансамбль внесли в Список всемирного наследия ЮНЕСКО. Пройдя галерею, оглянитесь: ритм колонн и фонарей помогает увидеть её как единое пространство.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>811</b> — первое письменное упоминание святилища.</li><li><b>1168</b> — перестройка при поддержке Тайры-но Киёмори задаёт масштаб ансамбля.</li><li><b>1996</b> — включение в Список всемирного наследия ЮНЕСКО.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d09-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d09-otorii-user-gate.jpg" alt="Большие красные тории Ицукусимы с отражением при низкой воде" loading="lazy" decoding="async"></div><div class="vt">大鳥居</div><div class="plate"><div class="cap">Остановка 2 из 10</div><div class="t">9:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Миядзима · ворота в бухте</span></div><h2 class="nm2">Большие тории — О-тории</h2><div class="jp2">嚴島神社 大鳥居</div><p class="ann">Красные ворота стоят отдельно от берега: прилив превращает их то в морской силуэт, то в доступный для близкого осмотра деревянный памятник.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9A%B4%E5%B3%B6%E7%A5%9E%E7%A4%BE%20%E5%A4%A7%E9%B3%A5%E5%B1%85%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">嚴島神社 大鳥居</div><div class="l2" lang="ja">いつくしまじんじゃ おおとりい</div><div class="l3">Itsukushima Shrine O-Torii</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Большие ритуальные ворота святилища Ицукусима.</p><p><b>Главное</b>Две главные стойки с дополнительными опорами спереди и сзади.</p><p><b>Не пропустите</b>Форму массивных деревянных столбов, если позволит отлив.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Две главные стойки — под широкой верхней перекладиной.</li><li>Дополнительные опоры — перед главными столбами и позади них.</li><li>Вид на галереи святилища — с доступной части берега.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 При уровне воды ниже ~100 см.</li><li>💡 Поэтому ближе к поездке обязательно проверим прилив именно 19 мая 2027 года и при необходимости переставим утренние точки.</li><li>Подходите только по открывшемуся грунту, не заходя в воду; возвращайтесь при её подъёме.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С близкого расстояния тории перестают выглядеть плоским знаком на фоне моря: становятся заметны толщина стволов, дополнительные опоры и тяжёлая верхняя часть. Нынешние ворота возведены в 1875 году. Их высота — около 16,6 метра.</p><div class="sh"><span class="cap">Как стоят ворота</span></div><p>Это рёбу-тории: две основные стойки поддержаны вспомогательными столбами с обеих сторон. Сооружение удерживается собственным весом на подготовленном основании; под стойками грунт укреплён деревянными сваями. Поэтому популярная фраза «просто поставлены в песок» описывает устройство неполно.</p><div class="sh"><span class="cap">Отлив — условие, а не время в плане</span></div><p>Ассоциация Миядзимы указывает ориентир ниже 100 см для пешего подхода. Само слово «отлив» ещё не гарантирует сухую дорогу. В 9:50 сохраняется ваша остановка у ворот; возможность дойти до их основания зависит от уровня воды.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1875</b> — возведены нынешние большие тории.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d09-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d09-gojuto-user-pagoda.jpg" alt="Пятиярусная пагода Ицукусимы над каменной лестницей рядом с Сэндзёкаку" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">五重塔</div><div class="plate"><div class="cap">Остановка 3 из 10</div><div class="t">10:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Миядзима · пагода на холме</span></div><h2 class="nm2">Пятиярусная пагода Ицукусимы</h2><div class="jp2">嚴島神社 五重塔</div><p class="ann">Пять ярусов крыши поднимаются над прибрежными постройками; красные деревянные детали выделяются на фоне зелени.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9A%B4%E5%B3%B6%E7%A5%9E%E7%A4%BE%20%E4%BA%94%E9%87%8D%E5%A1%94%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">嚴島神社 五重塔</div><div class="l2" lang="ja">いつくしまじんじゃ ごじゅうのとう</div><div class="l3">Itsukushima Shrine Five-Storied Pagoda</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Историческая пятиярусная пагода рядом с Сэндзёкаку.</p><p><b>Главное</b>Контраст красных деталей и тёмных кровель.</p><p><b>Не пропустите</b>Ритм пяти выступающих карнизов при наружном осмотре.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Пять уровней кровли — по силуэту башни.</li><li>Красные колонны и стропила — под свесами крыши.</li><li>Соседний Сэндзёкаку — широкий деревянный зал рядом.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Очень фотогеничная связка пагоды с зелёным склоном Мисэна.</li><li>Пагоду осматривают снаружи; внутреннее посещение для обычных посетителей не предусмотрено.</li><li>Соблюдайте ограждения вокруг реставрируемого здания.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Пагода создаёт вертикальный акцент рядом с широким залом Сэндзёкаку. Её относят к 1407 году, периоду Муромати. Крыши покрыты корой японского кипариса, а в архитектуре сочетаются японские и пришедшие из Китая приёмы.</p><div class="sh"><span class="cap">Рассматривать снаружи</span></div><p>Здесь интересны соотношение ярусов и работа выступающих карнизов. Внутренние росписи не входят в обычный осмотр: башня закрыта для входа. Сочетание пагоды и святилища напоминает о времени, когда буддийские и синтоистские постройки составляли общий религиозный ансамбль.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1407</b> — датировка пагоды в государственном реестре культурного наследия.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d09-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d09-senjokaku-user-hall.jpg" alt="Деревянные колонны и балки зала Сэндзёкаку, картины под крышей и открытая веранда" loading="lazy" decoding="async"></div><div class="vt">千畳閣</div><div class="plate"><div class="cap">Остановка 4 из 10</div><div class="t">10:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Миядзима · деревянный павильон</span></div><h2 class="nm2">Хококу-дзиндзя — Сэндзёкаку</h2><div class="jp2">豊国神社（千畳閣）</div><p class="ann">Мощные колонны держат широкую крышу, а открытые стороны зала позволяют почувствовать его размер без стен и закрытых комнат.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%B1%8A%E5%9B%BD%E7%A5%9E%E7%A4%BE%EF%BC%88%E5%8D%83%E7%95%B3%E9%96%A3%EF%BC%89%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA1-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">豊国神社（千畳閣）</div><div class="l2" lang="ja">ほうこくじんじゃ（せんじょうかく）</div><div class="l3">Hokoku Shrine / Senjokaku Pavilion</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町1-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:30–16:30</div></div><div><div class="k">Стоимость</div><div class="v">¥100</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Большой деревянный зал, ныне святилище Тоётоми Хидэёси.</p><p><b>Главное</b>Открытая конструкция с видимыми балками.</p><p><b>Не пропустите</b>Веранду и подвешенные внутри вотивные картины эма.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Крупные колонны и балки — внутри зала.</li><li>Эма, подношения с изображениями, — под крышей.</li><li>Открытую веранду — по краю павильона.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Обязательно выйдите на открытую веранду — именно там ощущается масштаб павильона.</li><li>Перед подъёмом на деревянный настил следуйте указателям о снятии обуви.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Название Сэндзёкаку означает «павильон тысячи татами», хотя площадь традиционно сравнивают с 857 татами. Самое сильное впечатление создаёт непрерывное пространство: взгляд проходит между колоннами к открытым сторонам здания.</p><div class="sh"><span class="cap">Незавершённый замысел Хидэёси</span></div><p>Тоётоми Хидэёси начал строительство в 1587 году как большого буддийского зала для чтения сутр. После его смерти работы прекратились. Отсутствие части стен и потолка делает устройство постройки особенно наглядным. После разделения буддизма и синто в эпоху Мэйдзи прежние буддийские изображения перенесли в Дайган-дзи, а здание стало святилищем Хидэёси.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1587</b> — начало строительства большого зала по приказу Хидэёси.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d09-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d09-daishoin-user-rakan.jpg" alt="Каменные раканы в вязаных шапочках вдоль лестницы в зелёном саду Дайсё-ин" loading="lazy" decoding="async"></div><div class="vt">大聖院</div><div class="plate"><div class="cap">Остановка 5 из 10</div><div class="t">11:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Миядзима · буддийский храм</span></div><h2 class="nm2">Храм Дайсё-ин</h2><div class="jp2">大聖院</div><p class="ann">Храм поднимается по склону несколькими уровнями: вдоль лестниц и дорожек встречаются небольшие фигуры с разными лицами и позами.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E8%81%96%E9%99%A2%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA210" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">大聖院</div><div class="l2" lang="ja">だいしょういん</div><div class="l3">Daisho-in Temple</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町210</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Буддийский храм традиции Сингон у подножия Мисэна.</p><p><b>Главное</b>Залы на склоне и множество небольших статуй.</p><p><b>Не пропустите</b>Сад пятисот раканов — просветлённых учеников Будды.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Ворота Ниомон — у нижнего подхода к храму.</li><li>Небольшие каменные фигуры — вдоль лестниц и дорожек.</li><li>Пятьсот раканов — в отдельном саду на территории.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Не просто пройти храм: поднимайтесь по лестнице и рассматривайте маленькие статуи вдоль пути.</li><li>Не переставляйте подношения и не заходите за ограждения ради фотографии.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Дайсё-ин раскрывается постепенно: лестница выводит к новым залам, а возле дорожек появляются небольшие скульптуры. Рассматривайте лица по отдельности — серия фигур устроена так, что общий ряд не заменяет встречи с каждой из них.</p><div class="sh"><span class="cap">Храм у священной горы</span></div><p>Предание связывает основание Дайсё-ин с Кукаем и его практикой на Мисэне в 806 году. Кукай, известный также как Кобо-дайси, принёс из Китая учение Сингон. Эта связь объясняет, почему храм у подножия и священная гора воспринимаются как части одного религиозного ландшафта.</p><div class="sh"><span class="cap">Пятьсот раканов</span></div><p>Раканы — буддийские подвижники, достигшие просветления. В храмовом саду установлены пятьсот их фигур. Небольшой размер приглашает приблизиться и заметить различия выражений и жестов; это подходящее место для вашей заметки о внимательном осмотре статуй.</p></div></details></div></div></div></article>
+<article class="stop" id="d09-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d09-omotesando-user-street.jpg" alt="Лавки, освещённые вывески и посетители торговой улицы Омотэсандо на Миядзиме" loading="lazy" decoding="async"></div><div class="vt">表参道</div><div class="plate"><div class="cap">Остановка 6 из 10</div><div class="t">11:45</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Миядзима · торговый подход</span></div><h2 class="nm2">Торговая улица Омотэсандо</h2><div class="jp2">宮島表参道商店街</div><p class="ann">На подходе к святилищу соседствуют лавки момидзи-мандзю, устричные заведения и магазины деревянной утвари — здесь ваша остановка на обед.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%AE%E5%B3%B6%E8%A1%A8%E5%8F%82%E9%81%93%E5%95%86%E5%BA%97%E8%A1%97%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">宮島表参道商店街</div><div class="l2" lang="ja">みやじまおもてさんどうしょうてんがい</div><div class="l3">Miyajima Omotesando Shopping Street</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Торговая улица на подходе к Ицукусиме.</p><p><b>Главное</b>Местные устрицы и сладости в форме кленового листа.</p><p><b>Не пропустите</b>Момидзи-мандзю и деревянные рисовые лопатки сякуси.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Момидзи-мандзю — в витринах кондитерских.</li><li>Устрицы — у заведений с обозначением 牡蠣 или かき.</li><li>Деревянные рисовые лопатки — в сувенирных лавках.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Обед + Momiji Manju + местные устрицы.</li><li>Еду и покупки оплачивают отдельно; используйте места для еды у выбранного заведения.</li><li>Не кормите оленей и убирайте от них бумагу, пакеты и еду.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Омотэсандо — торговый подход длиной около 350 метров. На одной улице сосредоточены еда и ремёсла, которые ассоциируются с Миядзимой: устрицы, анаго, сладости момидзи-мандзю и деревянные рисовые лопатки. Здесь нет общего входного билета или единого меню.</p><div class="sh"><span class="cap">Лист клёна на витрине</span></div><p>Момидзи-мандзю узнаются по форме кленового листа. У разных лавок различаются начинки; некоторые предлагают свежую выпечку прямо у прилавка. Посмотрите на форму сладости, прежде чем выбирать вкус: кленовый лист связывает торговую улицу с образом острова и его парка.</p><div class="sh"><span class="cap">Улица паломников и покупателей</span></div><p>Торговля обращена к людям, идущим к святилищу. Ассоциация острова насчитывает здесь более восьмидесяти магазинов. Поэтому улицу интересно рассматривать как последовательность небольших специализаций: кондитерская, морепродукты, резьба по дереву, утварь. Обед остаётся вашей остановкой без назначения конкретного ресторана.</p></div></details></div></div></div></article>
+<article class="stop" id="d09-s07"><div class="hero"><div class="photo"><img src="../assets/photos/d09-momijidani-user-bridge.jpg" alt="Красный мост парка Момидзидани среди осенних клёнов над ручьём" loading="lazy" decoding="async"></div><div class="vt">紅葉谷</div><div class="plate"><div class="cap">Остановка 7 из 10</div><div class="t">13:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Миядзима · долина клёнов</span></div><h2 class="nm2">Парк Момидзидани</h2><div class="jp2">紅葉谷公園</div><p class="ann">За прибрежными улицами начинается долина с клёнами и ручьём; мосты и дорожки ведут через зелень у подножия горы.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">紅葉谷公園</div><div class="l2" lang="ja">もみじだにこうえん</div><div class="l3">Momijidani Park</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町紅葉谷公園</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Парк в долине у подножия Мисэна.</p><p><b>Главное</b>Клёны над водой и прогулочными дорожками.</p><p><b>Не пропустите</b>Мост Момидзи у входа в парк.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Мост Момидзи — у входа в долину.</li><li>Кленовые листья — над дорожками и ручьём.</li><li>Каменистое русло — между деревьями.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Смотрите на ручей с мостов и дорожек, не спускаясь на мокрые камни.</li><li>В мае основной сезонный образ — зелёные листья; осеннюю окраску к этой дате не ожидаем.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Момидзидани означает «долина клёнов». В парке около семисот кленовых деревьев нескольких видов. В мае здесь интересны прозрачный свет через молодую листву, тень над водой и переход от тесных торговых улиц к лесистому склону.</p><div class="sh"><span class="cap">Один пейзаж в разные сезоны</span></div><p>Красный мост у входа остаётся цветовым акцентом и среди зелени. Осенняя окраска, с которой часто связывают название парка, обычно приходится на ноябрь. На весенней прогулке полезнее рассматривать форму листьев и то, как кроны нависают над руслом.</p><div class="sh"><span class="cap">Русло, устроенное как сад</span></div><p>После разрушительного тайфуна Макурадзаки 1945 года здесь создали систему защиты от селевых потоков. Работы шли в 1948–1950 годах: камни и русло оформляли так, чтобы инженерные сооружения вписались в пейзаж. Поэтому вид ручья — результат не только природы, но и восстановления долины.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1948–1950</b> — создана садовая система защиты русла от селевых потоков.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d09-s08"><div class="hero"><div class="photo"><img src="../assets/photos/d09-ropeway-user-cabins.jpg" alt="Две кабины канатной дороги Миядзимы над морем и островами" loading="lazy" style="object-position:right center" decoding="async"></div><div class="vt sm">宮島ロープウエー</div><div class="plate"><div class="cap">Остановка 8 из 10</div><div class="t">14:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Миядзима · канатная дорога</span></div><h2 class="nm2">Канатная дорога Миядзимы</h2><div class="jp2">宮島ロープウエー</div><p class="ann">Кабины поднимаются над лесом к станции Сисиива: с высоты открывается море, а между двумя участками линии меняется сам тип вагонов.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%AE%E5%B3%B6%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A8%E3%83%BC%20%E7%B4%85%E8%91%89%E8%B0%B7%E9%A7%85%20%E3%80%92739-0522%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA%E7%B4%85%E8%91%89%E8%B0%B7%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">宮島ロープウエー</div><div class="l2" lang="ja">みやじまろーぷうえー</div><div class="l3">Miyajima Ropeway</div><div class="l4" lang="ja">廿日市市・宮島<br>〒739-0522 広島県廿日市市宮島町紅葉谷公園</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–16:00</div></div><div><div class="k">Стоимость</div><div class="v">¥2 000</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Двухучастковая канатная дорога от долины к станции Сисиива.</p><p><b>Главное</b>Смена кабин и морская панорама над лесом.</p><p><b>Не пропустите</b>Разницу между верхней станцией и самой вершиной Мисэна.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Нижнюю станцию Момидзидани — в верхней части парковой долины.</li><li>Станцию Каятани — место смены участков канатной дороги.</li><li>Станцию Сисиива — конечную точку подъёма.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 спуск до 16:30</li><li>Следите за временем последнего спуска на табло; к нему нужно вернуться на верхнюю станцию.</li><li>Держите билет для обратной поездки.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На первом участке небольшие кабины непрерывно проходят над лесом, на втором более крупные вагоны движутся навстречу друг другу. Между ними находится станция пересадки. Два разных устройства делают поездку заметной частью осмотра острова.</p><div class="sh"><span class="cap">Верхняя станция и вершина</span></div><p>Конечная станция называется Сисиива. Она даёт доступ к обзорной площадке, но не находится на вершине Мисэна: ваш дальнейший подъём к вершине остаётся отдельным пунктом. В стоимости указан обычный взрослый билет туда и обратно. Последний спуск в 16:30 относится к отправлению со станции, а не к уходу с вершины.</p></div></details></div></div></div></article>
+<article class="stop" id="d09-s09"><div class="hero"><div class="photo"><img src="../assets/photos/d09-shishiiwa-user-observatory.jpg" alt="Каменные ступени и площадка Сисиива с биноклями и видом на море" loading="lazy" decoding="async"></div><div class="vt">獅子岩</div><div class="plate"><div class="cap">Остановка 9 из 10</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Миядзима · вид на Внутреннее море</span></div><h2 class="nm2">Обзорная площадка Сисиива</h2><div class="jp2">獅子岩展望台</div><p class="ann">Рядом с верхней станцией открывается морская панорама: острова перекрывают друг друга, а проливы образуют светлые полосы между ними.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%8D%85%E5%AD%90%E5%B2%A9%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">獅子岩展望台</div><div class="l2" lang="ja">ししいわてんぼうだい</div><div class="l3">Shishiiwa Observatory</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市宮島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Обзорная площадка рядом со станцией Сисиива.</p><p><b>Главное</b>Острова и проливы Внутреннего Японского моря.</p><p><b>Не пропустите</b>Несколько планов островных силуэтов вдали.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Морскую панораму — с открытой обзорной площадки.</li><li>Островные силуэты — на ближнем и дальнем планах.</li><li>Указатели к Мисэну — рядом с верхней станцией.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Снимайте с оборудованной площадки, не перелезая через ограждения.</li><li>Сохраните ориентир верхней станции для возвращения к спуску до 16:30.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Сисиива — первая панорамная остановка после канатной дороги. Здесь хорошо видно, почему Внутреннее Японское море воспринимается как череда островных пространств: полосы воды разделены сушей, и каждый дальний план имеет свой оттенок.</p><div class="sh"><span class="cap">Два разных вида</span></div><p>Площадка у станции и вершина Мисэна — разные места. Здесь удобно сначала рассмотреть морскую сторону острова, а затем продолжить предусмотренный вами маршрут к вершине. Чёткость дальних очертаний зависит от погоды; конкретный вид горизонта не гарантирован.</p></div></details></div></div></div></article>
+<article class="stop" id="d09-s10"><div class="hero"><div class="photo"><img src="../assets/photos/d09-misen-user-panorama.jpg" alt="Панорама с Мисэна: площадка и станция Сисиива ниже по склону, острова и корабль на море" loading="lazy" decoding="async"></div><div class="vt">弥山</div><div class="plate"><div class="cap">Остановка 10 из 10</div><div class="t">15:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Миядзима · вершина острова</span></div><h2 class="nm2">Вершина Мисэн</h2><div class="jp2">弥山山頂</div><p class="ann">На высоте 535 метров лес уступает место крупным камням и обзорному павильону: отсюда остров раскрывается вместе с окружающим морем.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%BC%A5%E5%B1%B1%E5%B1%B1%E9%A0%82%20%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%BC%A5%E5%B1%B1%E5%B1%B1%E9%A0%82" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">弥山山頂</div><div class="l2" lang="ja">みせんさんちょう</div><div class="l3">Mount Misen Summit</div><div class="l4" lang="ja">廿日市市・宮島<br>広島県廿日市市弥山山頂</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Высшая точка Миядзимы, 535 метров над морем.</p><p><b>Главное</b>Крупные камни и панорама с вершины.</p><p><b>Не пропустите</b>Обзорный павильон среди гранитных валунов.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Крупные валуны — вокруг вершины.</li><li>Обзорный павильон — в верхней точке маршрута.</li><li>Границу леса и открытых камней — при выходе наверх.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Для камней и ступеней нужна обувь с нескользкой подошвой; возьмите воду.</li><li>Учитывайте ваш спуск до 16:30: возвращаться нужно к станции Сисиива.</li><li>Не забирайтесь на край валунов ради фотографии.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Вершина Мисэна — открытое пространство среди крупных гранитных камней. Лес поднимается почти до самого верха, поэтому выход к панораме ощущается особенно резко. Обзорный павильон позволяет рассмотреть море с разных сторон.</p><div class="sh"><span class="cap">Гора за святилищем</span></div><p>Мисэн — не только высшая точка острова, но и часть его религиозного пейзажа. Традиция связывает гору с практикой Кукая в 806 году. Леса на её склонах входят в охраняемый ландшафт всемирного наследия Ицукусимы. С вершины становится понятнее, как прибрежные здания связаны с большим горным массивом за ними.</p><div class="sh"><span class="cap">Павильон на вершине</span></div><p>Для обзорного павильона опубликованы часы 10:00–16:00. Это режим здания, а не расписание доступа к открытой вершине и не время последней канатной дороги. Ваша остановка в 15:00 сохраняется; после неё необходимо вернуться к верхней станции для спуска.</p></div></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-09 END -->
+</body></html>

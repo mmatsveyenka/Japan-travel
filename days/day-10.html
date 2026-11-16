@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 10 · Хиросима · 20 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-10 START -->
+<section class="day" id="day-10"><div class="photo cv"><img src="../assets/photos/d10-hiroshima-user-historical-cover.jpg" alt="Исторический чёрно-белый вид разрушенной Хиросимы после атомной бомбардировки" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 10 · четверг, 20 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Хиросима</h1><div class="cjp">広島</div><p class="lead">Утро — у мемориалов и в Музее мира Хиросимы. Затем — белый замок и сады Химедзи, вечером — пагода Ясака и улицы Киото.</p></div><section class="in plan" id="d10-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Девять остановок: память Хиросимы, замок и сад Химедзи, вечерняя Хигасияма и Гион. Переезды — в 12:00 и 16:00.</p><div class="rows"><a class="row" href="#d10-s01"><div class="tm">8:00</div><div class="tx"><div class="nm">Атомный купол</div><div class="jp">原爆ドーム</div><div class="ch">Сохранившиеся стены у реки Мотоясу</div></div><div class="ar">›</div></a><a class="row" href="#d10-s02"><div class="tm g">утро</div><div class="tx"><div class="nm">Детский памятник мира</div><div class="jp">原爆の子の像</div><div class="ch">Садако и бумажные журавлики</div></div><div class="ar">›</div></a><a class="row" href="#d10-s03"><div class="tm g">утро</div><div class="tx"><div class="nm">Пламя мира</div><div class="jp">平和の灯</div><div class="ch">Огонь над раскрытыми ладонями</div></div><div class="ar">›</div></a><a class="row" href="#d10-s04"><div class="tm g">утро</div><div class="tx"><div class="nm">Парк мира</div><div class="jp">平和記念公園</div><div class="ch">Память на месте городского квартала</div></div><div class="ar">›</div></a><a class="row" href="#d10-s05"><div class="tm g">утро</div><div class="tx"><div class="nm">Кенотаф жертвам атомной бомбардировки</div><div class="jp">原爆死没者慰霊碑</div><div class="ch">Арка, имена и вид на купол</div></div><div class="ar">›</div></a><a class="row" href="#d10-s06"><div class="tm">9:30</div><div class="tx"><div class="nm">Музей мира в Хиросиме</div><div class="jp">広島平和記念資料館</div><div class="ch">Личные вещи и свидетельства людей</div></div><div class="ar">›</div></a><div class="row"><div class="tm">12:00</div><div class="tx"><div class="nm">Синкансэн в Химедзи</div><div class="jp">姫路</div><div class="ch">Переезд в Химедзи</div></div></div><a class="row" href="#d10-s07"><div class="tm">13:10</div><div class="tx"><div class="nm">Замок Химедзи</div><div class="jp">姫路城</div><div class="ch">Белые стены и деревянный донжон</div></div><div class="ar">›</div></a><a class="row" href="#d10-s08"><div class="tm g">днём</div><div class="tx"><div class="nm">Сад Коко-эн</div><div class="jp">好古園</div><div class="ch">Девять садов за стенами усадеб</div></div><div class="ar">›</div></a><div class="row"><div class="tm">16:00</div><div class="tx"><div class="nm">Едем в Киото</div><div class="jp">京都</div><div class="ch">Переезд в Киото</div></div></div><a class="row" href="#d10-s09"><div class="tm">19:00</div><div class="tx"><div class="nm">Вечер у пагоды Ясака</div><div class="jp">八坂の塔・東山・祇園</div><div class="ch">Пагода, каменные склоны и Гион</div></div><div class="ar">›</div></a></div></section><article class="stop" id="d10-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d10-dome-user-ruins.jpg" alt="Кирпичные стены Атомного купола и металлический каркас над ними на фоне синего неба" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">原爆ドーム</div><div class="plate"><div class="cap">Остановка 1 из 9</div><div class="t">8:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Хиросима · мемориал</span></div><h2 class="nm2">Атомный купол</h2><div class="jp2">原爆ドーム</div><p class="ann">Над рекой Мотоясу остаётся открытый каркас купола: сохранившиеся стены показывают след разрушения в центре сегодняшнего города.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8E%9F%E7%88%86%E3%83%89%E3%83%BC%E3%83%A0%20%E3%80%92730-0051%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E5%A4%A7%E6%89%8B%E7%94%BA1-10" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">原爆ドーム</div><div class="l2" lang="ja">げんばくどーむ</div><div class="l3">Atomic Bomb Dome</div><div class="l4" lang="ja">広島市<br>〒730-0051 広島県広島市中区大手町1-10</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Руины бывшего выставочного здания, сохранённые как свидетельство атомной бомбардировки.</p><p><b>Главное</b>Кирпичные стены и металлический каркас купола.</p><p><b>Не пропустите</b>Вид со стороны реки Мотоясу, с водой и небом.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Металлический каркас — над центральной частью здания.</li><li>Обнажённую кирпичную кладку — в проёмах разрушенных стен.</li><li>Силуэт купола над водой — со стороны реки Мотоясу.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Лучший ракурс — со стороны Motoyasu River, чтобы Dome оказался вместе с водой и небом.</li><li>💡 Снимите купол вместе с водой и небом. Для более выразительной композиции можно включить в кадр отражение здания и оставить свободное пространство вокруг него.</li><li>💡 Cenotaph — вид через арку: этот ракурс сохранён у отдельной остановки «Кенотаф».</li><li>Осматривайте руины снаружи, оставаясь за ограждением.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С берега лучше всего читается разница между уцелевшей оболочкой и исчезнувшими перекрытиями. Сквозь оконные проёмы видно небо, а над стенами остаётся каркас купола. Здание сохраняют в разрушенном виде, поэтому его нынешний облик — свидетельство события, а не попытка восстановить довоенную архитектуру.</p><div class="sh"><span class="cap">До 6 августа</span></div><p>Выставочное здание открылось в 1915 году по проекту чешского архитектора Яна Летцеля. Здесь показывали и продвигали продукцию префектуры; позднее оно стало Промышленно-выставочной палатой. Знакомый горожанам зелёный купол был частью обычной городской жизни.</p><div class="sh"><span class="cap">Разрушение и сохранение</span></div><p>6 августа 1945 года атомная бомба взорвалась примерно в 160 метрах к юго-востоку от здания. Оно выгорело, находившиеся внутри люди погибли. Долгое обсуждение судьбы руин завершилось решением городского совета о постоянном сохранении в 1966 году. Стабилизация кладки требует повторных работ: видимая неподвижность памятника поддерживается постоянной заботой.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1915</b> — открывается выставочное здание.</li><li><b>1945</b> — 6 августа здание разрушено атомной бомбардировкой.</li><li><b>1966</b> — городской совет принимает решение о постоянном сохранении.</li><li><b>1996</b> — мемориал включён в список Всемирного наследия ЮНЕСКО.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d10-children-user-monument.jpg" alt="Детский памятник мира с фигурой девочки и журавлём, окружённый витринами бумажных птиц" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">原爆の子の像</div><div class="plate"><div class="cap">Остановка 2 из 9</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Хиросима · памятник детям</span></div><h2 class="nm2">Детский памятник мира</h2><div class="jp2">原爆の子の像</div><p class="ann">Девочка поднимает над головой журавля, а рядом хранятся связки бумажных птиц, которые продолжают присылать в Хиросиму.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8E%9F%E7%88%86%E3%81%AE%E5%AD%90%E3%81%AE%E5%83%8F%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%AD%E5%B3%B6%E7%94%BA1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">原爆の子の像</div><div class="l2" lang="ja">げんばくのこのぞう</div><div class="l3">Children’s Peace Monument</div><div class="l4" lang="ja">広島市<br>広島県広島市中区中島町1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Памятник всем детям, погибшим вследствие атомной бомбардировки.</p><p><b>Главное</b>Фигура девочки с журавлём и история Садако Сасаки.</p><p><b>Не пропустите</b>Тысячи бумажных журавликов в витринах рядом.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Девочку с поднятым журавлём — наверху памятника.</li><li>Фигуры детей — по сторонам постамента.</li><li>Бумажных журавликов — в защищённых витринах вокруг.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Посмотрите тысячи бумажных журавликов — это одна из самых эмоциональных частей парка.</li><li>Рассматривайте бумажные подношения через стекло; не трогайте и не переставляйте связки.</li><li>Не мешайте школьным группам и людям, пришедшим возложить журавликов.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У этого памятника взгляд переходит от одной фигуры к множеству маленьких бумажных птиц. Девочка на вершине держит журавля, а связки вокруг превращают личную историю в общее обращение к миру.</p><div class="sh"><span class="cap">История Садако</span></div><p>Садако Сасаки было два года во время бомбардировки. Через десять лет у неё обнаружили лейкоз. В больнице она складывала журавликов, надеясь выздороветь, и умерла в 1955 году в возрасте двенадцати лет. Здесь важно помнить реальную девочку, а не сводить её судьбу к красивой истории об исполнении желания.</p><div class="sh"><span class="cap">Памятник, предложенный детьми</span></div><p>После её смерти одноклассники начали сбор средств на памятник всем детям — жертвам атомной бомбы. Инициативу поддержали в Японии и за её пределами. Памятник открыли 5 мая 1958 года, в День детей. Бумажные журавлики продолжают приносить и присылать: это живое продолжение детской инициативы.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1955</b> — Садако Сасаки умирает от лейкоза.</li><li><b>1958</b> — 5 мая открыт памятник детям.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d10-flame-user-ceremony.jpg" alt="Пламя мира на переднем плане и люди, молящиеся у кенотафа, за ним" loading="lazy" style="object-position:center bottom" decoding="async"></div><div class="vt">平和の灯</div><div class="plate"><div class="cap">Остановка 3 из 9</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Хиросима · мемориальное пламя</span></div><h2 class="nm2">Пламя мира</h2><div class="jp2">平和の灯</div><p class="ann">Над водой горит огонь на основании в форме раскрытых ладоней — часть общей оси мемориального ансамбля.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B9%B3%E5%92%8C%E3%81%AE%E7%81%AF%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%AD%E5%B3%B6%E7%94%BA1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">平和の灯</div><div class="l2" lang="ja">へいわのともしび</div><div class="l3">Flame of Peace</div><div class="l4" lang="ja">広島市<br>広島県広島市中区中島町1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мемориальное пламя, зажжённое 1 августа 1964 года.</p><p><b>Главное</b>Обещание поддерживать огонь до исчезновения ядерного оружия.</p><p><b>Не пропустите</b>Форму двух обращённых к небу ладоней.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Раскрытые ладони — в силуэте бетонного основания.</li><li>Пламя — над центральной чашей.</li><li>Продолжение водной оси — в сторону кенотафа.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Рассмотрите постамент с общедоступной дорожки: форма ладоней заметнее сбоку.</li><li>Не заходите в воду и за ограждения ради близкого кадра.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Огонь здесь невелик по сравнению с пространством вокруг. Его поддерживает широкая чаша, основание которой Кэндзо Тангэ задумал как руки, соединённые у запястий и раскрытые ладонями вверх. В этой форме соединены память о погибших, жаждавших воды, и надежда на мир.</p><div class="sh"><span class="cap">Обещание, обращённое в будущее</span></div><p>Пламя зажгли 1 августа 1964 года. Его смысл — поддерживать огонь до того дня, когда ядерное оружие исчезнет с Земли. Поэтому памятник говорит одновременно о прошлом и о цели, которая ещё должна быть достигнута. Вода, открытые ладони и огонь создают единый образ без большой надписи или сложного скульптурного рассказа.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1964</b> — 1 августа зажжено Пламя мира.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d10-park-user-axis.jpg" alt="Центральная ось Парка мира: дорожки, зелень, кенотаф и Атомный купол" loading="lazy" decoding="async"></div><div class="vt">平和記念公園</div><div class="plate"><div class="cap">Остановка 4 из 9</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Хиросима · мемориальный парк</span></div><h2 class="nm2">Парк мира</h2><div class="jp2">平和記念公園</div><p class="ann">Между реками открываются широкие дорожки и зелёные пространства: мемориалы связывает ландшафт, созданный на месте исчезнувшего городского квартала.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B9%B3%E5%92%8C%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%AD%E5%B3%B6%E7%94%BA1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">平和記念公園</div><div class="l2" lang="ja">へいわきねんこうえん</div><div class="l3">Hiroshima Peace Memorial Park</div><div class="l4" lang="ja">広島市<br>広島県広島市中区中島町1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мемориальный городской парк на месте довоенного района Накадзима.</p><p><b>Главное</b>Связь открытого пространства, памятников и реки.</p><p><b>Не пропустите</b>Перспективу от музея к кенотафу и куполу.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Реку Мотоясу — вдоль восточной стороны парка.</li><li>Открытую центральную перспективу — между музеем и мемориалами.</li><li>Сочетание газонов и широких дорожек — вокруг центрального ансамбля.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Смотрите на парк как на единое пространство: расстояние и свободный обзор между памятниками тоже имеют значение.</li><li>Соблюдайте тишину рядом с возложениями цветов и церемониями; не перекрывайте проход.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Парк даёт возможность отойти от отдельной скульптуры и увидеть весь ансамбль. Дорожки, вода и свободные пространства связывают купол, памятники и музей. Здесь особенно заметно, как современный город окружает территорию памяти.</p><div class="sh"><span class="cap">Район, которого больше нет</span></div><p>До 1945 года Накадзима была оживлённой частью Хиросимы с жилыми домами и торговыми улицами. После разрушения район получил другую функцию. Закон о строительстве Хиросимы как города мира, принятый в 1949 году, дал основу для устройства мемориального центра.</p><div class="sh"><span class="cap">Послевоенный ландшафт</span></div><p>Строительство парка и его учреждений началось в 1950 году; основной ансамбль был завершён в 1955-м. Парк не возник сразу после взрыва и не является нетронутым фрагментом довоенного города. Это осознанно созданное общественное пространство, где новые посадки и архитектура помогают сохранять память о людях и уничтоженном районе.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1949</b> — принят закон о строительстве Хиросимы как города мира.</li><li><b>1950–1955</b> — создаются парк и его основные учреждения.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d10-cenotaph-user-night.jpg" alt="Освещённая арка кенотафа ночью, цветы у подножия и Атомный купол в просвете" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt sm">原爆死没者慰霊碑</div><div class="plate"><div class="cap">Остановка 5 из 9</div><div class="t">утро</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Хиросима · мемориал жертвам</span></div><h2 class="nm2">Кенотаф жертвам атомной бомбардировки</h2><div class="jp2">原爆死没者慰霊碑</div><p class="ann">Низкая арка укрывает каменный ларец с именами погибших, а в её просвете складывается вид на пламя и Атомный купол.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8E%9F%E7%88%86%E6%AD%BB%E6%B2%A1%E8%80%85%E6%85%B0%E9%9C%8A%E7%A2%91%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%AD%E5%B3%B6%E7%94%BA1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">原爆死没者慰霊碑</div><div class="l2" lang="ja">げんばくしぼつしゃいれいひ</div><div class="l3">Cenotaph for the A-bomb Victims</div><div class="l4" lang="ja">広島市<br>広島県広島市中区中島町1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Центральный памятник жертвам атомной бомбардировки Хиросимы.</p><p><b>Главное</b>Каменный ларец со списками имён под защитной аркой.</p><p><b>Не пропустите</b>Atomic Bomb Dome в просвете арки.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Каменный ларец — под аркой, за местом возложения цветов.</li><li>Надпись с обещанием не повторять трагедию — на передней стороне ларца.</li><li>Купол — в просвете арки по центральной оси.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Встаньте так, чтобы через арку был виден Atomic Bomb Dome — это один из главных символических ракурсов Хиросимы.</li><li>Пропускайте людей, подошедших помолиться или возложить цветы; не занимайте центральную точку надолго.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Арка кажется простой, но её форма меняет восприятие всего пейзажа: взгляд проходит над каменным ларцом к воде, огню и далёкому куполу. Кэндзо Тангэ придал памятнику очертания древнего дома, чтобы символически защитить души погибших от дождя.</p><div class="sh"><span class="cap">Имена под аркой</span></div><p>Памятник открыт 6 августа 1952 года. Его официальное название — «Мемориальный памятник Хиросиме, городу мира». В ларце хранятся списки умерших вследствие бомбардировки независимо от гражданства; они пополняются по заявлениям близких. Это кенотаф — символическое место памяти, а не могила с останками.</p><div class="sh"><span class="cap">Слова обещания</span></div><p>Надпись выражает пожелание покоя погибшим и обещание не повторять совершённого зла. У памятника важно не только прочитать текст, но и заметить его положение: имена находятся под защитой, а перед посетителем раскрывается пространство города, продолжающего жить.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1952</b> — 6 августа открыт кенотаф.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d10-museum-user-building.jpg" alt="Приподнятый главный корпус Музея мира в Хиросиме, фонтан перед ним и парк позади" loading="lazy" decoding="async"></div><div class="vt sm">広島平和記念資料館</div><div class="plate"><div class="cap">Остановка 6 из 9</div><div class="t">9:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Хиросима · музей</span></div><h2 class="nm2">Музей мира в Хиросиме</h2><div class="jp2">広島平和記念資料館</div><p class="ann">Личные вещи, фотографии и свидетельства возвращают за общими историческими словами конкретные имена и повседневные судьбы.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%BA%83%E5%B3%B6%E5%B9%B3%E5%92%8C%E8%A8%98%E5%BF%B5%E8%B3%87%E6%96%99%E9%A4%A8%20%E3%80%92730-0811%20%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%AD%E5%B3%B6%E7%94%BA1-2" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">広島平和記念資料館</div><div class="l2" lang="ja">ひろしまへいわきねんしりょうかん</div><div class="l3">Hiroshima Peace Memorial Museum</div><div class="l4" lang="ja">広島市<br>〒730-0811 広島県広島市中区中島町1-2</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">7:30–19:00</div></div><div><div class="k">Стоимость</div><div class="v">¥200</div></div><div><div class="k">Последний вход</div><div class="v">18:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Музей о бомбардировке Хиросимы и её последствиях.</p><p><b>Главное</b>Личные вещи и истории людей, переживших катастрофу.</p><p><b>Не пропустите</b>Подписи с именами и обстоятельствами судьбы владельцев вещей.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Личные вещи — в основной экспозиции о жертвах бомбардировки.</li><li>Фотографии и документы — рядом с рассказами о событиях и последствиях.</li><li>Открытое пространство под главным корпусом — снаружи здания.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Читайте подписи к отдельным вещам: имя и история владельца раскрывают смысл экспоната.</li><li>Говорите тихо, не касайтесь экспонатов и витрин.</li><li>Если экспозиция даётся тяжело, сделайте паузу; проходить каждый стенд одинаково подробно необязательно.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В музее масштаб катастрофы раскрывается через вещи, которыми пользовались конкретные люди. Предмет одежды или домашняя вещь получают иной смысл рядом с именем владельца и рассказом семьи. Именно поэтому подписи здесь не менее важны, чем сами экспонаты.</p><div class="sh"><span class="cap">Что собирает музей</span></div><p>Коллекция включает вещи пострадавших, фотографии и документы о бомбардировке и её последствиях. Другие материалы объясняют Хиросиму до и после 6 августа и историю ядерного века. Рассказ помогает связать увиденные утром мемориалы с человеческими судьбами.</p><div class="sh"><span class="cap">Здание послевоенного города</span></div><p>Музей открылся 24 августа 1955 года. Приподнятый главный корпус относится к ансамблю, спроектированному Кэндзо Тангэ: пространство под зданием сохраняет ощущение открытого парка. В 2006 году главный корпус получил статус важного культурного достояния Японии. Само здание стало частью истории послевоенного понимания памяти.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1955</b> — 24 августа открыт музей.</li><li><b>2006</b> — главный корпус признан важным культурным достоянием.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → Химедзи</div><p>12:00 — синкансэн в Химедзи.</p></div></div>
+<article class="stop" id="d10-s07"><div class="hero"><div class="photo"><img src="../assets/photos/d10-himeji-user-castle.jpg" alt="Белый главный донжон замка Химедзи и связанные с ним малые башни над каменными основаниями" loading="lazy" style="object-position:right top" decoding="async"></div><div class="vt">姫路城</div><div class="plate"><div class="cap">Остановка 7 из 9</div><div class="t">13:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Химедзи · замок</span></div><h2 class="nm2">Замок Химедзи</h2><div class="jp2">姫路城</div><p class="ann">За белыми стенами и ярусами крыш скрывается деревянная крепость: повороты подхода и узкие проёмы объясняют её оборонительное устройство.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A7%AB%E8%B7%AF%E5%9F%8E%20%E3%80%92670-0012%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%A7%AB%E8%B7%AF%E5%B8%82%E6%9C%AC%E7%94%BA68" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">姫路城</div><div class="l2" lang="ja">ひめじじょう</div><div class="l3">Himeji Castle</div><div class="l4" lang="ja">姫路市<br>〒670-0012 兵庫県姫路市本町68</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">¥2 500</div></div><div><div class="k">Последний вход</div><div class="v">16:00</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Сохранившийся замковый ансамбль начала XVII века.</p><p><b>Главное</b>Главный донжон и система связанных с ним башен.</p><p><b>Не пропустите</b>Разницу между белым фасадом и деревянным интерьером.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Белую штукатурку — на стенах и выступающих частях ансамбля.</li><li>Связанные башни — вокруг главного донжона.</li><li>Узкие оборонительные проёмы — в стенах по пути осмотра.</li><li>Массивные деревянные элементы — внутри доступных помещений донжона.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Открывается в 9. До открытия можно спокойно пройти по Otemae-dori к замку и сделать фотографии.</li><li>Эта заметка относится к раннему приезду; в вашем плане посещение остаётся в 13:10.</li><li>Внутри есть крутые узкие лестницы; держитесь за поручни и не останавливайтесь на ступенях ради кадра.</li><li>Для замка и Коко-эн есть общий взрослый билет за ¥2 600; сохраните его до входа в сад.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Издали замок выглядит почти лёгким благодаря белым стенам и наслоению крыш. Вблизи впечатление меняется: каменные основания, узкие проходы и повороты показывают крепость, рассчитанную на защиту. Внутри доступных помещений главным становится дерево — опоры, балки и лестницы.</p><div class="sh"><span class="cap">Крепость Икэды Тэрумасы</span></div><p>После битвы при Сэкигахаре владельцем Химедзи в 1600 году стал Икэда Тэрумаса. Он начал большую перестройку в 1601 году; нынешний комплекс донжонов завершили в 1609-м. Главная башня соединена переходами с малыми: это целый узел обороны, который лучше рассматривать как взаимосвязанное сооружение.</p><div class="sh"><span class="cap">Сохранившаяся архитектура</span></div><p>За привычным прозвищем «Замок белой цапли» стоит реальный строительный материал — белая штукатурка. Она объединяет здания в один силуэт. В 1993 году ансамбль вошёл в список Всемирного наследия ЮНЕСКО. Его ценность раскрывают и общий вид снаружи, и сохранившаяся деревянная конструкция. Не все части комплекса доступны постоянно: следуйте открытому маршруту осмотра.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1601–1609</b> — перестройка при Икэде Тэрумасе создаёт нынешний комплекс донжонов.</li><li><b>1993</b> — замок включён в список Всемирного наследия ЮНЕСКО.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d10-s08"><div class="hero"><div class="photo"><img src="../assets/photos/d10-kokoen-user-pond.jpg" alt="Пруд с карпами, камнями, арочным мостиком и садовыми посадками в Коко-эн" loading="lazy" decoding="async"></div><div class="vt">好古園</div><div class="plate"><div class="cap">Остановка 8 из 9</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Химедзи · японский сад</span></div><h2 class="nm2">Сад Коко-эн</h2><div class="jp2">好古園</div><p class="ann">За воротами и глинобитными стенами сменяют друг друга девять садов: вода, камни и деревянные галереи задают более камерный масштаб после замка.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A5%BD%E5%8F%A4%E5%9C%92%20%E3%80%92670-0012%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%A7%AB%E8%B7%AF%E5%B8%82%E6%9C%AC%E7%94%BA68" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">好古園</div><div class="l2" lang="ja">こうこえん</div><div class="l3">Koko-en Garden</div><div class="l4" lang="ja">姫路市<br>〒670-0012 兵庫県姫路市本町68</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">¥400</div></div><div><div class="k">Последний вход</div><div class="v">16:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Современный комплекс японских садов на месте западных замковых усадеб.</p><p><b>Главное</b>Девять разных пространств с прудами, ручьями и посадками.</p><p><b>Не пропустите</b>Пруд в саду бывшей господской резиденции.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Большой пруд — в саду господской резиденции, 御屋敷の庭.</li><li>Крытую деревянную галерею — между Кассуй-кэн и Тёон-сай.</li><li>Ворота и стены с черепицей — между отдельными садами.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Если времени мало — не пытайтесь одинаково подробно смотреть все 9 садов, сосредоточьтесь на красивейших участках с прудами.</li><li>Оставайтесь на дорожках: газоны, мох и края воды не предназначены для прохода.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Коко-эн вид раскрывается порциями. Стена закрывает соседний участок, ворота дают новую рамку, а за поворотом меняется положение воды и деревьев. Большой пруд у господской резиденции позволяет увидеть этот принцип без необходимости одинаково подробно обходить все девять садов.</p><div class="sh"><span class="cap">Новый сад на историческом месте</span></div><p>Комплекс открылся 29 апреля 1992 года. Перед строительством археологи исследовали бывшие усадебные участки и проходы у западной стороны замка. Найденную планировку использовали при создании отдельных садов. Поэтому историческая основа территории и нынешнее садовое оформление относятся к разным временам.</p><div class="sh"><span class="cap">Стены, вода и галереи</span></div><p>Сады различаются размером и характером посадок, но их объединяют стены, ворота и вода. Крытая галерея связывает Кассуй-кэн и Тёон-сай, предлагая вид на пруд с другого уровня. В мае основное впечатление дают зелень и отражения; осенняя окраска не относится к вашему времени поездки.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1992</b> — 29 апреля открыт комплекс Коко-эн.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → Киото</div><p>16:00 — едем в Киото.</p></div></div>
+<article class="stop" id="d10-s09"><div class="hero"><div class="photo"><img src="../assets/photos/d10-yasaka-user-evening.jpg" alt="Пагода Ясака над традиционной улицей Хигасиямы с освещёнными витринами вечером" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">八坂の塔</div><div class="plate"><div class="cap">Остановка 9 из 9</div><div class="t">19:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Киото · вечерняя прогулка</span></div><h2 class="nm2">Вечер у пагоды Ясака</h2><div class="jp2">八坂の塔・東山・祇園</div><p class="ann">Пагода поднимается над невысокими домами Хигасиямы; прогулка продолжается по каменным склонам и улицам Гиона у Сиракавы.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B3%95%E8%A6%B3%E5%AF%BA%20%E5%85%AB%E5%9D%82%E3%81%AE%E5%A1%94%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E6%9D%B1%E5%B1%B1%E5%8C%BA%E5%85%AB%E5%9D%82%E4%B8%8A%E7%94%BA388%EF%BC%88%E6%B3%95%E8%A6%B3%E5%AF%BA%E3%83%BB%E5%85%AB%E5%9D%82%E3%81%AE%E5%A1%94%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">八坂の塔・東山・祇園</div><div class="l2" lang="ja">やさかのとう・ひがしやま・ぎおん</div><div class="l3">Yasaka Pagoda / Higashiyama / Gion</div><div class="l4" lang="ja">京都市<br>京都府京都市東山区八坂上町388（法観寺・八坂の塔）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Вечерний маршрут по улицам Хигасиямы и Гиона.</p><p><b>Главное</b>Пагода Ясака, Нинэн-дзака, Саннэн-дзака, Ханамикодзи и Сиракава.</p><p><b>Не пропустите</b>Силуэт пагоды над деревянными фасадами.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Пагоду Ясака — над крышами у Хокан-дзи.</li><li>Каменные ступени и невысокие фасады — на Нинэн-дзака и Саннэн-дзака.</li><li>Деревянные фасады чайных домов — на Ханамикодзи.</li><li>Воду и прибрежные дома — вдоль Сиракавы в Гионе.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Hōkan-ji, Ninenzaka, Sannenzaka, вечерние улочки Higashiyama.</li><li>💡 Hanamikoji, Shirakawa, традиционные улочки и вечерняя атмосфера.</li><li>В 19:00 пагоду рассматривайте с улицы; посещение её интерьера в вечернюю прогулку не включено.</li><li>Соблюдайте указатели о частных проходах и запрете съёмки. Не заходите в закрытые переулки и не фотографируйте майко и гэйко без разрешения.</li><li>На ступенях и у дверей оставляйте свободный проход; вечером говорите тише рядом с жилыми домами.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Пагода Ясака работает как ориентир среди невысокой застройки: пять ярусов крыш видны над улицей, а при движении их обрамляют разные фасады. Здесь интересно смотреть не только на башню, но и на то, как она включена в повседневный квартал.</p><div class="sh"><span class="cap">Хокан-дзи и пагода</span></div><p>Ясака-но-то — разговорное название пятиярусной пагоды храма Хокан-дзи. Нынешняя башня восстановлена в 1440 году при сёгуне Асикаге Ёсинори. Она гораздо старше окружающих современных заведений, но продолжает определять силуэт района. Вечерний наружный осмотр позволяет увидеть эту связь без посещения храма изнутри.</p><div class="sh"><span class="cap">Склоны Хигасиямы</span></div><p>Нинэн-дзака и Саннэн-дзака — улицы со ступенями, каменным покрытием и невысокими домами. Их вид меняется с закрытием лавок: торговые вывески уступают внимание линиям крыш, дверям и решёткам. Ваша прогулка посвящена улицам; конкретный график магазинов не распространяется на весь район.</p><div class="sh"><span class="cap">Ханамикодзи и Сиракава</span></div><p>В Гионе Ханамикодзи показывает улицу чайных домов, а Сиракава добавляет воду к городскому пейзажу. Гэйко — киотское название профессиональных исполнительниц традиционных искусств, майко — их ученицы. Это рабочий и жилой район: встреча с ними не является запланированным представлением. Оставайтесь на разрешённых проходах и следуйте ограничениям съёмки на месте.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1440</b> — восстановлена нынешняя пагода Хокан-дзи.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-10 END -->
+</body></html>

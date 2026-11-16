@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 4 · Такатихо · 14 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-04 START -->
+<section class="day" id="day-04"><div class="photo cv"><img src="../assets/photos/takachiho-cover.jpg" alt="Водопад Манай и мост над ущельем Такатихо" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 4 · пятница, 14 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Такатихо</h1><div class="cjp">高千穂</div><p class="lead">Лесная лестница Камисикими, вулканическое ущелье и открытый поезд над долиной. Затем — места мифа об Аматэрасу и вечерняя кагура.</p></div><section class="in plan" id="d04-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Шесть остановок: от лесного святилища до вечерней кагуры.</p><div class="rows"><div class="row"><div class="tm">7:35</div><div class="tx"><div class="nm">Быть у места отправления</div><div class="ch">🚶 Сбор · <a href="https://www.klook.com/activity/129204-takachiho-shrine-takachiho-gorge-amanoiwato-shrine-one-day-tour/" target="_blank" rel="noopener">Тур на Klook ↗</a></div></div></div><a class="row" href="#d04-s01"><div class="tm">10:20</div><div class="tx"><div class="nm">Камисикими Куманоимасу</div><div class="jp">上色見熊野座神社</div><div class="ch">Лестница, тории и каменные фонари</div></div><div class="ar">›</div></a><a class="row" href="#d04-s02"><div class="tm">11:50</div><div class="tx"><div class="nm">Ущелье Такатихо</div><div class="jp">高千穂峡</div><div class="ch">Водопад Манай и вулканические стены</div></div><div class="ar">›</div></a><a class="row" href="#d04-s03"><div class="tm">14:30</div><div class="tx"><div class="nm">Железная дорога Аматэрасу</div><div class="jp">高千穂あまてらす鉄道</div><div class="ch">Открытый поезд над горной долиной</div></div><div class="ar">›</div></a><a class="row" href="#d04-s04"><div class="tm">16:00</div><div class="tx"><div class="nm">Святилище Ама-но-Ивато</div><div class="jp">天岩戸神社 西本宮</div><div class="ch">Святилище мифа об Аматэрасу</div></div><div class="ar">›</div></a><a class="row" href="#d04-s05"><div class="tm">16:30</div><div class="tx"><div class="nm">Амано-Ясугавара</div><div class="jp">天安河原</div><div class="ch">Грот, тории и каменные башенки</div></div><div class="ar">›</div></a><a class="row" href="#d04-s06"><div class="tm">20:00</div><div class="tx"><div class="nm">Такатихо-но-Ёкагура</div><div class="jp">高千穂神楽</div><div class="ch">Миф о небесной пещере в танце</div></div><div class="ar">›</div></a></div></section><article class="stop" id="d04-s01"><div class="hero"><div class="photo"><img src="../assets/photos/kamishikimi-shrine.jpg" alt="Деревянное здание Камисикими Куманоимасу среди леса" loading="lazy" decoding="async"></div><div class="vt sm">上色見熊野座神社</div><div class="plate"><div class="cap">Остановка 1 из 6</div><div class="t">10:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Такамори · святилище</span></div><h2 class="nm2">Камисикими Куманоимасу</h2><div class="jp2">上色見熊野座神社</div><p class="ann">Каменная лестница поднимается между стволами и покрытыми мхом фонарями: лес постепенно скрывает вход, оставляя впереди тории и святилище на склоне.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E8%89%B2%E8%A6%8B%E7%86%8A%E9%87%8E%E5%BA%A7%E7%A5%9E%E7%A4%BE%20%E7%86%8A%E6%9C%AC%E7%9C%8C%E9%98%BF%E8%98%87%E9%83%A1%E9%AB%98%E6%A3%AE%E7%94%BA%E4%B8%8A%E8%89%B2%E8%A6%8B2619" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">上色見熊野座神社</div><div class="l2" lang="ja">かみしきみくまのいますじんじゃ</div><div class="l3">Kamishikimi Kumanoimasu Shrine</div><div class="l4" lang="ja">高森町<br>熊本県阿蘇郡高森町上色見2619</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Синтоистское святилище в лесу у Асо.</p><p><b>Главное</b>Длинная каменная лестница с рядами фонарей.</p><p><b>Не пропустите</b>Вид снизу вверх через тории.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Каменные фонари — по обеим сторонам лестницы.</li><li>Тории — над линией подъёма.</li><li>Мох на камне — вдоль тенистого подхода.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>📸 Лучшие кадры — снизу, когда тории и лестница уходят вверх.</li><li>Не перекрывайте ступени ради фотографии.</li><li>Мокрые камни скользят; держитесь обозначенной тропы.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Подъём к Камисикими Куманоимасу строится на повторении: ступени, фонарь, ствол, ещё один фонарь. Благодаря этому даже небольшое деревянное здание наверху воспринимается как завершение длинного перехода из повседневного пространства в священное. Тории обозначают эту границу; каменные фонари сопровождают путь к месту молитвы.</p><p>Святилище связано с почитанием Идзанаги и Идзанами и местной традицией Кумано. Выше главного здания находится скала Угэтоива со сквозным отверстием, которому предание придаёт смысл преодоления трудностей. Она помогает понять местный культ природных форм, но отдельный подъём к скале в ваш план не добавлен.</p></div><div class="leg"><div class="cap">По преданию</div><p>Отверстие в Угэтоива объясняют побегом демона, пробившего камень. Это местное предание, а не описание происхождения породы.</p></div></details></div></div></div></article>
+<article class="stop" id="d04-s02"><div class="hero"><div class="photo"><img src="../assets/photos/takachiho-gorge.jpg" alt="Водопад Манай и каменные стены ущелья Такатихо" loading="lazy" decoding="async"></div><div class="vt">高千穂峡</div><div class="plate"><div class="cap">Остановка 2 из 6</div><div class="t">11:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Такатихо · ущелье</span></div><h2 class="nm2">Ущелье Такатихо</h2><div class="jp2">高千穂峡</div><p class="ann">Река Гокасэ проходит между стенами вулканического камня, а водопад Манай падает в узкую зелёную чашу под прогулочной дорожкой.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%8D%83%E7%A9%82%E5%B3%A1%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%95%E5%BE%A1%E5%A1%A9%E4%BA%95" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">高千穂峡</div><div class="l2" lang="ja">たかちほきょう</div><div class="l3">Takachiho Gorge</div><div class="l4" lang="ja">高千穂町<br>宮崎県西臼杵郡高千穂町三田井御塩井</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Ущелье реки Гокасэ в вулканических породах.</p><p><b>Главное</b>Водопад Манай и стены со столбчатой отдельностью.</p><p><b>Не пропустите</b>Изгиб каменных колонн над водой.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Водопад Манай — со смотровой площадки у ущелья.</li><li>Каменные столбы — в стенах каньона.</li><li>Мост над рекой — рядом с прогулочной частью.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Тур предоставляет шаттл, который сокращает обратный подъём.</li><li>После этого прощаетесь с группой.</li><li>Оставайтесь на открытых участках дорожки и следуйте ограждениям.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Такатихо вода и камень показывают разные этапы истории одного ландшафта. Сначала раскалённые продукты извержений Асо заполнили долину. При остывании толща растрескалась на колонны — так возникла столбчатая отдельность. Затем река прорезала породу, обнажив её внутреннюю структуру. Изгибы колонн видны прямо со стороны прогулочной дорожки.</p><p>Водопад Манай — наиболее узнаваемая часть ущелья: струя падает с боковой стены в реку, а не преграждает ей путь поперёк. В 1934 году ущелье получило государственный статус живописного места и природного памятника. В вашем плане предусмотрен осмотр ущелья; лодочная прогулка отдельным пунктом не задана. Адресный ориентир — район Осиои у основной прогулочной части.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1934</b> — ущелье признано государственным живописным местом и природным памятником.</li></ul></details></div></div></div></article>
+<article class="stop" id="d04-s03"><div class="hero"><div class="photo"><img src="../assets/photos/amaterasu-railway.jpg" alt="Туристический поезд железной дороги Аматэрасу рядом с бывшей станцией" loading="lazy" decoding="async"></div><div class="vt sm">高千穂あまてらす鉄道</div><div class="plate"><div class="cap">Остановка 3 из 6</div><div class="t">14:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Такатихо · железная дорога</span></div><h2 class="nm2">Железная дорога Аматэрасу</h2><div class="jp2">高千穂あまてらす鉄道</div><p class="ann">Открытая пассажирская платформа идёт по бывшей железнодорожной линии к высокому мосту: за краем вагона видны горы и сельские долины Такатихо.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%8D%83%E7%A9%82%E3%81%82%E3%81%BE%E3%81%A6%E3%82%89%E3%81%99%E9%89%84%E9%81%93%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%951425-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">高千穂あまてらす鉄道</div><div class="l2" lang="ja">たかちほあまてらすてつどう</div><div class="l3">Takachiho Amaterasu Railway</div><div class="l4" lang="ja">高千穂町<br>宮崎県西臼杵郡高千穂町三田井1425-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:40–15:40</div></div><div><div class="k">Стоимость</div><div class="v">¥2 400</div></div><div><div class="k">Последний вход</div><div class="v">15:25</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Туристическая поездка по части бывшей линии Такатихо.</p><p><b>Главное</b>Открытый вагон и вид с высокого железнодорожного моста.</p><p><b>Не пропустите</b>Старую станцию, с которой начинается маршрут.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Старое вокзальное здание — у кассы.</li><li>Открытые вагоны — на платформе.</li><li>Высокий мост — на маршруте при разрешённом движении.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Покупайте билет в кассе на месте: индивидуальной предварительной брони нет.</li><li>В дождь или сильный ветер движение могут остановить.</li><li>14:30 — время остановки по вашему плану; доступный рейс выбирается в кассе.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Аматэрасу сохраняет железную дорогу через её использование: посетитель видит рельсы, тоннели и мост с открытой платформы. Это туристический аттракцион на сохранившемся участке, а не обычный поезд, связывающий города. Самая заметная точка — мост высотой около 105 метров, с которого открываются горные долины.</p><p>В сентябре 2005 года тайфун тяжело повредил линию Такатихо. Компания Аматэрасу была создана в 2008 году, чтобы дать части инфраструктуры новую жизнь. Старый вокзал остался отправной точкой, а лёгкие туристические составы заменили регулярные пассажирские поезда. Поэтому поездка рассказывает не только о пейзаже, но и о местной попытке сохранить связь с железнодорожным прошлым.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>2005</b> — тайфун повреждает линию Такатихо.</li><li><b>2008</b> — создаётся компания Аматэрасу.</li></ul></details></div></div></div></article>
+<article class="stop" id="d04-s04"><div class="hero"><div class="photo"><img src="../assets/photos/amano-iwato-daylight.jpg" alt="Территория святилища Ама-но-Ивато" loading="lazy" decoding="async"></div><div class="vt sm">天岩戸神社 西本宮</div><div class="plate"><div class="cap">Остановка 4 из 6</div><div class="t">16:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Такатихо · святилище</span></div><h2 class="nm2">Святилище Ама-но-Ивато</h2><div class="jp2">天岩戸神社 西本宮</div><p class="ann">Деревянные постройки западного святилища обращены к речному обрыву, за которым почитают пещеру, связанную с мифом об исчезновении солнечного света.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E5%B2%A9%E6%88%B8%E7%A5%9E%E7%A4%BE%20%E8%A5%BF%E6%9C%AC%E5%AE%AE%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%B2%A9%E6%88%B81073-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">天岩戸神社 西本宮</div><div class="l2" lang="ja">あまのいわとじんじゃ にしほんぐう</div><div class="l3">Amano-Iwato Shrine, Nishi Hongu</div><div class="l4" lang="ja">高千穂町<br>宮崎県西臼杵郡高千穂町岩戸1073-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Святилище, посвящённое мифу о пещере Аматэрасу.</p><p><b>Главное</b>Западное святилище и почитаемая пещера за рекой.</p><p><b>Не пропустите</b>Разницу между священной пещерой и гротом Амано-Ясугавара.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Молитвенный зал — внутри западного комплекса.</li><li>Изображения героев мифа — на территории святилища.</li><li>Место сбора для показа пещеры — по указателям при святилище.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>К месту обзора священной пещеры проводят со служителем святилища.</li><li>Соблюдайте запрет на съёмку там, где он обозначен.</li><li>Не пытайтесь спускаться к почитаемой пещере.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Ама-но-Ивато устроено вокруг природного священного объекта. Главная пещера находится на противоположном склоне ущелья; к ней не подходят как к туристическому гроту. Из западного святилища её показывают с отдельного места в сопровождении служителя. Этот способ посещения сохраняет дистанцию между наблюдателем и почитаемым пространством.</p><p>Название отсылает к одному из центральных эпизодов японской мифологии, записанному в «Кодзики» в 712 году и «Нихон сёки» в 720-м. Местная традиция связывает литературный сюжет с конкретным ущельем. Даты записей относятся к текстам, а не доказывают основание святилища в эти годы.</p></div><div class="leg"><div class="cap">По преданию</div><p>Аматэрасу скрылась за каменной дверью, и мир погрузился во тьму. Боги собрались, чтобы выманить её наружу; танец Амэ-но-Удзумэ и сила Тадзикарао помогли вернуть свет.</p></div></details></div></div></div></article>
+<article class="stop" id="d04-s05"><div class="hero"><div class="photo"><img src="../assets/photos/amano-yasukawara-grotto.jpg" alt="Тории и каменные башенки под сводом Амано-Ясугавара" loading="lazy" decoding="async"></div><div class="vt">天安河原</div><div class="plate"><div class="cap">Остановка 5 из 6</div><div class="t">16:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Такатихо · святилище</span></div><h2 class="nm2">Амано-Ясугавара</h2><div class="jp2">天安河原</div><p class="ann">Под широким каменным навесом у реки стоят тории и маленькое святилище; вокруг теснятся сложенные посетителями башенки из камней.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E5%AE%89%E6%B2%B3%E5%8E%9F%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E5%B2%A9%E6%88%B8" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">天安河原</div><div class="l2" lang="ja">あまのやすかわら</div><div class="l3">Amano-Yasukawara</div><div class="l4" lang="ja">高千穂町<br>宮崎県西臼杵郡高千穂町岩戸</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Почитаемый грот у реки Ивато.</p><p><b>Главное</b>Тории под каменным сводом и речное окружение.</p><p><b>Не пропустите</b>Вид из грота наружу, к свету и воде.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Тории — под большим скальным навесом.</li><li>Каменные башенки — вокруг святилища.</li><li>Реку Ивато — рядом с подходом к гроту.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>На влажной тропе и камнях у воды идите осторожно.</li><li>Не разбирайте чужие каменные башенки.</li><li>Адрес относится к местности Ивато; ориентируйтесь на название 天安河原.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У Амано-Ясугавара нет отдельного парадного двора: святилище помещено под естественным каменным навесом рядом с рекой. При входе особенно заметен контраст тёмного потолка и светлого проёма. Каменные башенки отражают современную практику личных молитв; их множество не означает, что каждый камень лежит здесь с древности.</p><p>Это другой объект, чем почитаемая пещера Ама-но-Ивато. К гроту Амано-Ясугавара посетители подходят по речной тропе, тогда как пещеру Аматэрасу рассматривают издалека. Оба места объединяет один миф, но их роль в нём различается.</p></div><div class="leg"><div class="cap">По преданию</div><p>Когда Аматэрасу скрылась в пещере, боги собрались у этой реки, чтобы обсудить возвращение света. Грот называют местом их совета.</p></div></details></div></div></div></article>
+<article class="stop" id="d04-s06"><div class="hero"><div class="photo"><img src="../assets/photos/takachiho-kagura.jpg" alt="Исполнители кагуры в масках на представлении в Такатихо" loading="lazy" decoding="async"></div><div class="vt">高千穂神楽</div><div class="plate"><div class="cap">Остановка 6 из 6</div><div class="t">20:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Такатихо · представление</span></div><h2 class="nm2">Такатихо-но-Ёкагура</h2><div class="jp2">高千穂神楽</div><p class="ann">В зале святилища маски, медленные жесты и ударные превращают знакомый сюжет о небесной пещере в живое действие рядом со зрителями.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%8D%83%E7%A9%82%E7%A5%9E%E6%A5%BD%20%E5%AE%AE%E5%B4%8E%E7%9C%8C%E8%A5%BF%E8%87%BC%E6%9D%B5%E9%83%A1%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%89%E7%94%B0%E4%BA%951037%20%E9%AB%98%E5%8D%83%E7%A9%82%E7%A5%9E%E7%A4%BE%20%E7%A5%9E%E6%A5%BD%E6%AE%BF" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">高千穂神楽</div><div class="l2" lang="ja">たかちほかぐら</div><div class="l3">Takachiho Kagura at Takachiho Shrine</div><div class="l4" lang="ja">高千穂町<br>宮崎県西臼杵郡高千穂町三田井1037 高千穂神社 神楽殿</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">20:00–21:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 000</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Вечернее представление кагуры в святилище Такатихо.</p><p><b>Главное</b>Четыре танца из местного цикла тридцати трёх.</p><p><b>Не пропустите</b>Как маска и движение передают характер божества.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Маски Тадзикарао и Удзумэ — в танцах о небесной пещере.</li><li>Жест открытия каменной двери — в эпизоде Тотори.</li><li>Комический семейный эпизод — в заключительном танце Госинтай.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Забронируйте место через систему организатора.</li><li>Следуйте указаниям зала по размещению и съёмке.</li><li>Смотрите на кисти рук и наклон маски: небольшое движение меняет выражение персонажа.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Кагура — ритуальное представление для божеств, в котором музыка, маска и танец рассказывают миф. В Такатихо зритель сидит близко к исполнителям: характер передаётся не сменой декораций, а темпом шага, поворотом головы и движением рук. После посещения Ама-но-Ивато узнаваемыми становятся персонажи, возвращающие солнце из пещеры.</p><p>Ежевечерняя программа в святилище показывает четыре танца из цикла тридцати трёх. Её следует отличать от деревенской ночной кагуры, которую общины исполняют осенью и зимой на протяжении всей ночи. Танцы Тадзикарао, Удзумэ и Тотори связаны с открытием небесной двери; Госинтай переводит рассказ к теме семьи и продолжения жизни. В 1978 году традиция ночной кагуры Такатихо получила статус важного нематериального народного культурного достояния Японии.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1978</b> — традиция ночной кагуры Такатихо получает государственное признание.</li></ul></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-04 END -->
+</body></html>

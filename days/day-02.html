@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 2 · Северная Окинава · 12 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-02 START -->
+<section class="day" id="day-02"><div class="photo cv"><img src="../assets/photos/okinawa-fukugi-cover.jpg" alt="Деревья фукуги и дорога в деревне Бисэ" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 2 · среда, 12 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Северная Окинава</h1><div class="cjp">沖縄本島北部</div><p class="lead">От аквариума с китовой акулой — к белому пляжу, тенистым аллеям Бисэ и рифовому мысу. Вечером — огни American Village и Depot Island.</p></div>
+<section class="in plan" id="d02-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Пять остановок: Мотобу и Бисэ днём, Михама вечером.</p><div class="rows"><a class="row" href="#d02-s01"><div class="tm">12:30</div><div class="tx"><div class="nm">Океанариум Тюрауми</div><div class="jp">沖縄美ら海水族館</div><div class="ch">Китовая акула в синеве Куросио</div></div><div class="ar">›</div></a><a class="row" href="#d02-s02"><div class="tm">15:15</div><div class="tx"><div class="nm">Эмеральд-Бич</div><div class="jp">エメラルドビーチ</div><div class="ch">Белый песок и лагуна у парка</div></div><div class="ar">›</div></a><a class="row" href="#d02-s03"><div class="tm">15:50</div><div class="tx"><div class="nm">Аллеи фукуги в Бисэ</div><div class="jp">備瀬のフクギ並木</div><div class="ch">Живые стены вокруг деревенских домов</div></div><div class="ar">›</div></a><a class="row" href="#d02-s04"><div class="tm">16:10</div><div class="tx"><div class="nm">Мыс Бисэдзаки</div><div class="jp">備瀬崎</div><div class="ch">Рифовые лужи на краю деревни</div></div><div class="ar">›</div></a><a class="row" href="#d02-s05"><div class="tm">19:00</div><div class="tx"><div class="nm">American Village и Depot Island</div><div class="jp">美浜アメリカンビレッジ・デポアイランド</div><div class="ch">Цветные фасады и вечер у моря</div></div><div class="ar">›</div></a></div></section><article class="stop" id="d02-s01">
+<div class="hero"><div class="photo"><img src="../assets/photos/churaumi-kuroshio.jpg" alt="Китовая акула и скаты перед большим окном аквариума «Море Куросио»" loading="lazy" decoding="async"></div><div class="vt">美ら海水族館</div><div class="plate"><div class="cap">Остановка 1 из 5</div><div class="t">12:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Мотобу · океанариум</span></div><h2 class="nm2">Океанариум Тюрауми</h2><div class="jp2">沖縄美ら海水族館</div><p class="ann">Китовая акула проходит перед огромным окном, скаты парят над рыбами, а дальше начинается мир океанских глубин.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8%20%E3%80%92905-0206%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%9B%BD%E9%A0%AD%E9%83%A1%E6%9C%AC%E9%83%A8%E7%94%BA%E5%AD%97%E7%9F%B3%E5%B7%9D424" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">沖縄美ら海水族館</div><div class="l2" lang="ja">おきなわちゅらうみすいぞくかん</div><div class="l3">Okinawa Churaumi Aquarium</div><div class="l4" lang="ja">本部町<br>〒905-0206 沖縄県国頭郡本部町字石川424</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:30–18:30</div></div><div><div class="k">Стоимость</div><div class="v">¥2 180</div></div><div><div class="k">Последний вход</div><div class="v">17:30</div></div></section><div class="strip"><div><div class="k">Объём Куросио</div><div class="v">7 500 м³</div></div><div><div class="k">Глубина</div><div class="v">10 м</div></div><div><div class="k">Открыт</div><div class="v">1 ноября 2002</div></div></div><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Океанариум о морях Окинавы: от освещённого рифа до Куросио и глубины.</p><p><b>Главное</b>Большой аквариум «Море Куросио» с китовой акулой и скатами.</p><p><b>Не пропустите</b>Разницу между рифовыми обитателями, рыбами открытой воды и глубоководными животными.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Китовая акула — за главным окном «Моря Куросио».</li><li>Скаты — в том же аквариуме, над стаями рыб.</li><li>Обитатели глубины — в заключительной части экспозиции.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Сохраните порядок залов: он раскрывает переход от рифа к открытому океану и глубине.</li><li>При съёмке уберите вспышку и не ставьте штатив: штативы внутри запрещены.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Тюрауми устроен как путешествие от берегового рифа в открытый океан и дальше, туда, куда почти не проникает солнечный свет. Вместо коллекции животных со всего света здесь показывают морскую среду Окинавы. Самая узнаваемая сцена — китовая акула перед большим окном «Моря Куросио», но смысл маршрута становится яснее, если замечать, как от зала к залу меняются освещение, формы животных и пространство вокруг них.</p><p>Название соединяет окинавское «тюра» — «красивый» и японское «уми» — «море». Нынешний океанариум открылся 1 ноября 2002 года на территории парка, выросшего из Международной океанической выставки 1975 года. Это современное продолжение истории места: после временной выставки здесь остались постоянные учреждения, посвящённые океану и природе островов.</p><div class="sh"><span class="cap">Почему здесь Куросио</span></div><p>Куросио — тёплое течение, проходящее вдоль островов Рюкю. Оно связывает прибрежные рифы с большим океаном. В одноимённом аквариуме объёмом 7 500 кубометров особенно хорошо виден масштаб пелагических рыб — тех, кто живёт в толще открытой воды. Китовая акула кажется медленной, пока рядом не оказывается человек по эту сторону стекла. Скаты движутся иначе: плавники работают широкими взмахами, почти как крылья.</p><p>Чаша имеет глубину 10 метров, ширину 35 метров и длину 27 метров. Эти числа помогают понять не только размеры сооружения, но и то, сколько свободного пространства требуется его обитателям. Состав экспозиции может меняться в зависимости от состояния животных; обещать конкретное число акул или скатов на день посещения нельзя.</p><div class="sh"><span class="cap">От рифа к глубине</span></div><p>В небольших залах полезно смотреть на детали, которые теряются у огромного окна: способ движения, окраску, положение глаз. У рифа рыбе нужны укрытия и манёвренность, в открытой воде — непрерывное движение, на глубине — другие способы ориентироваться. Так отдельные экспозиции складываются в рассказ об одном море, а не в набор независимых достопримечательностей.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1975</b> — на этом побережье проходит Международная океаническая выставка.</li><li><b>1976</b> — на её территории создаётся национальный парк.</li><li><b>2002</b> — 1 ноября открывается нынешний океанариум Тюрауми.</li></ul></details></div></div></div></article>
+<article class="stop" id="d02-s02">
+<div class="hero"><div class="photo"><img src="../assets/photos/emerald-beach.jpg" alt="Белый песок и прозрачная вода Эмеральд-Бич" loading="lazy" decoding="async"></div><div class="vt sm">エメラルドビーチ</div><div class="plate"><div class="cap">Остановка 2 из 5</div><div class="t">15:15</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Мотобу · пляж</span></div><h2 class="nm2">Эмеральд-Бич</h2><div class="jp2">エメラルドビーチ</div><p class="ann">Белый коралловый песок разделяет лагуну на три берега, а за водой виден силуэт острова Иэ.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%89%E3%83%93%E3%83%BC%E3%83%81%20%E3%80%92905-0206%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%9B%BD%E9%A0%AD%E9%83%A1%E6%9C%AC%E9%83%A8%E7%94%BA%E5%AD%97%E7%9F%B3%E5%B7%9D424%20%E6%B5%B7%E6%B4%8B%E5%8D%9A%E5%85%AC%E5%9C%92%20%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%89%E3%83%93%E3%83%BC%E3%83%81" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">エメラルドビーチ</div><div class="l2" lang="ja">えめらるどびーち</div><div class="l3">Emerald Beach</div><div class="l4" lang="ja">本部町<br>〒905-0206 沖縄県国頭郡本部町字石川424 海洋博公園 エメラルドビーチ</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:30–17:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="strip"><div><div class="k">Берегов</div><div class="v">три</div></div><div><div class="k">Среда</div><div class="v">рифовая лагуна</div></div></div><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Оборудованный пляж парка Ocean Expo внутри рифовой лагуны.</p><p><b>Главное</b>Белый песок, мелководье и вид на остров Иэ.</p><p><b>Не пропустите</b>Три части пляжа: для купания, отдыха и созерцания.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Силуэт острова Иэ — за лагуной, на горизонте.</li><li>Три участка пляжа — на схеме у входа.</li><li>Переход цвета воды — от белого песка к рифу.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Купайтесь только в открытой зоне и следуйте указаниям спасателей.</li><li>Сноркелинг на этом пляже запрещён правилами парка.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Эмеральд-Бич показывает ту же морскую среду, с которой только что знакомил океанариум, но уже с берега. Здесь важен переход цвета: почти прозрачная вода у песка постепенно становится зелёной и синей. На горизонте виден остров Иэ. Пляж расположен в рифовой лагуне и имеет необычный Y-образный план с тремя участками: «берегом игр», «берегом отдыха» и «берегом видов».</p><p>Это управляемая территория парка, а не дикий участок побережья. Песок и зоны купания обслуживаются, в сезон работают спасатели и устанавливаются защитные сети. При этом ограничения зависят от погоды и состояния моря: открытый парк не означает, что купание разрешено в любой момент.</p><div class="sh"><span class="cap">История паркового берега</span></div><p>Международная океаническая выставка 1975 года превратила это побережье в крупную общественную территорию. В августе 1976 года на её месте создали национальный парк Ocean Expo. В 2001 году Эмеральд-Бич вошёл в государственную подборку 88 мест для купания, а в 2006-м — в список ста лучших водных зон для отдыха. Эти даты относятся к признанию качества пляжа, а не к его открытию.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1975</b> — океаническая выставка формирует историю будущего парка.</li><li><b>1976</b> — в августе учреждён парк Ocean Expo.</li><li><b>2001</b> — пляж включён в подборку 88 мест для купания.</li><li><b>2006</b> — включён в подборку ста водных зон для отдыха.</li></ul></details></div></div></div></article>
+<article class="stop" id="d02-s03">
+<div class="hero"><div class="photo"><img src="../assets/photos/fukugi-tunnel.jpg" alt="Тенистая песчаная дорожка под густыми деревьями фукуги в Бисэ" loading="lazy" decoding="async"></div><div class="vt">備瀬の並木</div><div class="plate"><div class="cap">Остановка 3 из 5</div><div class="t">15:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Мотобу · деревня Бисэ</span></div><h2 class="nm2">Аллеи фукуги в Бисэ</h2><div class="jp2">備瀬のフクギ並木</div><p class="ann">Песчаные переулки проходят под сомкнутыми кронами, а за зелёными стенами продолжается повседневная жизнь приморской деревни.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%82%99%E7%80%AC%E3%81%AE%E3%83%95%E3%82%AF%E3%82%AE%E4%B8%A6%E6%9C%A8%20%E3%80%92905-0207%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%9B%BD%E9%A0%AD%E9%83%A1%E6%9C%AC%E9%83%A8%E7%94%BA%E5%82%99%E7%80%AC" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">備瀬のフクギ並木</div><div class="l2" lang="ja">びせのふくぎなみき</div><div class="l3">Bise Fukugi Tree Road</div><div class="l4" lang="ja">本部町<br>〒905-0207 沖縄県国頭郡本部町備瀬</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="strip"><div><div class="k">Старейшие деревья</div><div class="v">около 300 лет</div></div><div><div class="k">Дома в селении</div><div class="v">около 250</div></div></div><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Жилое селение с деревьями фукуги, посаженными вокруг домов против ветра.</p><p><b>Главное</b>Тенистые переулки и устройство деревни, приспособленное к тайфунам.</p><p><b>Не пропустите</b>Разницу между общественной дорожкой и входом в частный двор.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Сомкнутые кроны — над узкими переулками.</li><li>Зелёные ограды — по периметру жилых участков.</li><li>Повороты дорожек — между посадками и входами в дома.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Оставайтесь на общедоступных дорожках: дома и дворы за посадками частные.</li><li>Не загораживайте входы и не фотографируйте жителей без разрешения.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Бисэ деревья образуют стены и потолок: свет просачивается между листьями, а дорожки остаются узкими и тихими. Это не специально высаженный туристический парк. Фукуги окружают дома, защищая их от ветра, и именно эта бытовая задача создала нынешний пейзаж. В селении около 250 домов; участки и переулки складываются в регулярную сетку.</p><p>На Окинаве фукуги издавна использовали как ветрозащитные посадки. У моря эта защита особенно важна: плотные вечнозелёные кроны смягчают воздействие сильного ветра. Поэтому смотреть здесь стоит не на отдельное «знаменитое дерево», а на то, как посадки связаны с домами, поворотами дорожек и выходами к берегу.</p><div class="sh"><span class="cap">История без точной даты основания</span></div><p>Самым старым деревьям Бисэ предположительно около 300 лет. Это оценка возраста, а не доказанная дата создания всех аллей: посадки появились и обновлялись в разные периоды. Дорога, которую называют Bise Fukugi Tree Road, — часть целого жилого ландшафта. Аллеи ведут в сторону мыса Бисэдзаки, но деревня не сводится к одному прямому проходу.</p><p>Ценность места — в сохранившемся способе организации жизни на острове. Деревья здесь служат инфраструктурой: как стены или ограда, только живые. Тишина, тень и песчаные поверхности позволяют почувствовать этот масштаб лучше, чем набор исторических дат.</p></div></details></div></div></div></article>
+<article class="stop" id="d02-s04">
+<div class="hero"><div class="photo"><img src="../assets/photos/bisezaki-coast.jpg" alt="Мыс Бисэдзаки, прибрежное мелководье и островок с высоты" loading="lazy" decoding="async"></div><div class="vt">備瀬崎</div><div class="plate"><div class="cap">Остановка 4 из 5</div><div class="t">16:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Мотобу · мыс</span></div><h2 class="nm2">Мыс Бисэдзаки</h2><div class="jp2">備瀬崎</div><p class="ann">За деревенскими аллеями открывается скалистый берег: мелководье, коралловый риф и вода, меняющая рисунок вместе с приливом.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%82%99%E7%80%AC%E5%B4%8E%20%E3%80%92905-0207%20%E6%B2%96%E7%B8%84%E7%9C%8C%E5%9B%BD%E9%A0%AD%E9%83%A1%E6%9C%AC%E9%83%A8%E7%94%BA%E5%82%99%E7%80%AC639" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">備瀬崎</div><div class="l2" lang="ja">びせざき</div><div class="l3">Bisezaki / Cape Bise</div><div class="l4" lang="ja">本部町<br>〒905-0207 沖縄県国頭郡本部町備瀬639</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мыс у северного края Бисэ, окружённый рифовым мелководьем.</p><p><b>Главное</b>Береговой пейзаж и прозрачная вода среди камней.</p><p><b>Не пропустите</b>При отливе — приливные лужи, наблюдаемые с устойчивого берега.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Рифовое мелководье — перед скалистым краем берега.</li><li>Приливные лужи — между камнями, если позволяет уровень воды.</li><li>Граница суши и рифа — особенно заметна при отливе.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Для прогулки по камням нужна устойчивая обувь; мокрые поверхности могут скользить.</li><li>Наблюдайте с берега; не переходите проливы и не заходите на риф ради фотографии.</li><li>На 12 мая 2027 года прилив для вашего времени не проверен; конкретный вид мелководья не гарантируется.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Бисэдзаки — переход от защищённых деревьями переулков к открытому морю. Здесь нет большого здания или единой даты основания: главная особенность места — береговой риф и то, как он проявляется при разном уровне воды. Во время отлива между камнями остаются небольшие водоёмы, в которых можно заметить рыб, не уходя далеко от берега.</p><p>Этот участок не стоит воспринимать как продолжение оборудованного Эмеральд-Бич. Каменистое дно, прилив и течение требуют другого внимания. В 16:10 вода может закрывать те участки, которые на чужих фотографиях выглядят сухими: вид мыса на конкретный час нельзя обещать без проверенного прогноза прилива. Для вашего расписания здесь сохраняется именно остановка у мыса, без добавленной программы купания или перехода к островкам.</p></div></details></div></div></div></article>
+<article class="stop" id="d02-s05">
+<div class="hero"><div class="photo"><img src="../assets/photos/depot-island.jpg" alt="Цветные здания Depot Island и пальмы в American Village" loading="lazy" decoding="async"></div><div class="vt">美浜</div><div class="plate"><div class="cap">Остановка 5 из 5</div><div class="t">19:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Тятан · квартал Михама</span></div><h2 class="nm2">American Village и Depot Island</h2><div class="jp2">美浜アメリカンビレッジ・デポアイランド</div><p class="ann">Цветные фасады, лестницы и террасы выходят к морю, а вечером квартал меняется благодаря вывескам и подсветке.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%BE%8E%E6%B5%9C%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%93%E3%83%AC%E3%83%83%E3%82%B8%E3%83%BB%E3%83%87%E3%83%9D%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%20%E3%80%92904-0115%20%E6%B2%96%E7%B8%84%E7%9C%8C%E4%B8%AD%E9%A0%AD%E9%83%A1%E5%8C%97%E8%B0%B7%E7%94%BA%E7%BE%8E%E6%B5%9C9-1%20%E3%83%87%E3%83%9D%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">美浜アメリカンビレッジ・デポアイランド</div><div class="l2" lang="ja">みはまあめりかんびれっじ・でぽあいらんど</div><div class="l3">Mihama American Village / Depot Island</div><div class="l4" lang="ja">北谷町<br>〒904-0115 沖縄県中頭郡北谷町美浜9-1 デポアイランド</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="strip"><div><div class="k">Chohichiya</div><div class="v">корпус A · 1F</div></div><div><div class="k">Blue Seal</div><div class="v">корпус D · 2F</div></div></div><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Торгово-развлекательный квартал в Тятане; Depot Island — его приморская часть.</p><p><b>Главное</b>Вечерние улицы, подсвеченные фасады и прогулка у моря.</p><p><b>Не пропустите</b>Ваши две точки: украшения Chohichiya и мороженое Blue Seal.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Chohichiya / 長七屋 — корпус Depot Island A, первый этаж.</li><li>Blue Seal / ブルーシール — корпус D, второй этаж.</li><li>Подсвеченные фасады — на улицах и террасах приморского квартала.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Зайти в Okinawan Jewelry Chohichiya: 長七屋 北谷1号店, корпус A, 1F.</li><li>💡 Мороженое в Blue Seal: корпус D, 2F.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">American Village — не музей американской жизни и не отдельный парк с входным билетом. Это городской квартал с магазинами, ресторанами и развлечениями. Его приморская часть Depot Island устроена как открытый торговый район: переходы между зданиями, лестницы и террасы становятся частью прогулки. Вечером особенно заметна архитектура — цветные стены, вывески и освещённые детали, которые днём выглядят иначе.</p><p>Для истории этого места важна современная перестройка Михамы, а не древность. Муниципальный проект American Village развивался как часть преобразования городского побережья. В 2004 году был подготовлен итоговый отчёт о его создании. Район продолжал меняться и после этого: сегодняшняя прогулка проходит через пространства разных этапов развития, поэтому старые фотографии не всегда совпадают с нынешним видом.</p><div class="sh"><span class="cap">Depot Island: архитектура прогулки</span></div><p>Оператор описывает Depot Island как открытый торговый комплекс с пальмами, бугенвиллиями и яркими зданиями с намеренно состаренными поверхностями. Здесь нет одного обязательного ракурса. Интереснее замечать, как узкий проход раскрывается в небольшую площадь, а лестница выводит на террасу. У моря к этому добавляются горизонт и отражения света. Для вашего вечернего времени основной образ — подсвеченный квартал; закат не привязан к 19:00.</p><div class="sh"><span class="cap">Украшения и мороженое</span></div><p>Chohichiya — мастерская и магазин стеклянных украшений. В корпусе A находится филиал «Тятан № 1»: ориентир для вашей заметки Okinawan Jewelry Chohichiya. Его изделия связаны с окинавским «хотару-глас», декоративным стеклом с глубокими цветами и светящимися бликами. Серия «Нанами» обыгрывает цвета моря. Это современное украшение, а не археологический или ритуальный предмет.</p><p>Blue Seal находится в корпусе D на втором этаже. Это конкретная точка в Depot Island; в American Village есть и другие филиалы, поэтому название корпуса помогает не спутать их. Среди вкусов представлены окинавский фиолетовый батат и солёное печенье «тинсуко». Ваша заметка про мороженое сохраняется как часть этой остановки, без дополнительного времени и отдельной карточки.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>2004</b> — муниципалитет выпускает отчёт о создании American Village.</li></ul></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-02 END -->
+</body></html>

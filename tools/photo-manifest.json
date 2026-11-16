@@ -1,0 +1,130 @@
+[
+  {
+    "name": "naha-gangala-cover.jpg",
+    "source": "https://www.pakutaso.com/20170741192post-12464.html",
+    "width": 6016,
+    "height": 4016,
+    "local": "assets/photos/naha-gangala-cover.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2136
+  },
+  {
+    "name": "gyokusendo-blue-hall.jpg",
+    "source": "https://unsplash.com/photos/cave-with-calm-body-of-water-during-daytime-B587f4cdHgw",
+    "sourceImage": "https://images.unsplash.com/photo-1550992402-9b1fc58fd76d",
+    "width": 7695,
+    "height": 5130,
+    "local": "assets/photos/gyokusendo-blue-hall.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "gangala-banyan.jpg",
+    "source": "https://www.pakutaso.com/20170713192post-12465.html",
+    "width": 6016,
+    "height": 4016,
+    "local": "assets/photos/gangala-banyan.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2136
+  },
+  {
+    "name": "shuri-red-palace.jpg",
+    "source": "https://unsplash.com/s/photos/shurijo",
+    "sourceImage": "https://images.unsplash.com/photo-1718035392630-d296240940d9",
+    "width": 6000,
+    "height": 4000,
+    "local": "assets/photos/shuri-red-palace.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "kokusai-dori-street.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AKokusai%20Dori%2001.JPG",
+    "width": 2560,
+    "height": 1920,
+    "local": "assets/photos/kokusai-dori-street.jpg",
+    "outputWidth": 2560,
+    "outputHeight": 1920
+  },
+  {
+    "name": "fukushuen-garden-v2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File%3AJP%20%E6%B2%96%E7%B9%A9%20Okinawa%20%E9%82%A3%E9%9C%B8%E5%B8%82%20Naha%20City%20%E7%A6%8F%E5%B7%9E%E5%9C%92%20Fukushuen%20Garden%20%E9%8C%A6%E9%AF%89%E9%AD%9A%E6%B1%A0%20golden%20fish%20pond%20February%202026%20N13P%2026.jpg",
+    "width": 3280,
+    "height": 2464,
+    "local": "assets/photos/fukushuen-garden-v2.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2104
+  },
+  {
+    "name": "nakasu-night.jpg",
+    "source": "https://www.pakutaso.com/20200140007post-24999.html",
+    "width": 5909,
+    "height": 3939,
+    "local": "assets/photos/nakasu-night.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "takachiho-cover.jpg",
+    "source": "https://www.pakutaso.com/20200306064post-25998.html",
+    "width": 3505,
+    "height": 5258,
+    "local": "assets/photos/takachiho-cover.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 4800
+  },
+  {
+    "name": "kamishikimi-shrine.jpg",
+    "source": "https://unsplash.com/s/photos/kamishikimi",
+    "width": 3200,
+    "height": 2129,
+    "local": "assets/photos/kamishikimi-shrine.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2129
+  },
+  {
+    "name": "takachiho-gorge.jpg",
+    "source": "https://www.pakutaso.com/20200330083post-25995.html",
+    "width": 5793,
+    "height": 3862,
+    "local": "assets/photos/takachiho-gorge.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "amaterasu-railway.jpg",
+    "source": "https://www.kanko-miyazaki.jp/business/photo/1294",
+    "width": 5313,
+    "height": 3540,
+    "local": "assets/photos/amaterasu-railway.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2132
+  },
+  {
+    "name": "amano-iwato-daylight.jpg",
+    "source": "https://www.kanko-miyazaki.jp/business/photo/778",
+    "width": 6000,
+    "height": 4000,
+    "local": "assets/photos/amano-iwato-daylight.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2133
+  },
+  {
+    "name": "amano-yasukawara-grotto.jpg",
+    "source": "https://www.kanko-miyazaki.jp/business/photo/845",
+    "width": 6000,
+    "height": 4004,
+    "local": "assets/photos/amano-yasukawara-grotto.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2135
+  },
+  {
+    "name": "takachiho-kagura.jpg",
+    "source": "https://www.kanko-miyazaki.jp/business/photo/737",
+    "width": 4288,
+    "height": 2848,
+    "local": "assets/photos/takachiho-kagura.jpg",
+    "outputWidth": 3200,
+    "outputHeight": 2125
+  }
+]

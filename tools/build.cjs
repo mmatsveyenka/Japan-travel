@@ -1,0 +1,31 @@
+﻿const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),read=n=>fs.readFileSync(path.join(root,n),'utf8'),write=(n,t)=>fs.writeFileSync(path.join(root,n),t);
+const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const css=read('days/day-02.html').match(/<style>([\s\S]*?)<\/style>/)[1];
+const page=(title,body)=>`<!DOCTYPE html>\n<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>${esc(title)}</title><style>${css}</style></head><body>\n${body}\n</body></html>\n`;
+const back='<a class="back" href="../index.html#index">← Все дни</a>';
+const list=a=>`<ul>${a.map(t=>`<li>${t}</li>`).join('')}</ul>`;
+const photo=(image,alt,lazy=false)=>`<div class="photo${lazy?'':' cv'}"><img src="../assets/photos/${image}" alt="${esc(alt)}"${lazy?' loading="lazy"':''} decoding="async"></div>`;
+const types={nature:'🌿 Сад / природа',culture:'🎭 Культура',street:'🍢 Улица / рынок',shrine:'⛩ Святилище'};
+function card(s,i,total){return `<article class="stop" id="${s.id}"><div class="hero">${photo(s.image,s.alt,true)}${s.optional?'<div class="optb">Опционально</div>':''}<div class="vt${s.vertical.length>6?' sm':''}">${s.vertical}</div><div class="plate"><div class="cap">Остановка ${i+1} из ${total}</div><div class="t">${s.time}</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-${s.type})">${types[s.type]}</span><span class="cap">${s.area}</span></div><h2 class="nm2">${s.name}</h2><div class="jp2">${s.jp}</div><p class="ann">${s.ann}</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent((s.mapName||s.jp)+' '+s.address)}" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">${s.jp}</div><div class="l2" lang="ja">${s.kana}</div><div class="l3">${s.en}</div><div class="l4" lang="ja">${s.city}<br>${s.address}</div></div></details></div><section class="practical" aria-label="Часы и стоимость">${s.practical.map((v,n)=>`<div><div class="k">${['Часы работы','Стоимость','Последний вход'][n]}</div><div class="v">${v}</div></div>`).join('')}</section><div class="s30"><div class="cap">За 30 секунд</div>${s.quick.map((v,n)=>`<p><b>${['Что это','Главное','Не пропустите'][n]}</b>${v}</p>`).join('')}</div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div>${list(s.find)}</div><div class="here"><div class="cap">На месте</div>${list(s.advice)}</div><details class="story"><summary>История и подробности</summary>${s.body}</details></div></div></div></article>`;}
+function render(d){
+ const nn=String(d.number).padStart(2,'0');d.stops.forEach((s,i)=>s.id=`d${nn}-s${String(i+1).padStart(2,'0')}`);
+ const rows=d.rows.map(s=>`<${s.id?'a':'div'} class="row"${s.id?` href="#${s.id}"`:''}><div class="tm${/\d/.test(s.time)?'':' g'}">${s.time}</div><div class="tx"><div class="nm">${s.name}${s.optional?'<span class="opt">Опционально</span>':''}</div>${s.jp?`<div class="jp">${s.jp}</div>`:''}<div class="ch">${s.ch||s.quick?.[1]||''}</div></div>${s.id?'<div class="ar">›</div>':''}</${s.id?'a':'div'}>`).join('');
+ return `<!-- DAY-${nn} START -->\n<section class="day" id="day-${nn}">${photo(d.cover,d.coverAlt)}<div class="in cvr"><div class="day-head"><div class="cap">День ${d.number} · ${d.date}</div>${back}</div><h1 class="city">${d.title}</h1><div class="cjp">${d.jp}</div><p class="lead">${d.lead}</p></div><section class="in plan" id="d${nn}-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">${d.planLead}</p><div class="rows">${rows}</div></section>${d.stops.map((s,i)=>card(s,i,d.stops.length)).join('\n')}<div class="in"><div class="way">${back}</div></div></section>\n<!-- DAY-${nn} END -->`;
+}
+// Обычная сборка сохраняет существующие дни. Намеренное обновление: --update=03,04.
+const update=new Set((process.argv.find(a=>a.startsWith('--update='))?.split('=')[1]||'').split(',').map(n=>n.padStart(2,'0')));
+for(const d of require('./days-03-04.cjs')){const nn=String(d.number).padStart(2,'0'),file=`days/day-${nn}.html`;if(!fs.existsSync(path.join(root,file))||update.has(nn))write(file,page(`День ${d.number} · ${d.title} · ${10+d.number} мая 2027`,render(d)));}
+const days=fs.readdirSync(path.join(root,'days')).filter(n=>/^day-\d{2}\.html$/.test(n)).sort();
+const sections=days.map(n=>{const nn=n.match(/\d+/)[0],section=read('days/'+n).match(new RegExp(`<!-- DAY-${nn} START -->[\\s\\S]*?<!-- DAY-${nn} END -->`));if(!section)throw Error('Missing day boundary: '+n);return section[0];});
+const meta={1:['Токио → Окинава','東京 → 沖縄','#4F7C82'],2:['Северная Окинава','沖縄本島北部','#4F7C82'],3:['Южная Окинава → Фукуока','沖縄本島南部 → 福岡','#4F7C82'],4:['Такатихо','高千穂','#5E7B5A']};
+const active=new Set(days.map(n=>Number(n.match(/\d+/)[0])));
+function index(combined=false){return `<section id="index"><div class="cap">Путеводитель</div><h1 class="ix-title">Япония</h1><div class="ix-jp">日本</div><div class="ix-dates">11–31 мая 2027</div><p class="ix-route">Токио → Окинава → Фукуока → Такатихо</p><nav class="grid" aria-label="Дни поездки">${Array.from({length:21},(_,i)=>{const n=i+1,nn=String(n).padStart(2,'0'),on=active.has(n),m=meta[n],date=new Date(Date.UTC(2027,4,11+i));return `<${on?'a':'div'} class="tile ${on?'on':'off'}" style="--city:${m?.[2]||'var(--rule)'}"${on?` href="${combined?'':'days/day-'+nn+'.html'}#day-${nn}"`:''}><div class="n">${n}</div><div class="d">${11+i} мая · ${['вс','пн','вт','ср','чт','пт','сб'][date.getUTCDay()]}</div>${m?`<div class="c">${m[0]}</div><div class="j" lang="ja">${m[1]}</div>`:''}${on?'':'<div class="s">скоро</div>'}</${on?'a':'div'}>`;}).join('\n')}</nav></section>`;}
+write('index.html',page('Япония · 11–31 мая 2027',index()));
+write('brochure.html',page('Япония · Путеводитель · 11–31 мая 2027',index(true)+'\n'+sections.join('\n').replaceAll('../assets/photos/','assets/photos/').replaceAll('../index.html#index','#index')));
+console.log(`Built index and brochure with ${days.length} days; existing day files preserved.`);
+
+

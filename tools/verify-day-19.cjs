@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),read=n=>fs.readFileSync(path.join(root,n
 const d=require('./day-19.cjs')[0];
 // Последний готовый день защищён также при явной сборке следующего.
 // Постоянная защита не зависит от наличия служебной папки .tmp.
-const day18Hash='5b38e795093ebd797642b3467cf0bb432ed29a394d38d3b69e3195e71285b3ed';
+const day18Hash='19534c2f1c586747b5d3dea58279012e027608866e61c6e5d28a5d5a6e832b13';
 assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-18.html'))).digest('hex'),day18Hash,'Previously completed day 18 changed');
 assert.equal(d.number,19);assert.equal(d.date,'суббота, 29 мая');assert.equal(d.title,'Никко');assert.equal(d.jp,'日光');assert.equal(d.color,'#5E7B5A');
 assert.equal(new Date(Date.UTC(2027,4,29)).getUTCDay(),6);

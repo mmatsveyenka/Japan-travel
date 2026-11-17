@@ -191,8 +191,8 @@ if(eighth.status==='awaiting_photos'){
  for(let i=1;i<=6;i++)assert(html.includes('Остановка '+i+' из 6'),'Day 8 plate');
  console.log('OK day 8 schedule, subsidiary notes and six cards.');
 }
-const approved={'days/day-01.html':'bd6f526997e6ac344c71e31b6deac15baef07372197d5752ffd49bc7af2e641e','days/day-02.html':'48ab7b0f2d4d6c042ca14e9d710760893b077418f815e742fd0397ce3054f0a5','reference.html':'bcea4919b812a636d3e3eb59053d7379fde28ed54fa363932baac92ce7fdd736'};
-approved['days/day-08.html']='ecc762804b99a01a90340568f302da3f0f1a175cced7f109ef24774e1a7855b0';
+const approved={'days/day-01.html':'678e2b51deaf19735b471e5543e398d92935e13d1ddbe7ee1a99de3d93497a46','days/day-02.html':'d67705500a4594c95902846b708cb2f3a84d0bf53b07eef134c149fb4b1cc83f','reference.html':'c65a1149c87149328d4d5c2d161bc1b7628af7b91ce4f9b01ed6a4d967d2d597'};
+approved['days/day-08.html']='a3f032b32bd4319d330c0640077cdf2a16cd4a9b5f3be3b0f071af4cc1645e27';
 for(const [file,hash] of Object.entries(approved))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),hash,'Approved file changed: '+file);
 const rootPaths=html=>html.replaceAll('../assets/photos/','assets/photos/').replaceAll('../index.html#index','index.html#index');
 const body=html=>html.match(/<body>([\s\S]*?)<\/body>/)[1].trim();
@@ -208,6 +208,7 @@ const voids=new Set(['meta','img','br','hr','link','input','wbr']);
 for(const file of files){
  const html=fs.readFileSync(path.join(root,file),'utf8');
  assert.equal(html.match(/<style>([\s\S]*?)<\/style>/)[1],sourceCss,'CSS mismatch '+file);
+ assert(sourceCss.includes('.way{margin-top:24px;padding-top:0;border-top:0}'),'Transfer spacing rule missing');
  assert(sourceCss.includes('.way.day-end{margin-top:0;padding-top:0;border-top:0}'),'Footer spacing rule missing');
  assert.equal((html.match(/class="way day-end"/g)||[]).length,file==='index.html'?0:file==='brochure.html'?dayFiles.length:1,'Footer container missing '+file);
  assert(!html.includes('<div class="way"><a class="back"'),'Old footer divider recreated '+file);
@@ -277,7 +278,7 @@ assert.equal((plan6.match(/<div class="row">/g)||[]).length,2,'Train and hotel u
 assert.deepEqual([...plan6.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:8},(_,i)=>'#d06-s'+String(i+1).padStart(2,'0')));
 const fifth=read('days/day-05.html');
 const seventh=read('days/day-07.html');
-assert.equal(require('node:crypto').createHash('sha256').update(seventh).digest('hex'),'fbfff5bdc21630531024915df5b45ca6f05664665c566048a8afa3f81bdf05fc','Prior day 7 changed');
+assert.equal(require('node:crypto').createHash('sha256').update(seventh).digest('hex'),'b187c7764962d4d850d7e425fdba5029fecbd1e3d31c75cdedd7a2067aee88d1','Prior day 7 changed');
 assert(seventh.includes('День 7 · понедельник, 17 мая'),'Day 7 date');
 assert.deepEqual([...seventh.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['утро','утро','утро','11:45','днём','днём','днём','днём','19:00'],'Day 7 schedule');
 assert.equal((seventh.match(/class="stop"/g)||[]).length,8,'Day 7: two alternative walks and six required places');
@@ -289,7 +290,7 @@ assert.equal((plan7.match(/<div class="row">/g)||[]).length,1,'Gathering is not 
 assert.deepEqual([...plan7.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:8},(_,i)=>'#d07-s'+String(i+1).padStart(2,'0')),'Day 7 order');
 assert.equal((seventh.match(/class="back"/g)||[]).length,2);
 for(let i=1;i<=8;i++)assert(seventh.includes('Остановка '+i+' из 8'),'Day 7 plate');
-assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-06.html'))).digest('hex'),'748fa6916731116bdacd7814710f8b606447bc91dd5cabe1b08b4a034c16f323','Prior day 6 changed');
+assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-06.html'))).digest('hex'),'fc8ae0dc6c5ecbba48638534a8c6a63d7c99a9ab60264d4ec9536ca8b9232c2b','Prior day 6 changed');
 assert.deepEqual([...fifth.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),['10:50','16:13','19:30','вечер'],'Day 5 schedule');
 assert(fifth.includes('День 5 · суббота, 15 мая'),'Day 5 date');
 assert.equal((fifth.match(/class="stop"/g)||[]).length,2,'Only volcano and Kitahama have sightseeing cards');
@@ -302,7 +303,7 @@ assert.deepEqual([...fifthPlan.matchAll(/<a class="row" href="([^"]+)"/g)].map(m
 assert.equal((fifthPlan.match(/<div class="row">/g)||[]).length,2,'City arrivals remain unlinked');
 assert(fifth.indexOf('Переезд → Асо → Беппу')>fifth.indexOf('id="d05-s01"'));
 assert(fifth.indexOf('Переезд → Асо → Беппу')<fifth.indexOf('id="d05-s02"'));
-for(const [file,hash] of Object.entries({'days/day-03.html':'3932ec9beea604ca90b8b1b2225e57f552912d1fe22a5d6402507cf1f533a392','days/day-04.html':'1d93c57e6fc815b7359d135226c869636e5512bbafc697c261c166c418095499','days/day-05.html':'7fefb6bcf5863aeb11d95f2b01de9a78be7ae19670a86fdc6c93f22fc1196ceb'}))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),hash,'Prior day changed: '+file);
+for(const [file,hash] of Object.entries({'days/day-03.html':'bdda77460057de686566d13ae5b0b72e211d812aeaa2ba78e065e02ffc4499c1','days/day-04.html':'d8bab4bcf5c5953e581e03aeea6e2f16cc3d3090865318226c65a958fdece2d2','days/day-05.html':'0532ee62d64073a2a7d0cadf3fab5f0c829409e30c9b1ad5a147037823274e6e'}))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'),hash,'Prior day changed: '+file);
 for(const file of dayFiles){const nn=file.match(/day-(\d+)/)[1],section=read(file).match(new RegExp('<!-- DAY-'+nn+' START -->[\\s\\S]*?<!-- DAY-'+nn+' END -->'))[0];assert(read('brochure.html').includes(rootPaths(section).replaceAll('index.html#index','#index')),'Combined day differs '+nn);}
 const usedPhotos=dayFiles.flatMap(f=>[...read(f).matchAll(/src="\.\.\/assets\/photos\/([^"]+)"/g)].map(m=>m[1]));assert.equal(new Set(usedPhotos).size,usedPhotos.length,'Repeated photograph in itinerary');
 for(const file of fs.readdirSync(path.join(root,'assets/photos'))){const b=fs.readFileSync(path.join(root,'assets/photos',file));assert.equal(b.readUInt16BE(0),0xffd8,'Not JPEG '+file);}

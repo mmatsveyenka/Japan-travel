@@ -1798,3 +1798,48 @@
 - Пройдены синтаксические проверки, `node tools/build.cjs --update=20`, `node tools/verify.cjs` и `node tools/visual-check.cjs 20`. Chrome **320/390/820/1180 px**: нет переполнения и битых фото, пропорции **4:3 / 16:9**, перед «Найдите на месте» 32 px. Все 14 адресов и историй раскрываются, план, плитка и два возврата работают в отдельной странице и сборке. Проверка дня дополнена сохранением пользовательского решения в манифесте.
 - Все 15 кадров просмотрены на браузерных снимках **820/1180 px**, обложка также на **390 px**, две длинные фото-надписи — отдельно на **320 px**. Все 14 фото-надписей остаются в одной вертикальной колонке. Листы кадров — `.tmp/day20-browser-photos-820.jpg` и `.tmp/day20-browser-photos-1180.jpg`; отчёт — `.tmp/visual-report-20.json`. Это эмуляция размеров, не физические iOS-устройства.
 - SHA-256 **всех 20 ранее готовых страниц и reference.html** совпали со снимком перед обработкой фото. Все прежние записи манифеста и его текстовый префикс сохранены. Повторная обычная сборка сохранила все **21** день побайтово. Отчёт — `.tmp/day20-completion-preservation.json`. День 2 и CSS не менялись. По оформлению дня 20 оставшейся работы и ожидания фото нет. Публикацию пользователь выполняет самостоятельно.
+
+
+## 62. Очистка репозитория · 17 ноября 2026
+
+- По просьбе пользователя проверены фактические ссылки всех 21 страниц дней, index.html, brochure.html, reference.html и текстовые зависимости модулей tools. Найдены **28 неиспользуемых JPEG**: ни одна страница не загружает их, генератор и проверки не используют их имена. Они удалены из assets/photos; сохранены все **160 используемых фотографий**. Объём удалённых JPEG — **44 296 073 байта**.
+- Из .tmp удалены **855 временных файлов**: пробные загрузки, старые резервные копии, одноразовые скрипты, снимки экрана и отчёты — **577 943 870 байт**. В .tmp оставлен только node_modules: playwright и sharp требуются существующему tools/visual-check.cjs и обработке фотографий. Папка уже исключена через .gitignore. Прежние ссылки на .tmp в разделах журнала — исторические записи о проверках; эти отчёты теперь отсутствуют в рабочей папке.
+- Общий объём, убранный из папки проекта, — **622 239 943 байта**, около **622 МБ**. Все **883** удалённых файла предварительно сохранены в архив вне репозитория: `C:/Users/maxim/.codex/visualizations/2026/11/17/01a1e9a6-d0ce-7e23-8567-66e0aaf0f1ad/japan-travel-cleanup-recovery.zip`. Количество, размеры и SHA-256 каждого файла в архиве проверены до удаления. Удаление выполнено только для проверенных файлов внутри assets/photos и .tmp, без удаления зависимостей и каталога .git.
+- Исторические записи tools/photo-manifest.json, включая источники, лицензии и supersededBy удалённых старых снимков, сохранены **без изменений**. Наличие старого local в исторической записи не означает использование файла текущей страницей. Документы проекта, DAY_XX_PREPARATION.md, reference.html и инструменты оставлены: они содержат правила, тексты, глоссарии, рабочие источники и необходимые данные для последующих правок и проверки.
+
+### Удалённые неиспользуемые фотографии
+
+- `assets/photos/amaterasu-railway.jpg`
+- `assets/photos/american-village.jpg`
+- `assets/photos/aso-nakadake-crater.jpg`
+- `assets/photos/beppu-bay-night-cover.jpg`
+- `assets/photos/beppu-ropeway-cabin-v2.jpg`
+- `assets/photos/beppu-ropeway-view.jpg`
+- `assets/photos/bisezaki.jpg`
+- `assets/photos/chinoike-crimson-pond-v2.jpg`
+- `assets/photos/chinoike-red-pond.jpg`
+- `assets/photos/churaumi.jpg`
+- `assets/photos/day01-cover.jpg`
+- `assets/photos/day02-cover.jpg`
+- `assets/photos/emerald.jpg`
+- `assets/photos/fukugi.jpg`
+- `assets/photos/fukuoka-castle-tamon-hall.jpg`
+- `assets/photos/fukuoka-momochi-cover.jpg`
+- `assets/photos/gyokusendo-cave.jpg`
+- `assets/photos/kamishikimi-shrine.jpg`
+- `assets/photos/karato-market-waterfront.jpg`
+- `assets/photos/kokusai-dori-street.jpg`
+- `assets/photos/motonosumi-red-torii.jpg`
+- `assets/photos/naha-gangala-cover.jpg`
+- `assets/photos/ohori-pond-islands.jpg`
+- `assets/photos/okinawa-fukugi-cover.jpg`
+- `assets/photos/shuri-gate.jpg`
+- `assets/photos/takachiho-gorge.jpg`
+- `assets/photos/yufuin-floral-village.jpg`
+- `assets/photos/yufuin-yufu-cover.jpg`
+
+### Проверка после очистки
+
+- Пройдены `node tools/build.cjs` и `node tools/verify.cjs`: все ссылки, ID, HTML, единые стили, расписания и локальные фотографии корректны. В сборке остаются **21 активный день и 139 карточек**.
+- SHA-256 всех **185 защищённых файлов** совпали со снимком до очистки: 21 страница дня, главная, брошюра, эталон, 160 используемых фото и манифест. Содержимое и оформление путеводителя не менялись. Playwright и sharp загружаются после очистки. Повторная визуальная проверка не требовалась: страницы, CSS и все отображаемые изображения сохранены побайтово.
+- Проверка результата и перечень файлов архива сохранены рядом с ним вне репозитория: japan-travel-cleanup-result.json и japan-travel-cleanup-recovery-files.json. Публикация, коммит, отправка и очистка истории Git не выполнялись.

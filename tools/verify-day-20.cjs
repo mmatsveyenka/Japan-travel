@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),read=n=>fs.readFileSync(path.join(root,n),'utf8');
 const d=require('./day-20.cjs')[0];
-assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-18.html'))).digest('hex'),'b717b914777f6125feabfc6c1ac9478afbdd92f3e973fbbe73f38ffba3139108','Previously completed day 18 changed');
+assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-18.html'))).digest('hex'),'5b38e795093ebd797642b3467cf0bb432ed29a394d38d3b69e3195e71285b3ed','Previously completed day 18 changed');
 assert.equal(d.number,20);assert.equal(d.date,'воскресенье, 30 мая');assert.equal(d.title,'Токио');assert.equal(d.jp,'東京');assert.equal(d.color,'#26344D');
 assert.equal(new Date(Date.UTC(2027,4,30)).getUTCDay(),0);
 const names=['江の島弁財天仲見世通り','江島神社 辺津宮','江島神社 中津宮','江の島サムエル・コッキング苑','江の島シーキャンドル','江島神社 奥津宮','江の島岩屋','稚児ヶ淵','カップヌードルミュージアム 横浜','山下公園','横浜港大さん橋国際客船ターミナル','横浜赤レンガ倉庫','大観覧車「コスモクロック21」','YOKOHAMA AIR CABIN 桜木町駅'];

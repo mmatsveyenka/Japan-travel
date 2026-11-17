@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=n=>fs.readFileSync(path.join(root,n),'utf8');
 const d=require('./day-17.cjs')[0];
-assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-16.html'))).digest('hex'),'83457b45e5d2a76ce5b847cfc3c0c7aebd12601b40f62044802fa80fefdaec3b','Previously completed day 16 changed');
+assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-16.html'))).digest('hex'),'aa3ed796b83027ae04f9fd4fc24a2ff0aace0c288228399f3859b23ac3a22400','Previously completed day 16 changed');
 const times=['9:20','10:10','11:00','12:40','13:45','18:15','20:50'];
 assert.equal(d.number,17);assert.equal(d.title,'Саппоро → Токио');assert.equal(d.jp,'札幌 → 東京');
 assert.equal(d.color,'#4F7C82');assert.equal(d.date,'четверг, 27 мая');

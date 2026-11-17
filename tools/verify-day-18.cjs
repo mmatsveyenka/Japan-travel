@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),read=n=>fs.readFileSync(path.join(root,n),'utf8');
 const d=require('./day-18.cjs')[0];
-assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-17.html'))).digest('hex'),'8540e0d6ba4bf062c30bb63f893cb5481cc14c391043d7015917973da1473f92','Previously completed day 17 changed');
+assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'days/day-17.html'))).digest('hex'),'a472b6646ad7f44c856bc4760feb917a11bdbee0184277c12bf697154ea76de0','Previously completed day 17 changed');
 assert.equal(d.number,18);assert.equal(d.title,'Токио');assert.equal(d.jp,'東京');assert.equal(d.color,'#26344D');
 assert.equal(d.date,'пятница, 28 мая');assert.equal(new Date(Date.UTC(2027,4,28)).getUTCDay(),5);
 assert.equal(d.stops.length,12);assert.equal(d.rows.length,12);

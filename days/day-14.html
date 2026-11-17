@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 14 · Осака · 24 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-14 START -->
+<section class="day" id="day-14"><div class="photo cv"><img src="../assets/photos/d14-osaka-user-cover.jpg" alt="Замок Осаки, каменные стены и городские высотные здания в вечернем освещении" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 14 · понедельник, 24 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Осака</h1><div class="cjp">大阪</div><p class="lead">Кацуо-дзи с красными дарума, затем лесная долина и водопад Мино. После прогулки — возвращение за багажом в Senri-Chuo и вылет из ITM в Саппоро.</p></div><section class="in plan" id="d14-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Три остановки в Мино перед перелётом. Багаж оставляем в Senri-Chuo и возвращаемся за ним в 15:20; вылет из ITM — в 18:00.</p><div class="rows"><div class="row"><div class="tm">8:00</div><div class="tx"><div class="nm">🚃 Едем в Осаку</div><div class="jp">大阪</div><div class="ch">💡 Вылет из ITM<br>🧳 Оставить багаж Senri-Chuo</div></div></div><a class="row" href="#d14-s01"><div class="tm">10:20</div><div class="tx"><div class="nm">Кацуо-дзи</div><div class="jp">勝尾寺</div><div class="ch">Дарума у храмовой лестницы</div></div><div class="ar">›</div></a><a class="row" href="#d14-s02"><div class="tm">12:00</div><div class="tx"><div class="nm">🚌 Парк Мино</div><div class="jp">箕面公園</div><div class="ch">Лесная дорожка вдоль реки</div></div><div class="ar">›</div></a><a class="row" href="#d14-s03"><div class="tm">12:45</div><div class="tx"><div class="nm">Водопад Мино</div><div class="jp">箕面大滝</div><div class="ch">Тридцатитрёхметровый поток среди леса</div></div><div class="ar">›</div></a><div class="row"><div class="tm">15:20</div><div class="tx"><div class="nm">🚇 Senri-Chuo</div><div class="jp">千里中央</div><div class="ch">🧳 Вернуться за чемоданами</div></div></div><div class="row"><div class="tm">15:50</div><div class="tx"><div class="nm">✈️ Летим в Саппоро</div><div class="jp">札幌</div><div class="ch">💡 Вылетаем в 18:00</div></div></div></div></section><div class="in"><div class="way"><div class="cap">Переезд → Осака</div><p>8:00 — 🚃 Едем в Осаку.<br>💡 Вылет из ITM<br>🧳 Оставить багаж Senri-Chuo</p></div></div><article class="stop" id="d14-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d14-katsuoji-user-daruma.jpg" alt="Полки с красными дарума у каменной лестницы Кацуо-дзи под цветущими вишнёвыми деревьями" loading="lazy" style="object-position:center bottom" decoding="async"></div><div class="vt">勝尾寺</div><div class="plate"><div class="cap">Остановка 1 из 3</div><div class="t">10:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Мино · буддийский храм</span></div><h2 class="nm2">Кацуо-дзи</h2><div class="jp2">勝尾寺</div><p class="ann">Красные дарума стоят рядами у лестницы и прячутся среди камней: в горном храме желание связывают с собственным усилием.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8B%9D%E5%B0%BE%E5%AF%BA%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AE%95%E9%9D%A2%E5%B8%82%E7%B2%9F%E7%94%9F%E9%96%93%E8%B0%B72914-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">勝尾寺</div><div class="l2" lang="ja">かつおうじ</div><div class="l3">Katsuo-ji Temple</div><div class="l4" lang="ja">箕面市<br>大阪府箕面市粟生間谷2914-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">¥500</div></div><div><div class="k">Последний вход</div><div class="v">16:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Буддийский храм, двадцать третья остановка паломничества Сайкоку.</p><p><b>Главное</b>Полки с красными дарума, оставленными в благодарность.</p><p><b>Не пропустите</b>Разницу между большими дарума и маленькими фигурками с предсказаниями.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Полки с дарума — рядом с лестницей к главному залу.</li><li>Маленькие дарума — среди камней и у фонарей на территории.</li><li>Главный зал — в верхней части храмового маршрута.</li><li>Пагоду тахото — по указателям на плане территории.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Не переставляйте чужие подношения ради фотографии.</li><li>На лестницах выбирайте устойчивую обувь; после дождя ступени могут скользить.</li><li>Если захотите приобрести дарума, следуйте храмовой инструкции заполнения: здесь это личное обещание работать над целью.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Кацуо-дзи узнаётся по красным округлым фигуркам. На полках они образуют плотные ряды, а маленькие дарума неожиданно появляются у фонарей и между камнями. Сначала полезно рассмотреть лица и размеры, затем поднять взгляд к храмовым крышам: перед вами действующая обитель с молитвенными залами и лестницами на лесном склоне.</p><div class="sh"><span class="cap">Что означает победа</span></div><p>Название «храм победы» здесь объясняют через преодоление собственной слабости. Дарума не должен исполнять желание вместо человека: записанная цель и закрашенный глаз обозначают обещание действовать. После подведения итогов фигурку возвращают храму в благодарность. Полки подношений поэтому можно читать как множество личных историй, не зная их подробностей. Маленькие фигурки с омикудзи — предсказаниями — составляют другой, более рассеянный по территории слой этого пейзажа.</p><div class="sh"><span class="cap">Обитель Каннон</span></div><p>Кацуо-дзи входит в Сайкоку — паломничество по тридцати трём храмам Каннон, бодхисаттвы сострадания. Его главная святыня — одиннадцатиликая тысячерукая Каннон. Дарума стали самым узнаваемым образом места, но не заменяют его буддийского содержания. На плане различаются главный зал, небольшие молитвенные постройки и тахото — двухъярусная пагода с круглым верхним объёмом.</p><div class="sh"><span class="cap">Ранние даты</span></div><p>Собственная храмовая хронология относит начало обители к 727 году: братья Дзэнтю и Дзэнсан устраивают здесь скит. В 775 году Кайдзё посвящает переписанные свитки сутры новому залу Мироку-дзи. Это традиционный рассказ о происхождении храма; его даты не означают, что нынешние постройки сохранились с VIII века.</p></div><div class="leg"><div class="cap">По преданию</div><p>По храмовому преданию, молитвы настоятеля помогли императору Сэйва выздороветь. Государь даровал название «Кацуо-дзи» — «храм, победивший правителя». Монахи сочли такую формулировку слишком смелой и заменили иероглиф «правитель» созвучным «хвост», сохранив произношение. Это объяснение названия принадлежит храмовой традиции.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>727</b> — традиционная дата появления скита в храмовой хронологии.</li><li><b>775</b> — храмовая хронология относит к этому году посвящение зала Мироку-дзи.</li></ul></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → парк Мино</div><p>12:00 — 🚌 Minoh Park.</p></div></div>
+<article class="stop" id="d14-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d14-minoh-user-bridge.jpg" alt="Красный мост в парке Мино перед водопадом среди жёлтых и красных осенних листьев" loading="lazy" decoding="async"></div><div class="vt">箕面公園</div><div class="plate"><div class="cap">Остановка 2 из 3</div><div class="t">12:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Мино · лесной парк</span></div><h2 class="nm2">Парк Мино</h2><div class="jp2">箕面公園</div><p class="ann">Дорожка следует за изгибами реки под клёнами и высокими деревьями: парк раскрывается через воду, тень и близкие склоны.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AE%95%E9%9D%A2%E5%85%AC%E5%9C%92%20%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8B%99%E6%89%80%20%E3%80%92562-0002%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AE%95%E9%9D%A2%E5%85%AC%E5%9C%921-18%EF%BC%88%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8B%99%E6%89%80%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">箕面公園</div><div class="l2" lang="ja">みのおこうえん</div><div class="l3">Minoh Park</div><div class="l4" lang="ja">箕面市<br>〒562-0002 大阪府箕面市箕面公園1-18（管理事務所）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Парк вдоль долины реки Мино на северной окраине Осакской равнины.</p><p><b>Главное</b>Такимити — прогулочная дорожка среди леса и воды.</p><p><b>Не пропустите</b>Клёны над рекой и каменистое русло под мостами.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Реку Мино — рядом с основной прогулочной дорожкой.</li><li>Клёны и высокие стволы — над дорожкой и по сторонам долины.</li><li>Мосты через реку — места, откуда видны повороты русла.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Гуляйте по открытым дорожкам и соблюдайте временные перекрытия.</li><li>Не садитесь на перила и не опирайтесь на них: за ограждением местами глубокое русло.</li><li>Если встретите макак, не приближайтесь и не кормите их; уберите еду в сумку.</li><li>Унесите мусор с собой; в парке запрещены курение и открытый огонь.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В парке Мино внимание постепенно переходит от городских деталей к лесу: слышна вода, между стволами видны склоны, а дорожка повторяет направление долины. Такимити буквально означает «дорога к водопаду». Здесь интересен и сам путь: поверхность воды под мостом, тень от клёна и то, как узкое русло исчезает за поворотом.</p><div class="sh"><span class="cap">Парк вдоль долины</span></div><p>Префектурный парк занимает около 83,8 гектара и входит в более обширную охраняемую территорию «Мэйдзи-но-Мори Мино». Это разные уровни охраны: устроенная для прогулок долина — часть большого лесного массива. Не вся гора представляет собой одинаково оборудованную парковую дорожку. Основная дорожка позволяет рассматривать долину с разных сторон реки, оставаясь у воды.</p><div class="sh"><span class="cap">Как лес стал общественным парком</span></div><p>Мино был местом прогулок и паломничества ещё до официального учреждения парка. После нескольких попыток получить государственное согласование парк открыли 20 мая 1898 года. В 1907 году префектура выкупила его землю. В 1967 году окружающая местность получила статус квазинационального парка «Мэйдзи-но-Мори Мино» в рамках подготовки к столетию эпохи Мэйдзи.</p><div class="sh"><span class="cap">Зелёный сезон</span></div><p>Клёны известны осенней окраской, но поздней весной дают другой рисунок: свет проходит через зелёные листья и отражается в воде. Разнообразие лесной среды заметно по птицам, насекомым и растениям у русла. Встречу с конкретным животным нельзя назначить по часам; полезнее остановиться, прислушаться и рассмотреть ближайший участок леса.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1898</b> — 20 мая учреждён парк Мино.</li><li><b>1907</b> — префектура выкупает парковую землю.</li><li><b>1967</b> — окружающая территория получает статус квазинационального парка.</li></ul></details></div></div></div></article>
+<article class="stop" id="d14-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d14-minoh-user-falls.jpg" alt="Водопад Мино на скалистом лесном склоне с красными и зелёными осенними деревьями" loading="lazy" style="object-position:center 55%" decoding="async"></div><div class="vt">箕面大滝</div><div class="plate"><div class="cap">Остановка 3 из 3</div><div class="t">12:45</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Мино · водопад</span></div><h2 class="nm2">Водопад Мино</h2><div class="jp2">箕面大滝</div><p class="ann">Поток падает с высоты 33 метров в каменную чашу, обрамлённую лесом, и превращает тихую долину в пространство непрерывного гула.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AE%95%E9%9D%A2%E5%A4%A7%E6%BB%9D%20%E3%80%92562-0002%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AE%95%E9%9D%A2%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">箕面大滝</div><div class="l2" lang="ja">みのおおおたき</div><div class="l3">Minoh Falls / Minoh Otaki</div><div class="l4" lang="ja">箕面市<br>〒562-0002 大阪府箕面市箕面公園</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Большой водопад в лесной долине парка Мино.</p><p><b>Главное</b>Падение воды с 33-метровой скалы.</p><p><b>Не пропустите</b>Верхнюю кромку потока и рисунок брызг у основания.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Верхнюю кромку водопада — над отвесной скалой.</li><li>Каменную чашу — внизу, где белая вода разбивается о поверхность.</li><li>Переход от водопада к реке — ниже основной струи.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Оставайтесь на открытой обзорной площадке и не заходите за ограждения.</li><li>Берегите камеру от брызг; на влажной поверхности следите за опорой.</li><li>Для общего кадра оставьте место и верхнему краю скалы, и воде у основания.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У водопада прежде всего меняется звук: отдельное журчание реки собирается в сплошной гул. Белый поток контрастирует с тёмной скалой, а у основания распадается на брызги. Посмотрите на него сначала целиком, затем на верхнюю кромку и место падения: один и тот же поток выглядит то гладкой лентой, то множеством отдельных струй.</p><div class="sh"><span class="cap">Вода и форма долины</span></div><p>Высота Мино — 33 метра. Водопад входит в японскую подборку ста водопадов; окружающий лес и скалы делают его частью долины, а не отдельным парковым сооружением. Уровень воды и количество брызг меняются с погодой. Фотография может показывать другой сезон и другую силу потока, поэтому точное совпадение с чужим кадром не предполагается.</p><div class="sh"><span class="cap">Имя места</span></div><p>По распространённому объяснению, форма падающей воды напоминала «ми» — плетёный сельскохозяйственный лоток для веяния зерна. От этого сравнения выводят название Мино. Его лучше воспринимать как местную традицию толкования названия, а не как установленную историю образования водопада.</p><div class="sh"><span class="cap">Ландшафт под охраной</span></div><p>В 1956 году Минояма получил государственный статус живописного места. В реестре ценность описана через сочетание ущелья, водопадов, скал и леса рядом с большим городом. Водопад — самая узнаваемая часть этого пейзажа, но охрана относится к целому ландшафту.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1956</b> — 28 декабря Минояма внесён в государственный список живописных мест.</li></ul></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → Senri-Chuo и Саппоро</div><p>15:20 — 🚇 Senri-Chuo. 🧳 Вернуться за чемоданами.<br>15:50 — ✈️ Летим в Саппоро. 💡 Вылетаем в 18:00.</p></div></div><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-14 END -->
+</body></html>

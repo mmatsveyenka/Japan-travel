@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 13 · Киото · 23 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-13 START -->
+<section class="day" id="day-13"><div class="photo cv"><img src="../assets/photos/d13-uji-user-cover.jpg" alt="Фениксовый зал Бёдо-ин в Удзи и его отражение в пруду, осенняя листва по краям" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 13 · воскресенье, 23 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Киото</h1><div class="cjp">京都</div><p class="lead">Храмы Удзи и Фениксовый зал над прудом, затем Арасияма: мост через Кацуру, японские макаки и прогулка у речного острова.</p></div><section class="in plan" id="d13-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Утро в Удзи: три опциональных храма и святилища перед Бёдо-ин. Днём — мост, макаки на горном склоне и берега Кацуры в Арасияме.</p><div class="rows"><a class="row" href="#d13-s01"><div class="tm">10:30</div><div class="tx"><div class="nm">Мимурото-дзи<span class="opt">Опционально</span></div><div class="jp">三室戸寺</div><div class="ch">Храм Каннон на лесном склоне</div></div><div class="ar">›</div></a><a class="row" href="#d13-s02"><div class="tm">11:00</div><div class="tx"><div class="nm">Святилище Удзигами<span class="opt">Опционально</span></div><div class="jp">宇治上神社</div><div class="ch">Древняя архитектура и источник Кирихара</div></div><div class="ar">›</div></a><a class="row" href="#d13-s03"><div class="tm">11:20</div><div class="tx"><div class="nm">Косё-дзи<span class="opt">Опционально</span></div><div class="jp">興聖寺</div><div class="ch">Котодзака и дзэнский монастырь</div></div><div class="ar">›</div></a><a class="row" href="#d13-s04"><div class="tm">11:40</div><div class="tx"><div class="nm">Бёдо-ин</div><div class="jp">平等院</div><div class="ch">Фениксовый зал над прудом<br>💡 Фениксовый зал и отражение в пруду — лучшие объекты для фотографий</div></div><div class="ar">›</div></a><a class="row" href="#d13-s05"><div class="tm">14:00</div><div class="tx"><div class="nm">Мост Тогэцукё</div><div class="jp">渡月橋</div><div class="ch">Мост на фоне гор Арасиямы</div></div><div class="ar">›</div></a><a class="row" href="#d13-s06"><div class="tm">15:00</div><div class="tx"><div class="nm">Парк обезьян Иватаяма</div><div class="jp">嵐山モンキーパークいわたやま</div><div class="ch">Макаки и панорама Киото</div></div><div class="ar">›</div></a><a class="row" href="#d13-s07"><div class="tm g">днём</div><div class="tx"><div class="nm">Арасияма / Кацура / Наканосима</div><div class="jp">嵐山・桂川・嵐山公園（中之島地区）</div><div class="ch">Река, остров и зелёные берега</div></div><div class="ar">›</div></a></div></section><article class="stop" id="d13-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d13-mimurotoji-user-hall.jpg" alt="Главный зал Мимурото-дзи, каменная дорожка и горшки с лотосами перед храмом" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">三室戸寺</div><div class="plate"><div class="cap">Остановка 1 из 7</div><div class="t">10:30</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Удзи · храм Каннон</span></div><h2 class="nm2">Мимурото-дзи</h2><div class="jp2">三室戸寺</div><p class="ann">За лестницей открываются деревянный зал и трёхъярусная пагода: храмовый двор на склоне дополняет известные цветочные сады.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%89%E5%AE%A4%E6%88%B8%E5%AF%BA%20%E3%80%92611-0013%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%87%E6%B2%BB%E5%B8%82%E8%8E%B5%E9%81%93%E6%BB%8B%E8%B3%80%E8%B0%B721" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">三室戸寺</div><div class="l2" lang="ja">みむろとじ</div><div class="l3">Mimurotoji Temple</div><div class="l4" lang="ja">宇治市<br>〒611-0013 京都府宇治市莵道滋賀谷21</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:30–15:10</div></div><div><div class="k">Стоимость</div><div class="v">¥1 000</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Десятый храм паломничества Сайкоку, посвящённый Каннон.</p><p><b>Главное</b>Главный зал, лестница и трёхъярусная пагода.</p><p><b>Не пропустите</b>Разницу между храмовым двором и сезонными цветочными садами.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Главный зал — над широкой лестницей.</li><li>Трёхъярусную пагоду — в верхней храмовой части.</li><li>Зал Амиды — среди построек рядом с главным залом.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Поднимайтесь по лестнице в удобной обуви; ступени могут быть скользкими после дождя.</li><li>Не используйте штатив: съёмка со штативом запрещена.</li><li>Не рассчитывайте увидеть главный образ Каннон: это скрытая святыня, открываемая отдельно.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Мимурото-дзи интересен не только цветами. Лестница поднимает вас к верхнему двору, где деревянные постройки видны на фоне лесного склона. Главный зал, зал Амиды и трёхъярусная пагода позволяют рассмотреть храм как небольшой ансамбль: отдельные крыши перекликаются, но каждое здание имеет своё назначение.</p><div class="sh"><span class="cap">Храм паломничества</span></div><p>Мимурото-дзи — десятая остановка Сайкоку, паломничества к тридцати трём храмам Каннон. Каннон — бодхисаттва сострадания. Главный образ почитают как скрытую святыню, поэтому обычный визит не означает возможности его увидеть. Сохранившиеся основные здания относятся к эпохе Эдо; традиционная дата основания гораздо древнее нынешних построек.</p><div class="sh"><span class="cap">Сад и сезон</span></div><p>Сады занимают отдельное место в облике храма: азалии, гортензии и лотосы показывают его в разные месяцы. Для вашей майской остановки важны также зелень и сами постройки. Фотография цветущего сада иллюстрирует место в определённый сезон; совпадение цветения с днём визита не предполагается.</p></div><div class="leg"><div class="cap">По преданию</div><p>Храмовая история относит основание к 770 году. По преданию, император Конин увидел чудесный свет и велел найти его источник; в горном водоёме посланник обнаружил образ Каннон. Этот рассказ объясняет происхождение почитаемой святыни.</p></div></details></div></div></div></article>
+<article class="stop" id="d13-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d13-ujigami-user-honden.jpg" alt="Деревянный главный зал святилища Удзигами с решётчатым фасадом и лестницей среди деревьев" loading="lazy" style="object-position:center top" decoding="async"></div><div class="optb">Опционально</div><div class="vt">宇治上神社</div><div class="plate"><div class="cap">Остановка 2 из 7</div><div class="t">11:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Удзи · святилище у подножия горы</span></div><h2 class="nm2">Святилище Удзигами</h2><div class="jp2">宇治上神社</div><p class="ann">За сдержанным деревянным фасадом скрывается необычная конструкция: три небольшие святыни объединены общей крышей.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%AE%87%E6%B2%BB%E4%B8%8A%E7%A5%9E%E7%A4%BE%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%87%E6%B2%BB%E5%B8%82%E5%AE%87%E6%B2%BB%E5%B1%B1%E7%94%B059" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">宇治上神社</div><div class="l2" lang="ja">うじがみじんじゃ</div><div class="l3">Ujigami Shrine</div><div class="l4" lang="ja">宇治市<br>京都府宇治市宇治山田59</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">5:00–16:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Синтоистское святилище с древнейшим сохранившимся главным залом Японии.</p><p><b>Главное</b>Три внутренние святыни под общей защитной кровлей.</p><p><b>Не пропустите</b>Источник Кирихара и разные очертания крыш двух залов.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Молитвенный зал хайдэн — перед главным святилищем.</li><li>Главный зал хондэн — позади хайдэна; осматривайте с разрешённой стороны.</li><li>Павильон источника Кирихара — на территории святилища.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Сверяйте название: 宇治上神社 — Удзигами; соседнее 宇治神社 — другой объект.</li><li>Не заходите за ограждения ради вида внутренних святынь.</li><li>Источник осматривайте как историческую деталь; пить воду без разрешающего указания не следует.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Удзигами главное впечатление создают пропорции: низкие деревянные здания, широкие крыши и близкий лес. Сначала вы видите хайдэн — зал, обращённый к молящимся. Позади расположен хондэн, главное святилище. Его общая наружная оболочка объединяет три небольшие внутренние постройки; это помогает понять, почему простой снаружи объём считается столь необычным.</p><div class="sh"><span class="cap">Что здесь древнее всего</span></div><p>Хондэн относится к поздней эпохе Хэйан и считается древнейшим сохранившимся образцом синтоистской храмовой архитектуры. Это характеристика здания, а не утверждение, что само святилище основано раньше всех остальных. Точная дата возникновения культа неизвестна. Хайдэн моложе: он относится к началу эпохи Камакура и сохраняет черты архитектуры аристократического жилища.</p><div class="sh"><span class="cap">Вода и почитаемые божества</span></div><p>Среди местных деталей — Кирихара, один из исторических «семи знаменитых источников Удзи». Святилище посвящено императору Одзину и его сыновьям, Удзи-но-Вакиирацуко и Нинтоку. Их почитание связывает небольшую территорию с древним рассказом о наследовании престола; происхождение культа и возраст сохранившихся деревянных конструкций — разные вопросы.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>поздняя эпоха Хэйан</b> — создание сохранившегося главного святилища.</li><li><b>начало эпохи Камакура</b> — сооружение молитвенного зала хайдэн.</li></ul></details></div></div></div></article>
+<article class="stop" id="d13-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d13-koshoji-user-hall.jpg" alt="Зал Косё-дзи в Удзи, каменная многоярусная пагода и сад перед деревянной верандой" loading="lazy" decoding="async"></div><div class="optb">Опционально</div><div class="vt">興聖寺</div><div class="plate"><div class="cap">Остановка 3 из 7</div><div class="t">11:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Удзи · дзэнский монастырь</span></div><h2 class="nm2">Косё-дзи</h2><div class="jp2">興聖寺</div><p class="ann">Зелёный подъём Котодзака приводит к белым воротам и строгому ансамблю действующего дзэнского монастыря.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%88%88%E8%81%96%E5%AF%BA%20%E3%80%92611-0021%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%87%E6%B2%BB%E5%B8%82%E5%AE%87%E6%B2%BB%E5%B1%B1%E7%94%B027-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">興聖寺</div><div class="l2" lang="ja">こうしょうじ</div><div class="l3">Koshoji Temple, Uji</div><div class="l4" lang="ja">宇治市<br>〒611-0021 京都府宇治市宇治山田27-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">10:00–16:00</div></div><div><div class="k">Стоимость</div><div class="v">¥500</div></div><div><div class="k">Последний вход</div><div class="v">16:00</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Монастырь школы Сото, продолжающий традицию основанного Догэном храма.</p><p><b>Главное</b>Подход Котодзака и симметричный ансамбль за воротами.</p><p><b>Не пропустите</b>Белые ворота с изогнутым верхним очертанием.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Каменные входные ворота — в начале подхода от реки.</li><li>Аллею Котодзака — на подъёме к монастырю.</li><li>Ворота санмон в стиле рюгу — в конце подъёма.</li><li>Зал хатто — в центре монастырского ансамбля.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>На внутренних порогах следуйте указаниям о снятии обуви и разрешённом направлении осмотра.</li><li>Говорите тихо: это действующее место монашеской практики.</li><li>Фотографируйте внутри только там, где съёмка разрешена; не снимайте участников служб без согласия.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У Косё-дзи есть выразительный подход: от реки аллея Котодзака уходит вверх под кронами, а в конце появляются белые ворота рюгу — «драконьего дворца». За ними план становится собранным и симметричным. В центре расположен хатто, зал проповеди; по сторонам находятся помещения, связанные с монашеской жизнью.</p><div class="sh"><span class="cap">От Догэна к Удзи</span></div><p>История начинается в 1233 году, когда Догэн открыл Косё-дзи в Фукакусе, в другой части нынешнего Киото. Здесь формировалась японская традиция школы Сото, для которой важна практика дзадзэн — сидячей медитации. Нынешний монастырь в Удзи возник позднее: в 1648 году владетель Ёдо Нагаи Наомаса возродил обитель на земле чайного сада Асахи. Древность традиции не означает, что сегодняшний ансамбль стоит на первоначальном месте.</p><div class="sh"><span class="cap">Архитектура повседневной практики</span></div><p>Монастырский план организован вокруг совместной жизни, обучения и молитвы. Посмотрите, как центральный зал связан с боковыми корпусами, и сравните эту регулярность со свободным зелёным подходом. Котодзака известна осенними клёнами, но в конце весны её характер задают новые листья и тень. Участие в медитации — отдельная программа; в ваше расписание она не добавлена.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1233</b> — Догэн основывает Косё-дзи в Фукакусе.</li><li><b>1648</b> — монастырь возрождён в Удзи при поддержке Нагаи Наомасы.</li></ul></details></div></div></div></article>
+<article class="stop" id="d13-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d13-byodoin-user-approved-hawaii.jpg" alt="Гавайская копия Бёдо-ин у гор Коолау, декоративный пруд и сад" loading="lazy" decoding="async"></div><div class="vt">平等院鳳凰堂</div><div class="plate"><div class="cap">Остановка 4 из 7</div><div class="t">11:40</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Удзи · храм и сад Чистой земли</span></div><h2 class="nm2">Бёдо-ин</h2><div class="jp2">平等院</div><p class="ann">Фениксовый зал стоит на островке, а его отражение продолжает архитектуру в воде — земной образ буддийской Чистой земли.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B9%B3%E7%AD%89%E9%99%A2%20%E3%80%92611-0021%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%87%E6%B2%BB%E5%B8%82%E5%AE%87%E6%B2%BB%E8%93%AE%E8%8F%AF116" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">平等院</div><div class="l2" lang="ja">びょうどういん</div><div class="l3">Byodoin Temple</div><div class="l4" lang="ja">宇治市<br>〒611-0021 京都府宇治市宇治蓮華116</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:45–17:30</div></div><div><div class="k">Стоимость</div><div class="v">¥700</div></div><div><div class="k">Последний вход</div><div class="v">17:15</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Храм XI века с садом, изображающим Чистую землю Будды Амиды.</p><p><b>Главное</b>Фениксовый зал и его отражение в пруду Адзиикэ.</p><p><b>Не пропустите</b>Фениксов на крыше и изгиб каменистого берега.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Фениксовый зал — на островке в пруду.</li><li>Пару фениксов — на концах конька крыши центрального зала.</li><li>Отражение фасада — с противоположного берега Адзиикэ.</li><li>Каменистую кромку сухама — вдоль воды в саду.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Фениксовый зал и отражение в пруду — лучшие объекты для фотографий</li><li>Для общего кадра оставьте внизу место отражению, а по сторонам — обоим крыльям зала.</li><li>Вход внутрь Фениксового зала оформляется отдельно на месте, за ¥300; наличие места на сеанс не гарантировано.</li><li>Внутри Фениксового зала и музея фотографировать нельзя.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Фениксовый зал лучше сначала увидеть целиком через воду. Центральный объём и боковые галереи вытянуты над островком так, что напоминают птицу с раскрытыми крыльями. Пруд здесь участвует в замысле: отражение делает здание зрительно легче и отделяет его от берега, на котором стоит посетитель.</p><div class="sh"><span class="cap">Вилла становится храмом</span></div><p>В 1052 году Фудзивара-но-Ёримити превратил унаследованную от отца виллу в буддийский храм. Тогда распространялось представление о наступлении маппо — эпохи упадка буддийского учения. Надежду связывали с перерождением в Чистой земле Амиды. Уже в 1053 году был завершён зал Амиды, позднее получивший имя Фениксового. Скульптор Дзётё создал для него сидящую статую Будды.</p><div class="sh"><span class="cap">Как читать сад</span></div><p>Фасад обращён на восток: посетитель через пруд смотрит на запад, в сторону Чистой земли Амиды. Здание, остров, вода и дальние горы складываются в единый религиозный пейзаж. Каменистая кромка сухама с плавными изгибами восстановлена на основе археологических исследований, начатых в 1990 году. Вид берега помогает заметить, что сад не сводится к одному симметричному отражению.</p><div class="sh"><span class="cap">Сохранённое и восстановленное</span></div><p>Фениксы на крыше — копии, сменившие подлинники в 1968 году. Исторические скульптуры и другие сокровища храма показывают в музее Хосёкан. Во время ремонта, завершённого в 2014 году, цвет здания приблизили к первоначальному на основе исследований пигментов. Так сегодняшний вид соединяет старые деревянные конструкции с работой реставраторов.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1052</b> — Ёримити основывает Бёдо-ин на месте семейной виллы.</li><li><b>1053</b> — завершён зал Амиды — будущий Фениксовый зал.</li><li><b>2014</b> — завершён большой ремонт Фениксового зала.</li></ul></details></div></div></div></article>
+<article class="stop" id="d13-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d13-togetsukyo-user-bridge.jpg" alt="Мост Тогэцукё через Кацуру на фоне горного склона с осенними деревьями" loading="lazy" decoding="async"></div><div class="vt">渡月橋</div><div class="plate"><div class="cap">Остановка 5 из 7</div><div class="t">14:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Арасияма · мост и речной вид</span></div><h2 class="nm2">Мост Тогэцукё</h2><div class="jp2">渡月橋</div><p class="ann">Низкая линия моста пересекает Кацуру у зелёных склонов — здесь горная река выходит к городской равнине.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B8%A1%E6%9C%88%E6%A9%8B%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8F%B3%E4%BA%AC%E5%8C%BA%E5%B5%AF%E5%B3%A8%E4%B8%AD%E3%83%8E%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">渡月橋</div><div class="l2" lang="ja">とげつきょう</div><div class="l3">Togetsukyo Bridge</div><div class="l4" lang="ja">京都市<br>京都府京都市右京区嵯峨中ノ島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мост через Кацуру, один из главных видов Арасиямы.</p><p><b>Главное</b>Сочетание длинного парапета, воды и горного склона.</p><p><b>Не пропустите</b>Разницу между обликом деревянного моста и современной конструкцией.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Длинную горизонталь парапета — на фоне противоположного склона.</li><li>Опоры — под мостом, если смотреть с берега.</li><li>Остров Наканосима — у южной части речного перехода.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Общий вид моста снимайте с берега, не задерживая движение на тротуаре.</li><li>На мосту держитесь пешеходной части: по нему проходит транспорт.</li><li>Не спускайтесь к воде через ограждения ради нижнего ракурса.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С берега Тогэцукё выглядит почти плоской линией между водой и горой. Его выразительность строится на пропорциях: невысокий парапет не закрывает склон, а повторяющиеся опоры задают ритм над течением. Посмотрите и вдоль перехода, и поперёк него — на фоне леса.</p><div class="sh"><span class="cap">Старый образ, современная конструкция</span></div><p>Нынешний мост завершён в июне 1934 года. Основу составляет современная железобетонная конструкция, а внешний облик наследует прежнему деревянному мосту, чтобы сохранять связь с окружающим пейзажем. Поэтому узнаваемый исторический силуэт не означает, что весь переход деревянный.</p><div class="sh"><span class="cap">Переправа, которую восстанавливали</span></div><p>Начало истории переправы традиционно связывают с монахом Досё и IX веком. За последующие столетия мост менял положение и неоднократно восстанавливался после разрушений. Здесь важен сам устойчивый образ перехода через реку: поколения построек сменились, а связь двух берегов сохранилась.</p></div><div class="leg"><div class="cap">По преданию</div><p>Название Тогэцукё — «мост переходящей луны» — связывают с императором Камэямой: по преданию, он сравнил движение луны над мостом с её переходом через небо.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1934</b> — завершён нынешний мост.</li></ul></details></div></div></div></article>
+<article class="stop" id="d13-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d13-monkeys-user-approved-onsen.jpg" alt="Японские макаки у каменного горячего источника среди снега и пара" loading="lazy" decoding="async"></div><div class="vt">岩田山</div><div class="plate"><div class="cap">Остановка 6 из 7</div><div class="t">15:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Арасияма · японские макаки</span></div><h2 class="nm2">Парк обезьян Иватаяма</h2><div class="jp2">嵐山モンキーパークいわたやま</div><p class="ann">Над рекой открывается панорама Киото, а на горной площадке свободно перемещаются японские макаки.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B5%90%E5%B1%B1%E3%83%A2%E3%83%B3%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%E3%81%84%E3%82%8F%E3%81%9F%E3%82%84%E3%81%BE%20%E3%80%92616-0004%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E8%A5%BF%E4%BA%AC%E5%8C%BA%E5%B5%90%E5%B1%B1%E4%B8%AD%E5%B0%BE%E4%B8%8B%E7%94%BA61" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">嵐山モンキーパークいわたやま</div><div class="l2" lang="ja">あらしやまもんきーぱーくいわたやま</div><div class="l3">Arashiyama Monkey Park Iwatayama</div><div class="l4" lang="ja">京都市<br>〒616-0004 京都府京都市西京区嵐山中尾下町61</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–16:00</div></div><div><div class="k">Стоимость</div><div class="v">¥800</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Горный парк, где наблюдают свободно живущих японских макак.</p><p><b>Главное</b>Поведение стаи и вид на Киото с высоты.</p><p><b>Не пропустите</b>Взаимное вычёсывание шерсти и общение животных.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Открытую площадку с макаками — в верхней части парка.</li><li>Панораму Киото — с обзорной стороны площадки.</li><li>Сетчатые окна помещения для посетителей — в зоне разрешённого кормления.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>К площадке ведёт подъём по горной тропе; выбирайте обувь с устойчивой подошвой.</li><li>Не трогайте обезьян и сохраняйте дистанцию; следуйте указаниям сотрудников.</li><li>Кормление разрешено только купленным в парке кормом через сетку из помещения для посетителей.</li><li>Верхняя площадка закрывается в 16:30; учитывайте указания сотрудников о спуске.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Иватаяме вы оказываетесь среди животных на открытом горном склоне. Макаки свободно ходят по территории, сидят рядом друг с другом и вычёсывают шерсть. Именно эти спокойные действия позволяют увидеть социальную жизнь стаи. За площадкой раскрывается Киото: плотная городская застройка лежит ниже, а по краям видны окружающие горы.</p><div class="sh"><span class="cap">Стая, за которой наблюдают</span></div><p>История парка связана с изучением японских макак исследователями Киотского университета. Животных различают индивидуально, отмечают родственные связи и наблюдают за поведением. Площадка стала общедоступной в 1950-е годы. Нынешняя стая меняется, поэтому фиксированное число обезьян и появление детёнышей в конкретный день не обещаются.</p><div class="sh"><span class="cap">Кто находится за сеткой</span></div><p>При кормлении люди заходят в предназначенное помещение, а макаки остаются снаружи. Сетка сохраняет границу контакта; корм передают по правилам парка. За пределами этой зоны животных не кормят. Они могут уйти в лес, и доступность близкого наблюдения зависит от их поведения, а не только от часов работы.</p></div></details></div></div></div></article>
+<article class="stop" id="d13-s07"><div class="hero"><div class="photo"><img src="../assets/photos/d13-katsura-user-boats.jpg" alt="Прогулочные лодки у берега Кацуры в Арасияме под цветущими вишнёвыми деревьями" loading="lazy" decoding="async"></div><div class="vt">桂川中之島</div><div class="plate"><div class="cap">Остановка 7 из 7</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Арасияма · прогулка у реки</span></div><h2 class="nm2">Арасияма / Кацура / Наканосима</h2><div class="jp2">嵐山・桂川・嵐山公園（中之島地区）</div><p class="ann">После горной площадки — открытое пространство воды и берегов: Наканосима лежит островом в русле Кацуры.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B5%90%E5%B1%B1%E5%85%AC%E5%9C%92%20%E4%B8%AD%E4%B9%8B%E5%B3%B6%E5%9C%B0%E5%8C%BA%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8F%B3%E4%BA%AC%E5%8C%BA%E5%B5%AF%E5%B3%A8%E4%B8%AD%E3%83%8E%E5%B3%B6%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">嵐山・桂川・嵐山公園（中之島地区）</div><div class="l2" lang="ja">あらしやま・かつらがわ・あらしやまこうえん（なかのしまちく）</div><div class="l3">Arashiyama / Katsura River / Nakanoshima Park</div><div class="l4" lang="ja">京都市<br>京都府京都市右京区嵯峨中ノ島町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Одна прогулка по речной части Арасиямы с парком на острове.</p><p><b>Главное</b>Кацура, сосны Наканосимы и горы у воды.</p><p><b>Не пропустите</b>Разные направления течения по сторонам острова.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Остров Наканосима — в русле у южного конца Тогэцукё.</li><li>Сосны и вишнёвые деревья — вдоль парковых дорожек.</li><li>Горный склон — на противоположной стороне открытой воды.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Для прогулки используйте открытые парковые дорожки и разрешённые участки берега.</li><li>Не подходите к кромке при высокой воде и соблюдайте временные перекрытия.</li><li>Остановитесь для фотографии в стороне от основного прохода; унесите мусор с собой.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На Наканосиме пейзаж воспринимается с уровня реки: вода проходит по сторонам острова, над дорожками растут сосны и вишнёвые деревья, а горы остаются близким фоном. После вида с моста и сверху из парка обезьян здесь можно рассмотреть тот же ландшафт в более спокойном масштабе — через стволы, камни у воды и отдельные линии берега.</p><div class="sh"><span class="cap">Одна река, несколько названий</span></div><p>Кацура берёт начало в горах Тамба. У Камэоки участок реки называют Ходзу, а возле Арасиямы распространено название Ои. Это разные названия участков одной речной системы, а не три независимые реки. Здесь ущелье раскрывается в сторону равнины, и рядом оказываются горная вода, остров и городские берега.</p><div class="sh"><span class="cap">Как устроен парк</span></div><p>Арасияма-парк состоит из трёх районов: Камэяма, Наканосима и Ринсэн-дзи. Наканосима — островная часть, где дорожки проходят среди сосен и вишнёвых деревьев. Сравните открытые участки у воды и затенённые места под кронами: гора и река постоянно меняют взаимное положение в поле зрения, хотя вы остаётесь в небольшом пространстве парка.</p></div></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-13 END -->
+</body></html>

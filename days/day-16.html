@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 16 · Саппоро · 26 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-16 START -->
+<section class="day" id="day-16"><div class="photo cv"><img src="../assets/photos/d16-sapporo-user-winter-cover.jpg" alt="Зимняя панорама центра Саппоро с заснеженным парком Одори и городскими огнями в сумерках" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 16 · среда, 26 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Саппоро</h1><div class="cjp">札幌</div><p class="lead">От парящей долины Ноборибэцу и тихоокеанского мыса — к озеру Тоя, молодым вулканам и прозрачной воде Сикоцу. Вечером — возвращение в Саппоро и прогулка по парку Одори.</p></div><section class="in plan" id="d16-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Семь остановок: шесть мест дневной экскурсии и вечерний парк Одори. Сбор у северного выхода Sapporo Station — в 7:50, возвращение в Саппоро — в 17:55.</p><div class="rows"><div class="row"><div class="tm">7:50</div><div class="tx"><div class="nm">🚌 У северного выхода Sapporo Station</div><div class="jp">札幌駅 北口</div><div class="ch"><a href="https://www.klook.com/ru/activity/59789-noboribetsu-lake-toya-lake-shikotsu-tour-sapporo-join-day-tour/?dd_referrer=" target="_blank" rel="noopener">Экскурсия на Klook</a></div></div></div><a class="row" href="#d16-s01"><div class="tm">9:35</div><div class="tx"><div class="nm">Дзигокудани</div><div class="jp">登別地獄谷</div><div class="ch">Пар и горячие ручьи вулканической долины</div></div><div class="ar">›</div></a><a class="row" href="#d16-s02"><div class="tm">10:50</div><div class="tx"><div class="nm">Мыс Тикю</div><div class="jp">地球岬</div><div class="ch">Белый маяк над Тихим океаном</div></div><div class="ar">›</div></a><a class="row" href="#d16-s03"><div class="tm">12:05</div><div class="tx"><div class="nm">Смотровая Сайро</div><div class="jp">サイロ展望台</div><div class="ch">Озеро Тоя и острова Накадзима</div></div><div class="ar">›</div></a><a class="row" href="#d16-s04"><div class="tm">12:50</div><div class="tx"><div class="nm">Усу и Сёва-Синдзан</div><div class="jp">有珠山・昭和新山</div><div class="ch">Молодой лавовый купол у подножия Усу</div></div><div class="ar">›</div></a><a class="row" href="#d16-s05"><div class="tm">14:10</div><div class="tx"><div class="nm">Медвежий парк Сёва-Синдзан</div><div class="jp">昭和新山熊牧場</div><div class="ch">Бурые медведи у подножия вулкана</div></div><div class="ar">›</div></a><a class="row" href="#d16-s06"><div class="tm">16:10</div><div class="tx"><div class="nm">Озеро Сикоцу</div><div class="jp">支笏湖</div><div class="ch">Прозрачная вода среди лесистых гор</div></div><div class="ar">›</div></a><div class="row"><div class="tm">17:55</div><div class="tx"><div class="nm">🚌 Вернулись в Саппоро</div><div class="jp">札幌</div><div class="ch"></div></div></div><a class="row" href="#d16-s07"><div class="tm">19:00</div><div class="tx"><div class="nm">Вечерний парк Одори</div><div class="jp">大通公園</div><div class="ch">Аллеи и вечерние огни Саппоро</div></div><div class="ar">›</div></a></div></section><div class="in"><div class="way"><div class="cap">Сбор → северный выход Sapporo Station</div><p>7:50 — 🚌 У северного выхода Sapporo Station.<br><a href="https://www.klook.com/ru/activity/59789-noboribetsu-lake-toya-lake-shikotsu-tour-sapporo-join-day-tour/?dd_referrer=" target="_blank" rel="noopener">Экскурсия на Klook</a></p></div></div><article class="stop" id="d16-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d16-jigokudani-user-approved-monkey.jpg" alt="Макака на заснеженном склоне над рекой, мостом и деревянным зданием" loading="lazy" decoding="async"></div><div class="vt">登別地獄谷</div><div class="plate"><div class="cap">Остановка 1 из 7</div><div class="t">9:35</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Ноборибэцу · вулканическая долина</span></div><h2 class="nm2">Дзигокудани</h2><div class="jp2">登別地獄谷</div><p class="ann">Из светлой каменистой чаши поднимается пар, а деревянный настил проходит над горячими ручьями среди почти лишённых растительности склонов.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%99%BB%E5%88%A5%E5%9C%B0%E7%8D%84%E8%B0%B7%20%E5%8C%97%E6%B5%B7%E9%81%93%E7%99%BB%E5%88%A5%E5%B8%82%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">登別地獄谷</div><div class="l2" lang="ja">のぼりべつじごくだに</div><div class="l3">Noboribetsu Jigokudani / Hell Valley</div><div class="l4" lang="ja">登別市<br>北海道登別市登別温泉町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">24 часа</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Вулканическая долина и главный район выхода источников Ноборибэцу-онсэн.</p><p><b>Главное</b>Контраст белёсых склонов, струй пара и окружающего леса.</p><p><b>Не пропустите</b>Горячие ручьи под деревянным настилом к Тэссэн-икэ.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Светлые склоны и выходы пара — напротив основной обзорной площадки.</li><li>Горячие ручьи — под настилом, ведущим в центральную часть долины.</li><li>Тэссэн-икэ — небольшой источник у конца настила, если проход открыт.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Оставайтесь на оборудованных дорожках и соблюдайте перекрытия: грунт за ограждением связан с горячими источниками.</li><li>Не касайтесь воды в ручьях и не подходите к выходам пара.</li><li>Не ждите обязательного высокого выброса Тэссэн-икэ: активность источника меняется.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Дзигокудани сначала воспринимается как неожиданная прореха в лесу. Вместо зелёного склона перед вами открывается светлая чаша с бороздами, ручьями и подвижными облаками пара. Название переводится как «адская долина»: кипение, шипение и обнажённая земля дали повод представить здесь жилище они — японских демонов.</p><div class="sh"><span class="cap">Горячая вода для города</span></div><p>Котловина диаметром около 450 метров возникла в результате вулканической активности Хиёриямы. Внутри неё множество выходов горячей воды и газа. Это не только природный вид: источники снабжают термальной водой гостиницы Ноборибэцу-онсэн. Курорт и долина связаны одной подземной системой, хотя купаются в оборудованных ваннах, а не здесь.</p><div class="sh"><span class="cap">Настил среди источников</span></div><p>Деревянная дорожка позволяет увидеть долину ближе, не сходя на неустойчивую поверхность. Под ней заметны русла горячих ручьёв. У центрального источника Тэссэн-икэ вода прежде выбрасывалась заметнее; туристическая ассоциация отдельно отмечает, что прежние извержения теперь наблюдаются реже. Интерес здесь — в самой действующей системе: воде, окраске грунта, паре и звуке.</p></div></details></div></div></div></article>
+<article class="stop" id="d16-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d16-chikyu-user-lighthouse.jpg" alt="Белый маяк на скалистом мысе Тикю над Тихим океаном" loading="lazy" style="object-position:center bottom" decoding="async"></div><div class="vt">地球岬</div><div class="plate"><div class="cap">Остановка 2 из 7</div><div class="t">10:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Муроран · тихоокеанский мыс</span></div><h2 class="nm2">Мыс Тикю</h2><div class="jp2">地球岬</div><p class="ann">Невысокая белая башня маяка стоит над крутым берегом, а за ней весь вид занимает Тихий океан.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%9C%B0%E7%90%83%E5%B2%AC%20%E3%80%92051-0003%20%E5%8C%97%E6%B5%B7%E9%81%93%E5%AE%A4%E8%98%AD%E5%B8%82%E6%AF%8D%E6%81%8B%E5%8D%97%E7%94%BA4-77" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">地球岬</div><div class="l2" lang="ja">ちきゅうみさき</div><div class="l3">Cape Chikyu / Cape Chikiu</div><div class="l4" lang="ja">室蘭市<br>〒051-0003 北海道室蘭市母恋南町4-77</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мыс на южной оконечности полуострова Этомо в Муроране.</p><p><b>Главное</b>Белый маяк и открытый океан за высоким обрывом.</p><p><b>Не пропустите</b>Восьмигранную нижнюю часть маяка, видимую с обзорной площадки.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Белый маяк — ниже обзорной площадки, у края мыса.</li><li>Высокий обрыв — под маяком и по сторонам береговой линии.</li><li>«Колокол счастья» — на территории обзорной площадки.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>У моря бывает сильный ветер: придерживайте головной убор и телефон.</li><li>Смотрите с общественной площадки; вход на служебную территорию маяка не входит в обычный осмотр.</li><li>Для кадра с маяком оставьте вверху пространство морского горизонта.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На мысе Тикю главное впечатление создаёт соотношение размеров: маяк невелик, а море занимает почти всё поле зрения. Обзорная площадка расположена выше белой башни, поэтому обычно знакомый силуэт маяка здесь можно рассмотреть сверху. В ясную погоду вид уходит далеко за край полуострова; при тумане морской горизонт исчезает, и внимание смещается на близкие скалы.</p><div class="sh"><span class="cap">Имя скалистого берега</span></div><p>Иероглифы 地球 означают «земной шар», но местная туристическая организация связывает название с айнским словом «тикэп» — «обрыв». Через звучание «Тикиу» возникла нынешняя запись. Морская панорама хорошо запоминается, однако происхождение имени связано с берегом, а не с измерением кривизны Земли.</p><div class="sh"><span class="cap">Маяк как морской ориентир</span></div><p>Маяк впервые зажгли 1 апреля 1920 года. Его огонь находится на высоте 131 метр над морем: значительную часть высоты даёт сам обрыв, а не башня. Нижняя часть сооружения восьмигранная. Маяк продолжает служить судоходству; обычное посещение мыса — наружный осмотр, специальные дни открытия территории проводятся отдельно.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1920</b> — 1 апреля впервые зажжён огонь маяка Тикиу.</li></ul></details></div></div></div></article>
+<article class="stop" id="d16-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d16-sairo-user-panorama.jpg" alt="Озеро Тоя, лесистые острова и обзорная площадка Сайро" loading="lazy" decoding="async"></div><div class="vt">サイロ展望台</div><div class="plate"><div class="cap">Остановка 3 из 7</div><div class="t">12:05</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Озеро Тоя · обзорная площадка</span></div><h2 class="nm2">Смотровая Сайро</h2><div class="jp2">サイロ展望台</div><p class="ann">С высокого западного берега озеро Тоя раскрывается целиком: лесистые острова лежат посреди воды, а за ними поднимаются вулканические горы.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%82%A4%E3%83%AD%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E3%80%92049-5832%20%E5%8C%97%E6%B5%B7%E9%81%93%E8%99%BB%E7%94%B0%E9%83%A1%E6%B4%9E%E7%88%BA%E6%B9%96%E7%94%BA%E6%88%90%E9%A6%993-5" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">サイロ展望台</div><div class="l2" lang="ja">さいろてんぼうだい</div><div class="l3">Sairo Observatory</div><div class="l4" lang="ja">洞爺湖町<br>〒049-5832 北海道虻田郡洞爺湖町成香3-5</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Открытая смотровая площадка на западном берегу озера Тоя.</p><p><b>Главное</b>Широкая панорама воды, островов и массива Усу.</p><p><b>Не пропустите</b>Разницу между чашей озера и вулканическими островами внутри неё.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Накадзима — группа лесистых островов посреди озера.</li><li>Усу и Сёва-Синдзан — на противоположной стороне озёрного пейзажа, при хорошей видимости.</li><li>Границу высокого берега и водной чаши — прямо перед площадкой.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Сначала рассмотрите озеро без приближения, затем выделите острова и горы отдельными кадрами.</li><li>На открытой площадке пригодится слой одежды от ветра.</li><li>Туалеты находятся в здании магазина и доступны только в его рабочие часы.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Сайро удобна для чтения большого пейзажа: между вами и островами лежит широкая поверхность воды, а дальний берег помогает увидеть форму озёрной котловины. Это открытая площадка рядом с туристическим комплексом, а не высокая башня. К ней можно пройти непосредственно от парковки, без прохода через магазин.</p><div class="sh"><span class="cap">Два этапа вулканической истории</span></div><p>Кальдера Тоя возникла около 110 тысяч лет назад после крупного извержения и обрушения поверхности. Позднее впадина заполнилась водой. Острова Накадзима появились в результате другой серии извержений около 50 тысяч лет назад. Поэтому острова и окружающие озеро склоны относятся к разным этапам одной длинной истории.</p><div class="sh"><span class="cap">Что различить в панораме</span></div><p>Начните с ближнего берега, затем переведите взгляд на острова и противоположные горы. Усу и Сёва-Синдзан показывают более молодую вулканическую активность региона. Сайро даёт общий вид, с которым легче сопоставить следующую остановку у гор. Дальние очертания зависят от облаков и прозрачности воздуха; не все элементы панорамы видны одновременно.</p></div></details></div></div></div></article>
+<article class="stop" id="d16-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d16-showa-shinzan-user-dome.jpg" alt="Бурый купол Сёва-Синдзан среди леса, вид с высоты" loading="lazy" decoding="async"></div><div class="vt">昭和新山</div><div class="plate"><div class="cap">Остановка 4 из 7</div><div class="t">12:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Собэцу · вулканы</span></div><h2 class="nm2">Усу и Сёва-Синдзан</h2><div class="jp2">有珠山・昭和新山</div><p class="ann">Бурый скальный купол Сёва-Синдзан резко выступает среди зелени у подножия Усу — здесь новую гору наблюдали от первых землетрясений до её роста.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%89%E7%8F%A0%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%B1%B1%E9%BA%93%E9%A7%85%20%E3%80%92052-0102%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%89%E7%8F%A0%E9%83%A1%E5%A3%AE%E7%9E%A5%E7%94%BA%E5%AD%97%E6%98%AD%E5%92%8C%E6%96%B0%E5%B1%B1184-5%EF%BC%88%E6%9C%89%E7%8F%A0%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E5%B1%B1%E9%BA%93%E9%A7%85%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">有珠山・昭和新山</div><div class="l2" lang="ja">うすざん・しょうわしんざん</div><div class="l3">Mount Usu and Showa Shinzan</div><div class="l4" lang="ja">壮瞥町<br>〒052-0102 北海道有珠郡壮瞥町字昭和新山184-5（有珠山ロープウェイ山麓駅）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По зонам</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Вулкан Усу и выросший на его восточном склоне купол Сёва-Синдзан.</p><p><b>Главное</b>Скальный купол, сформировавшийся в ходе активности 1943–1945 годов.</p><p><b>Не пропустите</b>Памятник почтмейстеру Мимацу, который зарисовывал рост новой горы.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Бурый купол Сёва-Синдзан — над площадью у нижней станции канатной дороги.</li><li>Статую Мимацу Масао с измерительным прибором — у подножия Сёва-Синдзан.</li><li>Панораму озера Тоя и Сёва-Синдзан — у верхней станции, если поднимаетесь на Усу.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Карта и японский адрес ведут к нижней станции канатной дороги рядом с Сёва-Синдзан.</li><li>Для канатной дороги нужен отдельный билет: взрослый туда и обратно ¥2 000. Наличие подъёма в вашей программе сверяйте с бронью.</li><li>Сёва-Синдзан рассматривают с разрешённых площадок у подножия; не поднимайтесь на сам купол.</li><li>При подъёме следуйте действующим указателям и сообщениям оператора; доступ на гору зависит от погоды и вулканической обстановки.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Сёва-Синдзан легко отличить от окружающих склонов: его поверхность бурая и скалистая, а форма кажется слишком резкой рядом с лесом. «Новая гора эпохи Сёва» — буквальный смысл названия. Купол возник на восточной стороне Усу там, где прежде были поля. Это не древняя гора с неизвестной датой рождения: её появление пришлось на годы жизни людей, оставивших подробные наблюдения.</p><div class="sh"><span class="cap">Как вырос купол</span></div><p>В конце 1943 года начались землетрясения и поднятие земли. В 1944 году последовали взрывы, а затем из поднятого участка выдавилась вязкая лава. Рост продолжался до осени 1945 года. Сёва-Синдзан поэтому связан с Усу как проявление его активности, хотя визуально воспринимается отдельной горой.</p><div class="sh"><span class="cap">Наблюдатель с почты</span></div><p>Местный почтмейстер Мимацу Масао регулярно фиксировал контуры растущей горы с одной точки. Его последовательные зарисовки получили название «диаграммы Мимацу»: на них время превращается в наложенные друг на друга силуэты. Позднее он приобрёл землю, чтобы сохранить вулканическую форму и продолжать наблюдения. Памятник у подножия напоминает об этой связи повседневной жизни и исследования природы.</p><div class="sh"><span class="cap">Усу с высоты</span></div><p>Канатная дорога поднимается на Усу, а не на вершину Сёва-Синдзан. С площадок у верхней станции открываются озеро Тоя и молодой купол ниже. Поездка по канатной дороге — отдельная услуга; её наличие и оплату определяет выбранная экскурсионная программа. Общего билета на весь горный ландшафт нет, а медвежий парк остаётся следующей самостоятельной остановкой.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1943</b> — в декабре начинаются землетрясения, предшествовавшие рождению Сёва-Синдзан.</li><li><b>1944–1945</b> — извержения и рост лавового купола формируют новую гору.</li></ul></details></div></div></div></article>
+<article class="stop" id="d16-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d16-bear-ranch-user-bear.jpg" alt="Бурый медведь с поднятыми лапами в открытом вольере" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt sm">昭和新山熊牧場</div><div class="plate"><div class="cap">Остановка 5 из 7</div><div class="t">14:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Собэцу · медвежий парк</span></div><h2 class="nm2">Медвежий парк Сёва-Синдзан</h2><div class="jp2">昭和新山熊牧場</div><p class="ann">В просторных открытых вольерах медведи отдыхают и наблюдают за посетителями, а из специальной комнаты можно увидеть их почти на уровне глаз.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%AD%E5%92%8C%E6%96%B0%E5%B1%B1%E7%86%8A%E7%89%A7%E5%A0%B4%20%E3%80%92052-0102%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%89%E7%8F%A0%E9%83%A1%E5%A3%AE%E7%9E%A5%E7%94%BA%E5%AD%97%E6%98%AD%E5%92%8C%E6%96%B0%E5%B1%B1183%E7%95%AA%E5%9C%B0" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">昭和新山熊牧場</div><div class="l2" lang="ja">しょうわしんざんくまぼくじょう</div><div class="l3">Showa Shinzan Bear Ranch</div><div class="l4" lang="ja">壮瞥町<br>〒052-0102 北海道有珠郡壮瞥町字昭和新山183番地</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:30–17:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 000</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Парк с бурыми медведями у подножия Сёва-Синдзан.</p><p><b>Главное</b>Наблюдение за животными с разных уровней и расстояний.</p><p><b>Не пропустите</b>Специальную обзорную комнату «Хито-но-ори» — «клетку для людей».</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Группы медведей разного возраста — в отдельных вольерах на территории.</li><li>«Хито-но-ори» — специальную комнату для близкого наблюдения за крупными медведями.</li><li>Специальный корм — в точках продажи внутри парка.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Подготовьте наличные для входного билета: касса парка принимает оплату наличными.</li><li>Кормите животных только кормом парка и только по инструкции персонала; свою еду не используйте.</li><li>Не просовывайте руки или камеру через ограждения и отверстия обзорной комнаты.</li><li>Соблюдайте спокойствие у вольеров; активность животных не подчиняется времени экскурсии.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В медвежьем парке полезно сначала остановиться у одного вольера и понаблюдать: животные двигаются с разной скоростью, отдыхают, играют или следят за людьми. Их содержат группами по возрасту. Это наблюдение за животными в неволе; поведение у кормушки не стоит переносить на встречу с медведем в лесу.</p><div class="sh"><span class="cap">Кто оказывается за решёткой</span></div><p>Название «Хито-но-ори» переводится как «клетка для людей». Посетители входят в защищённую комнату внутри зоны близкого наблюдения и оказываются примерно на уровне медведей. Отсюда особенно заметны размер головы, лап и дыхание животного. У комнаты есть лестница; остальная территория также включает уклоны.</p><div class="sh"><span class="cap">История парка</span></div><p>Парк открылся в июле 1969 года у подножия Сёва-Синдзан. Его основная программа — наблюдение и кормление специальным кормом. Яблоки оператор предлагает сезонно, обычно с осени до конца марта, поэтому в мае их наличие не предполагается. Показ медвежат зависит от животных и текущей работы парка: конкретный состав вольеров заранее не гарантирован.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1969</b> — в июле открывается медвежий парк Сёва-Синдзан.</li></ul></details></div></div></div></article>
+<article class="stop" id="d16-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d16-shikotsu-user-lake.jpg" alt="Озеро Сикоцу, лесистая гора на противоположном берегу и ветви деревьев на переднем плане" loading="lazy" decoding="async"></div><div class="vt">支笏湖</div><div class="plate"><div class="cap">Остановка 6 из 7</div><div class="t">16:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Титосэ · кальдерное озеро</span></div><h2 class="nm2">Озеро Сикоцу</h2><div class="jp2">支笏湖</div><p class="ann">Прозрачная вода у берега быстро темнеет к глубине, а над озером поднимаются лесистые вулканические склоны.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%94%AF%E7%AC%8F%E6%B9%96%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E3%80%92066-0281%20%E5%8C%97%E6%B5%B7%E9%81%93%E5%8D%83%E6%AD%B3%E5%B8%82%E6%94%AF%E7%AC%8F%E6%B9%96%E6%B8%A9%E6%B3%89%E7%95%AA%E5%A4%96%E5%9C%B0%EF%BC%88%E6%94%AF%E7%AC%8F%E6%B9%96%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E4%BB%98%E8%BF%91%EF%BC%89" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">支笏湖</div><div class="l2" lang="ja">しこつこ</div><div class="l3">Lake Shikotsu</div><div class="l4" lang="ja">千歳市<br>〒066-0281 北海道千歳市支笏湖温泉番外地（支笏湖ビジターセンター付近）</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Глубокое кальдерное озеро в национальном парке Сикоцу-Тоя.</p><p><b>Главное</b>Прозрачная вода и вулканические горы вокруг озёрной чаши.</p><p><b>Не пропустите</b>Красный мост Ямасэн у выхода реки Титосэ из озера.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Переход от прозрачной воды к тёмной глубине — у оборудованного берега.</li><li>Реку Титосэ — в месте, где она вытекает из озера.</li><li>Красный мост Ямасэн — над истоком реки рядом с посёлком.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Японский адрес и карта указывают район визит-центра как ориентир береговой прогулки.</li><li>Оставайтесь на оборудованном берегу: дно резко уходит в глубину, а вода холодная даже летом.</li><li>Возьмите одежду от ветра и унесите мусор с собой.</li><li>При осмотре моста не перекрывайте пешеходный проход.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">У Сикоцу внимание удерживает сама вода: у берега видны камни, а чуть дальше поверхность становится глубоко-синей. Горы образуют стенки большой чаши. Здесь хорошо сопоставить открытый простор озера с небольшим истоком Титосэ, через который вода начинает путь к равнине.</p><div class="sh"><span class="cap">Озеро внутри кальдеры</span></div><p>Котловина возникла в результате крупной вулканической активности десятки тысяч лет назад. Позднее по краям кальдеры выросли вулканы, сформировавшие нынешний силуэт берегов. Глубина превышает 360 метров; Сикоцу — второе по глубине озеро Японии. Большой запас воды помогает ему редко замерзать полностью, хотя это не означает тёплую воду для купания.</p><div class="sh"><span class="cap">Мост с прежней железной дороги</span></div><p>Красный Ямасэн первоначально построили в 1899 году для железной дороги в другой части Хоккайдо. Около 1923 года мост перенесли к Сикоцу и использовали на промышленной линии компании Oji Paper. После закрытия линии в 1951 году он сохранился как пешеходный переход. Его металлическая решётка связывает нынешнюю прогулочную набережную с историей перевозки материалов и освоения водной энергии.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1899</b> — построен будущий мост Ямасэн, первоначально для другой железнодорожной линии.</li><li><b>Около 1923</b> — мост перенесён к озеру Сикоцу.</li><li><b>1951</b> — промышленная линия Ямасэн закрывается.</li></ul></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Возвращение → Саппоро</div><p>17:55 — 🚌 Вернулись в Саппоро.</p></div></div>
+<article class="stop" id="d16-s07"><div class="hero"><div class="photo"><img src="../assets/photos/d16-odori-user-night.jpg" alt="Ночная панорама парка Одори с яркими световыми инсталляциями среди городских кварталов" loading="lazy" decoding="async"></div><div class="vt">大通公園</div><div class="plate"><div class="cap">Остановка 7 из 7</div><div class="t">19:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Саппоро · городской парк</span></div><h2 class="nm2">Вечерний парк Одори</h2><div class="jp2">大通公園</div><p class="ann">Зелёная полоса между городскими кварталами собирает вечернюю жизнь Саппоро: прогулочные аллеи, клумбы и силуэт телебашни в дальней перспективе.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E9%80%9A%E8%A5%BF3%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">大通公園</div><div class="l2" lang="ja">おおどおりこうえん</div><div class="l3">Odori Park</div><div class="l4" lang="ja">札幌市<br>北海道札幌市中央区大通西3丁目</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">24 часа</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Длинный городской парк, пересекающий центр Саппоро с востока на запад.</p><p><b>Главное</b>Чередование зелёных участков и городской застройки.</p><p><b>Не пропустите</b>Перспективу аллей в сторону телебашни на восточном конце парка.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Телебашню — в восточной перспективе парка, на участке Ниси-1-тёмэ.</li><li>Клумбы и газоны — между прогулочными дорожками.</li><li>Сирень — среди посадок парка; время цветения зависит от весны.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Переходите улицы между участками парка по пешеходным переходам.</li><li>Для вечернего кадра соедините ближние деревья или клумбы с телебашней в перспективе.</li><li>Возьмите лёгкую верхнюю одежду: после дневных остановок у воды вечерняя прогулка может оказаться прохладной.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Одори устроен как последовательность зелёных городских комнат: дорожки, клумбы и газоны сменяются перекрёстком, а затем продолжаются в следующем квартале. Длина парка около полутора километров, но для вечерней прогулки не требуется проходить его целиком. На востоке видна телебашня; город остаётся рядом и становится частью пейзажа.</p><div class="sh"><span class="cap">Сначала полоса против огня</span></div><p>В 1871 году через планируемый город оставили широкое открытое пространство, разделявшее северную административную часть и южные жилые и торговые кварталы. Оно должно было препятствовать распространению пожаров между деревянными зданиями. Позднее утилитарная полоса превратилась в место прогулок. В 1911 году по проекту Нагаоки Ясухэя провели систематическое парковое благоустройство.</p><div class="sh"><span class="cap">Место повседневности и событий</span></div><p>Во время войны часть территории использовали под огороды. В 1950 году началось восстановление, и здесь прошёл первый Снежный фестиваль Саппоро. Телебашню построили в 1957 году. Сегодня парк принимает сезонные события, но остаётся повседневным местом отдыха. Сирень связана с поздней весной Саппоро; ни точное цветение, ни фестивальная программа на день прогулки не предполагаются автоматически.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1871</b> — создана открытая противопожарная полоса через центр города.</li><li><b>1911</b> — парковое благоустройство по проекту Нагаоки Ясухэя.</li><li><b>1950</b> — в парке проходит первый Снежный фестиваль Саппоро.</li><li><b>1957</b> — построена телебашня у восточного конца парка.</li></ul></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-16 END -->
+</body></html>

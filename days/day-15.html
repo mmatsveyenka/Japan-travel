@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 15 · Саппоро · 25 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-15 START -->
+<section class="day" id="day-15"><div class="photo cv"><img src="../assets/photos/d15-sapporo-user-cover.jpg" alt="Панорама центра Саппоро с зелёной полосой парка Одори, городскими зданиями и горами на горизонте" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 15 · вторник, 25 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Саппоро</h1><div class="cjp">札幌</div><p class="lead">Канал Отару и винокурня Nikka в Ёити, затем морские виды полуострова Сякотан: Камуи, Симамуи и Огон. Вечером — Танукикодзи и ужин в Сусукино.</p></div><section class="in plan" id="d15-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Шесть остановок: портовый Отару, винокурня и три вида побережья, затем вечер в Саппоро. Сбор у северного выхода Sapporo Station — в 8:40.</p><div class="rows"><div class="row"><div class="tm">8:40</div><div class="tx"><div class="nm">🚌 У северного выхода Sapporo Station</div><div class="jp">札幌駅北口</div><div class="ch"><a href="https://www.getyourguide.com/en-gb/sapporo-l32644/sapporo-shakotan-blue-cape-kamui-otaru-nikka-distillery-t1392697/" target="_blank" rel="noopener">Экскурсия GetYourGuide</a></div></div></div><a class="row" href="#d15-s01"><div class="tm">10:00</div><div class="tx"><div class="nm">Канал Отару</div><div class="jp">小樽運河</div><div class="ch">Вода, склады и портовая история<br>💡 Свободное время для прогулки по каналу, старым улицам, сувенирным магазинам и обеда. Если времени мало, сначала прогуляйся вдоль канала, а потом загляни на Sakaimachi Street.</div></div><div class="ar">›</div></a><a class="row" href="#d15-s02"><div class="tm">12:00</div><div class="tx"><div class="nm">Винокурня Nikka в Ёити</div><div class="jp">ニッカウヰスキー余市蒸溜所</div><div class="ch">Шотландский опыт на северном острове</div></div><div class="ar">›</div></a><a class="row" href="#d15-s03"><div class="tm">14:15</div><div class="tx"><div class="nm">Мыс Камуи</div><div class="jp">神威岬</div><div class="ch">Тропа между двумя морскими склонами</div></div><div class="ar">›</div></a><a class="row" href="#d15-s04"><div class="tm">15:35</div><div class="tx"><div class="nm">Побережье Симамуи</div><div class="jp">島武意海岸</div><div class="ch">Скалистая бухта за тёмным туннелем</div></div><div class="ar">›</div></a><a class="row" href="#d15-s05"><div class="tm">16:20</div><div class="tx"><div class="nm">Мыс Огон</div><div class="jp">黄金岬</div><div class="ch">Порт Бикуни и остров в море</div></div><div class="ar">›</div></a><div class="row"><div class="tm">18:30</div><div class="tx"><div class="nm">🚌 Вернулись в Саппоро</div><div class="jp">札幌</div><div class="ch"></div></div></div><a class="row" href="#d15-s06"><div class="tm">19:00</div><div class="tx"><div class="nm">Танукикодзи и ужин в Сусукино</div><div class="jp">狸小路商店街・すすきの</div><div class="ch">Торговая аркада и вечерний ужин<br>Ужин в Susukino</div></div><div class="ar">›</div></a></div></section><div class="in"><div class="way"><div class="cap">Сбор → Sapporo Station</div><p>8:40 — 🚌 У северного выхода Sapporo Station / 札幌駅北口.<br><a href="https://www.getyourguide.com/en-gb/sapporo-l32644/sapporo-shakotan-blue-cape-kamui-otaru-nikka-distillery-t1392697/" target="_blank" rel="noopener">Экскурсия GetYourGuide</a></p></div></div><article class="stop" id="d15-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d15-otaru-user-canal.jpg" alt="Канал Отару в вечернем свете, каменные склады, газовые фонари и отражения в воде" loading="lazy" decoding="async"></div><div class="vt">小樽運河</div><div class="plate"><div class="cap">Остановка 1 из 6</div><div class="t">10:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Отару · канал и старые улицы</span></div><h2 class="nm2">Канал Отару</h2><div class="jp2">小樽運河</div><p class="ann">Каменные склады тянутся вдоль воды, а газовые фонари отмечают прогулочную набережную бывшего грузового порта.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3%20%E5%8C%97%E6%B5%B7%E9%81%93%E5%B0%8F%E6%A8%BD%E5%B8%82%E6%B8%AF%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">小樽運河</div><div class="l2" lang="ja">おたるうんが</div><div class="l3">Otaru Canal</div><div class="l4" lang="ja">小樽市<br>北海道小樽市港町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Бывший грузовой канал с прогулочной набережной и историческими складами.</p><p><b>Главное</b>Изгиб воды и каменные фасады, обращённые к каналу.</p><p><b>Не пропустите</b>Газовые фонари и отражения складов с мостов.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Каменные склады — вдоль противоположного берега канала.</li><li>Газовые фонари — на прогулочной набережной.</li><li>Изгиб водного пути — с мостов над каналом.</li><li>Вывески стекольных и сувенирных лавок — на Sakaimachi Street, 堺町通り.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Свободное время для прогулки по каналу, старым улицам, сувенирным магазинам и обеда. Если времени мало, сначала прогуляйся вдоль канала, а потом загляни на Sakaimachi Street.</li><li>Уточните у сопровождающего место сбора и возвращайтесь к нему по условиям вашей экскурсии.</li><li>На мостах оставляйте проход другим пешеходам; для фотографии остановитесь у края, не выходя на дорогу.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С набережной видно, как был устроен портовый Отару: вода подходит к длинным складским фасадам, а мосты связывают береговые улицы. Сегодня часть зданий занята ресторанами и другими заведениями. Камень, спокойная поверхность канала и газовые фонари создают узнаваемый вид, но за ним стоит вполне практическая история перевозки грузов.</p><div class="sh"><span class="cap">Вода как грузовая дорога</span></div><p>Канал завершили в 1923 году. Большие суда разгружали на рейде, а небольшие баржи подвозили товары к складам. Водный путь создали, отсыпав землю со стороны моря, поэтому он сохранил плавный изгиб прежнего побережья. Позднее новые причалы позволили разгружать суда напрямую, и необходимость в баржах уменьшилась.</p><div class="sh"><span class="cap">Сохранённая часть города</span></div><p>Когда канал потерял хозяйственную роль, возник проект его засыпки ради автомобильной дороги. Последовал многолетний спор о сохранении портового пейзажа. В 1986 году часть водного пространства засыпали, а вдоль оставшегося канала устроили набережную. Участок вдоль дороги стал уже; северная часть сохранила первоначальную ширину. Нынешний вид — результат этого компромисса.</p><div class="sh"><span class="cap">Старые улицы и обед</span></div><p>Sakaimachi Street, 堺町通り, продолжает знакомство с торговым городом: здесь работают лавки стекла, музыкальных шкатулок, сладостей и морепродуктов. Она входит в ваше свободное время, без отдельного часа и обязательного магазина. Сначала осмотрите канал, затем выбирайте оставшуюся часть прогулки и обед по вашей заметке.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1923</b> — завершён канал для доставки портовых грузов на баржах.</li><li><b>1986</b> — после споров о засыпке устроены дорога и прогулочная набережная.</li></ul></details></div></div></div></article>
+<article class="stop" id="d15-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d15-nikka-user-museum.jpg" alt="Медный перегонный куб, деревянные балки и бочки с эмблемами Nikka в музейном интерьере" loading="lazy" style="object-position:right center" decoding="async"></div><div class="vt">余市蒸溜所</div><div class="plate"><div class="cap">Остановка 2 из 6</div><div class="t">12:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Ёити · винокурня и музей</span></div><h2 class="nm2">Винокурня Nikka в Ёити</h2><div class="jp2">ニッカウヰスキー余市蒸溜所</div><p class="ann">Каменные здания и медные кубы рассказывают, как шотландский опыт стал основой производства виски на Хоккайдо.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%8B%E3%83%83%E3%82%AB%E3%82%A6%E3%83%B0%E3%82%B9%E3%82%AD%E3%83%BC%E4%BD%99%E5%B8%82%E8%92%B8%E6%BA%9C%E6%89%80%20%E3%80%92046-0003%20%E5%8C%97%E6%B5%B7%E9%81%93%E4%BD%99%E5%B8%82%E9%83%A1%E4%BD%99%E5%B8%82%E7%94%BA%E9%BB%92%E5%B7%9D%E7%94%BA7%E4%B8%81%E7%9B%AE6" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">ニッカウヰスキー余市蒸溜所</div><div class="l2" lang="ja">にっかういすきーよいちじょうりゅうしょ</div><div class="l3">Nikka Whisky Yoichi Distillery</div><div class="l4" lang="ja">余市町<br>〒046-0003 北海道余市郡余市町黒川町7丁目6</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:15–16:15</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">15:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Первая винокурня Nikka, основанная Масатакой Такэцуру в 1934 году.</p><p><b>Главное</b>Традиция перегонки на прямом угольном огне.</p><p><b>Не пропустите</b>В музее — историю Такэцуру и различия марок Nikka.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Историю Масатаки Такэцуру — в экспозиции Nikka Museum.</li><li>Материалы о марках «Yoichi», «Taketsuru», «Black Nikka» и «From the Barrel» — в музее.</li><li>Медный перегонный куб — в центре музейного дегустационного бара.</li><li>Башню сушки солода — на экскурсионном маршруте, если он включён в ваше посещение.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Уточните у организатора, включает ли остановка экскурсию по производственной территории: для неё нужна предварительная бронь.</li><li>Самостоятельное посещение музея и магазина проходит через вход со стороны магазина; производственная территория доступна по экскурсионному допуску.</li><li>Музейный дегустационный бар платный; проба напитков не обязательна.</li><li>Следуйте правилам съёмки: на экскурсии разрешены фотографии, но запрещены видеосъёмка и запись звука.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Ёити винокурня выглядит как небольшой производственный посёлок: отдельные здания отвечают разным этапам работы, а музей объясняет, как эти этапы связаны. В медном кубе перегоняют спирт, затем бесцветный дистиллят отправляют в бочку. Цвет и часть аромата появляются уже при выдержке. Это помогает смотреть на оборудование как на звенья одного процесса.</p><div class="sh"><span class="cap">Почему именно Ёити</span></div><p>Масатака Такэцуру основал здесь первую винокурню Nikka в 1934 году. Он искал условия, напоминавшие Шотландию, где учился изготовлению виски: прохладный влажный климат, чистую воду и воздух. Ёити расположен у основания полуострова Сякотан, рядом с морем и горами. Выбор места был частью его замысла воспроизвести освоенную технологию в Японии.</p><div class="sh"><span class="cap">Угольный огонь</span></div><p>В Ёити сохраняют прямой нагрев перегонных кубов углём. Работник регулирует горение вручную; способ нагрева влияет на характер спирта. Башня сушки солода с характерной крышей относится к другой стадии производства: раньше здесь сушили пророщенный ячмень. Сейчас она уже не используется по первоначальному назначению, но остаётся символом винокурни.</p><div class="sh"><span class="cap">Музей и производственная экскурсия</span></div><p>В Nikka Museum представлены история компании, биография Такэцуру и работа создателей купажей. Музей можно посетить без записи, тогда как осмотр наружных производственных объектов проводят по предварительной брони. Посещение винокурни в составе автобусного тура не означает доступ на весь производственный маршрут: формат зависит от брони.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1934</b> — Масатака Такэцуру основывает винокурню в Ёити.</li></ul></details></div></div></div></article>
+<article class="stop" id="d15-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d15-kamui-user-cape.jpg" alt="Зелёный хребет мыса Камуи с тропой, маяком и отдельно стоящей скалой в синем море" loading="lazy" style="object-position:right center" decoding="async"></div><div class="vt">神威岬</div><div class="plate"><div class="cap">Остановка 3 из 6</div><div class="t">14:15</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Сякотан · скалистый мыс</span></div><h2 class="nm2">Мыс Камуи</h2><div class="jp2">神威岬</div><p class="ann">Узкий зелёный хребет выступает в Японское море; за его оконечностью поднимается отдельная скала Камуи.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A5%9E%E5%A8%81%E5%B2%AC%20%E5%8C%97%E6%B5%B7%E9%81%93%E7%A9%8D%E4%B8%B9%E9%83%A1%E7%A9%8D%E4%B8%B9%E7%94%BA%E5%A4%A7%E5%AD%97%E7%A5%9E%E5%B2%AC%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">神威岬</div><div class="l2" lang="ja">かむいみさき</div><div class="l3">Cape Kamui</div><div class="l4" lang="ja">積丹町<br>北海道積丹郡積丹町大字神岬町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:00–18:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">17:00</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Скалистый мыс на северо-западе полуострова Сякотан.</p><p><b>Главное</b>Морские просторы по обе стороны узкого хребта.</p><p><b>Не пропустите</b>Силуэт скалы Камуи за оконечностью мыса.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Узкий хребет — от обзорной зоны в сторону оконечности.</li><li>Ворота 女人禁制の門 — у начала тропы к концу мыса.</li><li>Скалу Камуи — в море за оконечностью.</li><li>Маяк — у конца мыса, если проход по тропе открыт.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Перед выходом на тропу проверьте допуск у ворот и следуйте указаниям сопровождающего.</li><li>Возьмите ветровку и обувь с устойчивой подошвой: тропа проходит по открытому гребню с подъёмами и спусками.</li><li>Не перелезайте через закрытые ворота и не выходите за ограждения ради ракурса.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На Камуи хорошо видна сама форма мыса: узкая полоса суши уходит в море, а склоны резко спускаются к воде с двух сторон. Тропа повторяет изгибы гребня. Пейзаж меняется при каждом повороте: то видна длинная зелёная спина мыса, то отдельно стоящая скала за его концом. Цвет воды зависит от света и состояния моря.</p><div class="sh"><span class="cap">Маяк над морским путём</span></div><p>Маяк Камуи впервые зажгли 25 августа 1888 года. Его назначение связано с судоходством у скалистого берега. Белая башня невелика по сравнению с мысом, но высота самого берега поднимает огонь над морем. Внешний осмотр маяка не означает, что его внутренние помещения открыты для посещения.</p><div class="sh"><span class="cap">Ворота и открытая тропа</span></div><p>Проход к оконечности регулируют воротами. При сильном ветре и дожде его могут закрывать независимо от общего режима парка. Вид из обзорной зоны перед воротами позволяет рассмотреть мыс и без выхода на дальний участок; выбирайте только открытые для посетителей дорожки.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1888</b> — 25 августа впервые зажжён маяк Камуи.</li></ul></details></div></div></div></article>
+<article class="stop" id="d15-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d15-shimamui-user-rocks.jpg" alt="Острые прибрежные скалы, зелень на склоне и прозрачная бирюзовая вода побережья Симамуи" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">島武意海岸</div><div class="plate"><div class="cap">Остановка 4 из 6</div><div class="t">15:35</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Сякотан · морская бухта</span></div><h2 class="nm2">Побережье Симамуи</h2><div class="jp2">島武意海岸</div><p class="ann">Из тёмного туннеля открывается скалистая бухта: у камней вода просвечивает зелёным, дальше становится насыщенно-синей.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B3%B6%E6%AD%A6%E6%84%8F%E6%B5%B7%E5%B2%B8%20%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E5%8C%97%E6%B5%B7%E9%81%93%E7%A9%8D%E4%B8%B9%E9%83%A1%E7%A9%8D%E4%B8%B9%E7%94%BA%E5%85%A5%E8%88%B8%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">島武意海岸</div><div class="l2" lang="ja">しまむいかいがん</div><div class="l3">Shimamui Coast</div><div class="l4" lang="ja">積丹町<br>北海道積丹郡積丹町入舸町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Бухта под скалами у мыса Сякотан.</p><p><b>Главное</b>Резкий переход от тёмного туннеля к открытому морскому виду.</p><p><b>Не пропустите</b>Камни под прозрачной водой у берега.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Короткий туннель — на подходе от парковки к обзорной площадке.</li><li>Линию каменистого берега — внизу под площадкой.</li><li>Скалы и переходы цвета воды — в бухте перед вами.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>В туннеле смотрите под ноги и пропускайте встречных в узких местах.</li><li>Осматривайте бухту с открытой площадки; спускайтесь к воде только при разрешённом проходе.</li><li>Не заходите за ограждения и учитывайте указания о закрытии прибрежных дорожек.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Симамуи воспринимается через смену света. На подходе туннель скрывает море, а у выхода пространство резко раскрывается: внизу камни, дальше скалы и открытая вода. С площадки удобно рассматривать границу между прозрачным мелководьем и более тёмной глубиной. Необычный цвет моря здесь часто называют «сякотанским синим», но он каждый раз зависит от освещения.</p><div class="sh"><span class="cap">Смотреть сверху</span></div><p>Побережье входит в японскую подборку ста примечательных морских берегов «Нагиса хякусэн». Главный общедоступный ориентир — обзорная площадка за туннелем. Спуск к каменистому берегу представляет собой отдельный участок: возможность видеть бухту сверху не означает разрешения пройти к воде. Соблюдайте местные ограждения и открытые направления.</p></div></details></div></div></div></article>
+<article class="stop" id="d15-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d15-ogon-user-approved-coast.jpg" alt="Прибрежная дорога, скалистый берег, лесной склон и море; точное место съёмки не подтверждено" loading="lazy" decoding="async"></div><div class="vt">黄金岬</div><div class="plate"><div class="cap">Остановка 5 из 6</div><div class="t">16:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Сякотан · Бикуни</span></div><h2 class="nm2">Мыс Огон</h2><div class="jp2">黄金岬</div><p class="ann">Лесная тропа выводит к виду на порт Бикуни, прибрежные скалы и остров Такарадзима.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%BB%84%E9%87%91%E5%B2%AC%20%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E7%A9%8D%E4%B8%B9%E7%94%BA%20%E7%BE%8E%E5%9B%BD%20%E5%8C%97%E6%B5%B7%E9%81%93%E7%A9%8D%E4%B8%B9%E9%83%A1%E7%A9%8D%E4%B8%B9%E7%94%BA%E5%A4%A7%E5%AD%97%E7%BE%8E%E5%9B%BD%E7%94%BA" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">黄金岬</div><div class="l2" lang="ja">おうごんみさき</div><div class="l3">Cape Ogon, Bikuni</div><div class="l4" lang="ja">積丹町<br>北海道積丹郡積丹町大字美国町</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Не указана</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Мыс с обзорной площадкой у порта Бикуни на полуострове Сякотан.</p><p><b>Главное</b>Сочетание портового берега, моря и острова Такарадзима.</p><p><b>Не пропустите</b>Контраст защищённой гавани и открытого моря.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Порт Бикуни — в панораме с обзорной площадки.</li><li>Остров Такарадзима, 宝島, — в море перед мысом.</li><li>Повороты береговой линии — по сторонам портовой бухты.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Следуйте открытым указателям на 黄金岬展望台 и уточните у сопровождающего нужный вход на тропу.</li><li>На лесной дорожке следите за корнями и неровностями; после дождя поверхность скользкая.</li><li>Держитесь в пределах обзорной площадки и не выходите к обрыву.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Огон завершает морскую часть дня другим масштабом. Здесь взгляд собирает не один узкий гребень, а целую бухту: гавань Бикуни, зелёные склоны, скалы и остров Такарадзима. От лесной дорожки пространство постепенно раскрывается к воде, и порт становится частью пейзажа.</p><div class="sh"><span class="cap">Мыс над Бикуни</span></div><p>К обзорной площадке ведёт оборудованная прогулочная тропа. В отличие от открытого хребта Камуи, значительная часть подхода проходит среди растительности. На площадке полезно сначала найти гавань и остров, а затем проследить береговую линию между ними: так легче понять, как мыс выступает за край портовой бухты.</p><div class="sh"><span class="cap">Остров и ракурс</span></div><p>Такарадзима переводится как «остров сокровищ». Его часто показывают сверху из-за очертаний, напоминающих сердце, но с наземной площадки видна прежде всего скалистая сторона острова. Фотографию с воздуха не стоит воспринимать как обещанный ракурс пешей прогулки.</p></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Возвращение → Саппоро</div><p>18:30 — 🚌 Вернулись в Саппоро.</p></div></div>
+<article class="stop" id="d15-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d15-tanukikoji-user-arcade.jpg" alt="Крытая торговая улица Танукикодзи с магазинами, прохожими и подвесными праздничными полотнищами" loading="lazy" decoding="async"></div><div class="vt">狸小路</div><div class="plate"><div class="cap">Остановка 6 из 6</div><div class="t">19:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Саппоро · торговая улица и вечерний квартал</span></div><h2 class="nm2">Танукикодзи и ужин в Сусукино</h2><div class="jp2">狸小路商店街・すすきの</div><p class="ann">Под длинной крышей аркады соседствуют вывески, сувенирные лавки и кафе; затем вечер продолжается за ужином в Сусукино.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%8B%B8%E5%B0%8F%E8%B7%AF%E5%95%86%E5%BA%97%E8%A1%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%972%E3%83%BB3%E6%9D%A1%E8%A5%BF1%EF%BD%9E7%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">狸小路商店街・すすきの</div><div class="l2" lang="ja">たぬきこうじしょうてんがい・すすきの</div><div class="l3">Tanukikoji Shopping Street / Susukino</div><div class="l4" lang="ja">札幌市<br>北海道札幌市中央区南2・3条西1～7丁目</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Историческая торговая улица в центре Саппоро и вечер в соседнем Сусукино.</p><p><b>Главное</b>Крытая аркада, витрины и небольшие магазины.</p><p><b>Не пропустите</b>Номера кварталов под крышей: по ним удобно ориентироваться.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Номера от первого до седьмого квартала — на указателях торговой улицы.</li><li>Разные конструкции крыши — над соседними участками аркады.</li><li>Вывески сувенирных лавок и кафе — по обе стороны прохода.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Ужин в Susukino.</li><li>Выбирайте ресторан по меню и условиям входа; конкретное заведение в вашем расписании не задано.</li><li>У магазинов и ресторанов разные часы работы; не ориентируйтесь на единое время закрытия всей улицы.</li><li>На пересечениях с дорогами следуйте сигналам светофора.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Танукикодзи удобно рассматривать как последовательность коротких городских сцен: вывески, витрины, входы в кафе и пересечения улиц. Крыша связывает кварталы в длинный торговый проход, но каждый участок сохраняет собственный характер. После морских видов это возвращение к плотному масштабу города — к людям, товарам и вечернему свету.</p><div class="sh"><span class="cap">Улица со времён освоения Хоккайдо</span></div><p>Когда в 1869 году в Саппоро разместили управление освоения Хоккайдо, у нынешних второго и третьего кварталов начали появляться торговые дома и заведения. Примерно с 1873 года за частью этой местности закрепилось название Танукикодзи. Поэтому историю улицы ведут от раннего роста Саппоро, а не от появления современной крыши.</p><div class="sh"><span class="cap">Длинная крыша</span></div><p>Торговая улица объединяет семь кварталов. Нынешнюю аркаду над участками с первого по шестой завершили в 1982 году, позднее её обновляли. Обратите внимание на границы кварталов: непрерывный торговый проход пересекает городские дороги, и не каждое пересечение перекрыто крышей.</p><div class="sh"><span class="cap">Ужин в Сусукино</span></div><p>Сусукино — соседний вечерний район с ресторанами, барами и яркими вывесками. Здесь можно продолжить день ужином, как и указано в вашем плане. Часы, меню и стоимость определяются выбранным заведением; прогулка по торговой улице не включает еду. Конкретный ресторан и дополнительное время ужина не назначены.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1873</b> — примерно к этому году за частью торговой местности закрепилось название Танукикодзи.</li><li><b>1982</b> — завершена вторая аркада над первым–шестым кварталами.</li></ul></details></div></div></div></article><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-15 END -->
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 12 · Амано­хасидатэ · 22 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-12 START -->
+<section class="day" id="day-12"><div class="photo cv"><img src="../assets/photos/d12-amanohashidate-user-cover.jpg" alt="Коса Аманохасидатэ и залив с южного склона, кресельный подъёмник на переднем плане" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 12 · суббота, 22 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Амано­хасидатэ</h1><div class="cjp">天橋立</div><p class="lead">Коса Аманохасидатэ с двух высот и изнутри: южная панорама, храм Тион-дзи, сосны и святилище Коно. После северного вида из Касамацу — прогулочный катер по бухте Инэ.</p></div><section class="in plan" id="d12-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Шесть остановок в вашем порядке: две смотровые, храм, коса, святилище и бухта Инэ. Вечером — возвращение в Киото.</p><div class="rows"><div class="row"><div class="tm">8:38</div><div class="tx"><div class="nm">Выезд в Amanohashidate</div><div class="ch">Поездка к побережью</div></div></div><a class="row" href="#d12-s01"><div class="tm">10:40</div><div class="tx"><div class="nm">Amano­hashidate View Land</div><div class="jp">天橋立ビューランド</div><div class="ch">Южный вид и летящий дракон<br>💡 Обязательно matanozoki — смотреть на Amanohashidate между ног. Chairlift даёт открытые виды, Monorail удобнее, если боитесь высоты.</div></div><div class="ar">›</div></a><a class="row" href="#d12-s02"><div class="tm">11:50</div><div class="tx"><div class="nm">Тион-дзи</div><div class="jp">智恩寺</div><div class="ch">Храм мудрости и веерные предсказания</div></div><div class="ar">›</div></a><a class="row" href="#d12-s03"><div class="tm">12:10</div><div class="tx"><div class="nm">Коса Амано­хасидатэ</div><div class="jp">天橋立</div><div class="ch">Сосны и песок между двумя берегами<br>💡 Если погода хорошая — взять велосипед. Всю косу можно пересечь примерно за 20 минут вместо ~50 минут пешком.</div></div><div class="ar">›</div></a><a class="row" href="#d12-s04"><div class="tm">12:50</div><div class="tx"><div class="nm">Мотоисэ Коно-дзиндзя</div><div class="jp">元伊勢籠神社</div><div class="ch">Древнее святилище и связь с Исэ</div></div><div class="ar">›</div></a><a class="row" href="#d12-s05"><div class="tm">13:20</div><div class="tx"><div class="nm">Парк Касамацу</div><div class="jp">天橋立傘松公園</div><div class="ch">Северный вид и мост в небеса<br>💡 Сделать matanozoki — отсюда коса должна выглядеть как «мост в небеса».</div></div><div class="ar">›</div></a><a class="row" href="#d12-s06"><div class="tm g">днём</div><div class="tx"><div class="nm">Прогулочный катер по бухте Инэ</div><div class="jp">伊根湾めぐり遊覧船（日出）</div><div class="ch">Фуная — лодочные дома у воды<br>Каждые 30 минут с 09:00 до 16:00</div></div><div class="ar">›</div></a><div class="row"><div class="tm g">вечер</div><div class="tx"><div class="nm">Назад на автобусе</div><div class="ch">Возвращение</div></div></div><div class="row"><div class="tm">19:05</div><div class="tx"><div class="nm">В Киото</div><div class="jp">京都</div><div class="ch">💡 Последний поезд</div></div></div></div></section><div class="in"><div class="way"><div class="cap">Переезд → Аманохасидатэ</div><p>8:38 — выезд в Amanohashidate.</p></div></div><article class="stop" id="d12-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d12-viewland-user-panorama.jpg" alt="Южная панорама косы с площадки Amanohashidate View Land, табличка и цветущая сакура" loading="lazy" decoding="async"></div><div class="vt">天橋立飛龍観</div><div class="plate"><div class="cap">Остановка 1 из 6</div><div class="t">10:40</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-modern)">🗼 Современное</span><span class="cap">Мондзю · южная смотровая</span></div><h2 class="nm2">Amano­hashidate View Land</h2><div class="jp2">天橋立ビューランド</div><p class="ann">С южного склона коса тянется через синюю воду, а перевёрнутый взгляд превращает её в летящего дракона.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E3%83%93%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%20%E3%80%92626-0001%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E6%96%87%E7%8F%A0437" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">天橋立ビューランド</div><div class="l2" lang="ja">あまのはしだてびゅーらんど</div><div class="l3">Amanohashidate View Land</div><div class="l4" lang="ja">宮津市<br>〒626-0001 京都府宮津市文珠437</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–17:30</div></div><div><div class="k">Стоимость</div><div class="v">¥1 000</div></div><div><div class="k">Последний вход</div><div class="v">17:00</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Смотровой парк на горе Мондзю к югу от косы.</p><p><b>Главное</b>Хирюкан — вид «летящего дракона».</p><p><b>Не пропустите</b>Матанодзоки: тот же пейзаж, увиденный между ног.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Площадки матанодзоки — вдоль обращённого к косе края парка.</li><li>Изгиб сосновой полосы — между двумя водными пространствами внизу.</li><li>Хирюкан-кайро — извилистый приподнятый прогулочный помост в парке.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Обязательно matanozoki — смотреть на Amanohashidate между ног. Chairlift даёт открытые виды, Monorail удобнее, если боитесь высоты.</li><li>На площадке для матанодзоки встаньте устойчиво, повернитесь спиной к косе и посмотрите между ног, не выходя за ограждения.</li><li>Билет включает вход и проезд туда и обратно; кресельный подъёмник и монорельс можно сочетать. Аттракционы оплачиваются отдельно.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">На южной площадке сначала посмотрите на косу обычным способом: узкая сосновая полоса уходит от ближнего берега и изгибается среди воды. Затем попробуйте матанодзоки — взгляд между ног. Небо оказывается внизу, вода наверху, и знакомая линия берега начинает восприниматься как отдельная фигура.</p><div class="sh"><span class="cap">Почему «летящий дракон»</span></div><p>Этот южный ракурс называется хирюкан: «вид летящего дракона». Название описывает сходство формы косы с драконом, а не отдельный природный объект. Позднее в тот же день парк Касамацу покажет ту же косу с противоположной стороны. Сравните направление изгиба и то, как меняется расстояние между берегами.</p><div class="sh"><span class="cap">Парк вокруг пейзажа</span></div><p>View Land соединяет смотровую площадку с небольшим парком развлечений. Приподнятый помост Хирюкан-кайро даёт ещё одну высоту взгляда; колесо обозрения и другие аттракционы окружают основную панораму. Для вашего визита главным остаётся сам ландшафт. Подъём устроен двумя способами: открытые кресла позволяют смотреть по сторонам, а монорельс предлагает поездку в вагоне.</p></div></details></div></div></div></article>
+<article class="stop" id="d12-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d12-chionji-user-ogonkaku.jpg" alt="Деревянные ворота Огонкаку храма Тион-дзи среди сосен, золотые таблички и красный фонарь" loading="lazy" decoding="async"></div><div class="vt">智恩寺</div><div class="plate"><div class="cap">Остановка 2 из 6</div><div class="t">11:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-temple)">卍 Храм</span><span class="cap">Мондзю · храм Мондзю</span></div><h2 class="nm2">Тион-дзи</h2><div class="jp2">智恩寺</div><p class="ann">За большими деревянными воротами стоят зал бодхисаттвы мудрости, невысокая пагода и сосны с веерными предсказаниями.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%99%BA%E6%81%A9%E5%AF%BA%20%E3%80%92626-0001%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E5%AD%97%E6%96%87%E7%8F%A0466" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">智恩寺</div><div class="l2" lang="ja">ちおんじ</div><div class="l3">Chionji Temple / Monjudo</div><div class="l4" lang="ja">宮津市<br>〒626-0001 京都府宮津市字文珠466</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Буддийский храм Мондзю — бодхисаттвы мудрости, известного также как Манджушри.</p><p><b>Главное</b>Главный зал Мондзю-до и деревянная пагода тахото.</p><p><b>Не пропустите</b>Маленькие веера омикудзи, привязанные к соснам.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Ворота Саммон, называемые Огонкаку, — со стороны торгового подхода.</li><li>Мондзю-до — главный зал в глубине двора.</li><li>Пагоду тахото — на храмовой территории; нижний и верхний объёмы различаются по форме.</li><li>Веерные омикудзи — среди ветвей сосен.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Смотрите главный образ только при разрешённом открытии: Мондзю здесь почитается как скрытая святыня.</li><li>У зала обратите внимание на дарственные таблички эма; внутри соблюдайте указания о доступе и съёмке.</li><li>Не снимайте и не развязывайте оставленные другими посетителями омикудзи.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Тион-дзи морской пейзаж сменяется камерным храмовым двором. Здесь почитают Мондзю, бодхисаттву мудрости, поэтому среди посетителей много тех, кто просит об успехах в учёбе. Небольшие веера в соснах — омикудзи, бумажные предсказания. Их форма связана с благоприятным образом раскрывающегося веера.</p><div class="sh"><span class="cap">Зал и старые детали</span></div><p>Главный зал Мондзю-до перестраивали в эпоху Эдо при правителе Миядзу Кёгоку Такатаке. При этом в нём сохранили более ранние центральные столбы с надписями посетителей эпохи Камакура. Среди подношений на стенах есть сангаку — таблички с математическими задачами: просьба о мудрости выражалась здесь вполне конкретными интеллектуальными занятиями.</p><div class="sh"><span class="cap">Пагода и восстановление храма</span></div><p>Около 1326 года дзэнский монах Судзан Кётю участвовал в возрождении обители, которая прежде была связана с эзотерическим буддизмом. В начале XVI века появилась нынешняя пагода тахото. В ней почитают Дайнити-нёрай — космического Будду эзотерической традиции. Соседство этих образов напоминает, что история храма складывалась из нескольких буддийских направлений.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>около 1326</b> — возрождение обители как дзэнского храма.</li><li><b>начало XVI века</b> — сооружение сохранившейся пагоды тахото.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d12-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d12-sandbar-user-aerial.jpg" alt="Панорама косы Аманохасидатэ: сосновая полоса, белые пляжи и вода по обе стороны" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">天橋立</div><div class="plate"><div class="cap">Остановка 3 из 6</div><div class="t">12:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Аманохасидатэ · сосновая коса</span></div><h2 class="nm2">Коса Амано­хасидатэ</h2><div class="jp2">天橋立</div><p class="ann">Под соснами панорамная линия превращается в дорожку: по сторонам видны песчаные берега и вода двух заливов.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E6%96%87%E7%8F%A0%E5%A4%A9%E6%A9%8B%E7%AB%8B%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">天橋立</div><div class="l2" lang="ja">あまのはしだて</div><div class="l3">Amanohashidate Sandbar</div><div class="l4" lang="ja">宮津市<br>京都府宮津市文珠天橋立公園</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">Без расписания</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Природная песчаная коса между заливом Миядзу и внутренней акваторией Асо-кай.</p><p><b>Главное</b>Прогулка внутри соснового ландшафта, который виден с обеих смотровых.</p><p><b>Не пропустите</b>Контраст тенистой дорожки и открытого песчаного берега.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Сосновую аллею — вдоль основного прохода по косе.</li><li>Белый песок — у выходов от дорожки к воде.</li><li>Разницу двух берегов — коса разделяет Миядзу и Асо-кай.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Если погода хорошая — взять велосипед. Всю косу можно пересечь примерно за 20 минут вместо ~50 минут пешком.</li><li>До оплаты проката уточните, где можно вернуть велосипед: ваш маршрут продолжается на противоположной стороне косы.</li><li>На узких участках снижайте скорость и пропускайте пешеходов; для фотографии остановитесь в стороне от прохода.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С высоты Аманохасидатэ кажется тонкой зелёной чертой. Внутри неё масштаб другой: стволы, неровные кроны, песок и выходы к воде. Здесь полезно замечать обе стороны дорожки — одна и та же полоса суши разделяет залив Миядзу и внутреннюю акваторию Асо-кай.</p><div class="sh"><span class="cap">Как возникла коса</span></div><p>Длина песчаной полосы — около 3,6 километра. Она сложилась благодаря длительному переносу и накоплению наносов у залива. Сосны закрепили узнаваемый облик места: сочетание светлого песка и тёмной хвои в Японии называют хакуся-сэйсё — «белый песок и зелёные сосны». Это природный береговой ландшафт, а не рукотворная дамба.</p><div class="sh"><span class="cap">Ландшафт, ставший знаменитым</span></div><p>Аманохасидатэ входит в традиционную тройку знаменитых видов Японии вместе с Мацусимой и Миядзимой. В 1643 году Хаяси Сюнсай упомянул эти три места как особые пейзажи. Слава вида относится к целому пространству воды, косы и окружающих высот; прогулка среди деревьев позволяет увидеть его изнутри.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1643</b> — Хаяси Сюнсай выделяет Аманохасидатэ, Мацусиму и Миядзиму как три особых пейзажа.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d12-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d12-kono-user-gate.jpg" alt="Деревянные ворота святилища Коно-дзиндзя с соломенной крышей, канатом симэнава и каменным подходом" loading="lazy" decoding="async"></div><div class="vt">元伊勢籠神社</div><div class="plate"><div class="cap">Остановка 4 из 6</div><div class="t">12:50</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Футю · святилище</span></div><h2 class="nm2">Мотоисэ Коно-дзиндзя</h2><div class="jp2">元伊勢籠神社</div><p class="ann">У северного конца косы святилище связывает побережье Танго с преданием о пути божеств к Исэ.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%83%E4%BC%8A%E5%8B%A2%E7%B1%A0%E7%A5%9E%E7%A4%BE%20%E3%80%92629-2242%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E5%AD%97%E5%A4%A7%E5%9E%A3430" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">元伊勢籠神社</div><div class="l2" lang="ja">もといせこのじんじゃ</div><div class="l3">Motoise Kono Shrine</div><div class="l4" lang="ja">宮津市<br>〒629-2242 京都府宮津市字大垣430</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">8:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Главное святилище исторической провинции Танго, известное связью с Исэ.</p><p><b>Главное</b>Сдержанная архитектура симмэй-дзукури и ограждённое священное пространство.</p><p><b>Не пропустите</b>Разницу между тории у подхода и храмовыми воротами Тион-дзи.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Тории — на подходе к святилищу со стороны косы.</li><li>Место для омовения — у входа на территорию.</li><li>Обращённый к посетителям зал молитвы — по главной оси подхода.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Следуйте обозначенным границам: к главному святилищу не проходят через закрытые ограждения.</li><li>При съёмке сверяйтесь со знаками на месте; не снимайте там, где фотографирование запрещено.</li><li>Манай-дзиндзя — отдельное святилище, связанное с Коно; дополнительный визит к нему в расписание не включён.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Коно-дзиндзя находится там, где прогулка по косе возвращает вас к северному берегу. За тории начинается пространство синтоистского святилища: осевой подход ведёт к месту молитвы, а главное здание отделено ограждениями. Основное божество здесь — Хико-хоакари-но-микото.</p><div class="sh"><span class="cap">Почему «Мотоисэ»</span></div><p>По храмовому преданию, Аматэрасу и Тоёукэ почитали в этой местности до их перенесения в Исэ. Отсюда название Мотоисэ — «прежнее Исэ». Это рассказ религиозной традиции, который объясняет связь святилищ; его не следует читать как точно датированную хронику древнейших событий.</p><div class="sh"><span class="cap">Архитектура и статус</span></div><p>По собственной истории святилища, в 719 году главный центр перенесли на нынешнее место с территории Манай. Главный зал выполнен в стиле симмэй-дзукури, родственном архитектуре Исэ: прямые линии, двускатная крыша и деревянная конструкция. Статус итиномия означает первое по значению святилище провинции. Здесь это Танго — историческая область на побережье Японского моря.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>719</b> — по истории святилища, главный центр перенесён на нынешнюю территорию.</li></ul></div></details></div></div></div></article>
+<article class="stop" id="d12-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d12-kasamatsu-user-deck.jpg" alt="Круглая смотровая площадка Sky Deck парка Касамацу и северный вид на косу Аманохасидатэ" loading="lazy" decoding="async"></div><div class="vt">傘松公園</div><div class="plate"><div class="cap">Остановка 5 из 6</div><div class="t">13:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Футю · северная смотровая</span></div><h2 class="nm2">Парк Касамацу</h2><div class="jp2">天橋立傘松公園</div><p class="ann">С северной стороны коса поднимается диагональю через воду: здесь её сравнивают с восходящим драконом и мостом в небо.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E5%82%98%E6%9D%BE%E5%85%AC%E5%9C%92%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E5%AD%97%E5%A4%A7%E5%9E%A375" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">天橋立傘松公園</div><div class="l2" lang="ja">あまのはしだてかさまつこうえん</div><div class="l3">Amanohashidate Kasamatsu Park</div><div class="l4" lang="ja">宮津市<br>京都府宮津市字大垣75</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–18:00</div></div><div><div class="k">Стоимость</div><div class="v">¥800</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Смотровой парк над северным берегом, на высоте около 130 метров.</p><p><b>Главное</b>Сёрюкан — вид «восходящего дракона».</p><p><b>Не пропустите</b>Матанодзоки и сравнение с утренней южной панорамой.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Площадку матанодзоки — у обзорной стороны парка.</li><li>Круглый выступающий Sky Deck — перед основной панорамой.</li><li>Две водные акватории по сторонам сосновой косы — на общем виде.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Сделать matanozoki — отсюда коса должна выглядеть как «мост в небеса».</li><li>Поворачивайтесь и наклоняйтесь только на предназначенной площадке, оставаясь внутри ограждений.</li><li>¥800 — общий билет туда и обратно на фуникулёр или кресельный подъёмник. В мае опубликованная работа кресел заканчивается в 16:00; фуникулёр работает дольше.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В Касамацу та же коса меняет направление: сосновая полоса вытягивается по диагонали от северного берега. Этот ракурс называют сёрюкан — «вид восходящего дракона». После прогулки внутри косы легко сопоставить знакомую дорожку с линией, которая теперь снова выглядит почти плоской.</p><div class="sh"><span class="cap">Мост над небом</span></div><p>Матанодзоки здесь считают местной традицией: встаньте спиной к пейзажу и взгляните между ног. Перевёрнутые небо и море меняют привычное чтение пространства, а сосновая полоса кажется мостом наверху. Парк называют местом возникновения такого способа смотреть, но точную древнюю дату этой привычки установить по опубликованным сведениям нельзя.</p><div class="sh"><span class="cap">Смотровая и её устройство</span></div><p>Площадка расположена примерно в 130 метрах над морем. Круглый Sky Deck выступает к панораме; на части его пола есть прозрачная вставка. Подходить к ней необязательно: широкий вид открывается и с обычных участков. К парку ведут фуникулёр и кресельный подъёмник с общим билетом, но разными часами работы.</p></div></details></div></div></div></article>
+<article class="stop" id="d12-s06"><div class="hero"><div class="photo"><img src="../assets/photos/d12-ine-user-funaya.jpg" alt="Лодочные дома фуная вдоль бухты Инэ, снятые с воды" loading="lazy" decoding="async"></div><div class="vt">伊根湾</div><div class="plate"><div class="cap">Остановка 6 из 6</div><div class="t">днём</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Инэ · прогулка по бухте</span></div><h2 class="nm2">Прогулочный катер по бухте Инэ</h2><div class="jp2">伊根湾めぐり遊覧船（日出）</div><p class="ann">С воды видны открытые лодочные помещения под домами: в бухте Инэ береговая архитектура обращена прямо к морю.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BC%8A%E6%A0%B9%E6%B9%BE%E3%82%81%E3%81%90%E3%82%8A%E9%81%8A%E8%A6%A7%E8%88%B9%20%E6%97%A5%E5%87%BA%E9%A7%85%20%E3%80%92626-0425%20%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%8E%E8%AC%9D%E9%83%A1%E4%BC%8A%E6%A0%B9%E7%94%BA%E5%AD%97%E6%97%A5%E5%87%BA11" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">伊根湾めぐり遊覧船（日出）</div><div class="l2" lang="ja">いねわんめぐりゆうらんせん（ひで）</div><div class="l3">Ine Bay Sightseeing Boat — Hide</div><div class="l4" lang="ja">伊根町<br>〒626-0425 京都府与謝郡伊根町字日出11</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">9:00–16:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 200</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Круговая прогулка по бухте с отправлением и возвращением к пристани Хидэ.</p><p><b>Главное</b>Фуная — дома с помещениями для лодок у самой воды.</p><p><b>Не пропустите</b>Открытые к морю нижние этажи и линию крыш над ними.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Вывеску 日出駅 — у нужной пристани отправления.</li><li>Лодочные проёмы фуная — в нижней части береговых зданий.</li><li>Остров Аосима — у входа в бухту.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Каждые 30 минут с 09:00 до 16:00.</li><li>Садитесь у пристани Хидэ: это круговой рейс по бухте, а не лодка через косу Аманохасидатэ.</li><li>Во время движения держитесь за поручни и соблюдайте указания экипажа; при плохой погоде возможна отмена.</li><li>Снимайте общий береговой вид, уважая частную жизнь людей в домах.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">С борта фуная читаются иначе, чем с улицы: к воде обращены широкие нижние проёмы, а выше расположены жилые помещения. Дома стоят близко к поверхности моря, потому что бухта защищена окружающими склонами и островом Аосима у входа.</p><div class="sh"><span class="cap">Дом и лодка</span></div><p>Фуная — буквально «лодочный дом». Нижний уровень служил местом для лодки, снастей и работы, верхний использовали для жизни. Так морское занятие и бытовое пространство соединялись в одном здании. Сегодня часть домов используется как жильё, часть приспособлена под гостевые помещения или кафе; берег продолжает жить, а не превращён целиком в музей.</p><div class="sh"><span class="cap">Сохранение живого берега</span></div><p>В 2005 году историческая застройка Инэ получила статус национального района сохранения традиционных зданий. Значение имеет ансамбль: повторяющаяся линия лодочных проёмов, деревянные фасады и связь каждого дома с водой. Катер позволяет рассмотреть эту структуру с морской стороны, не заходя в частные помещения.</p><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>2005</b> — историческая застройка Инэ включена в национальную систему сохранения традиционных ансамблей.</li></ul></div></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Переезд → возвращение</div><p>Назад на автобусе. 19:05 — в Киото. 💡 Последний поезд.</p></div></div><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-12 END -->
+</body></html>

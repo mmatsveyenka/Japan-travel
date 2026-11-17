@@ -4,8 +4,8 @@ const {chromium}=require('../.tmp/node_modules/playwright');
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const page=await browser.newPage();
 const report=[];
-const selected=process.argv.slice(2).length?process.argv.slice(2):['03','04','05','06','07','08','09','10'];
 const dayFiles=fs.readdirSync(path.join(__dirname,'../days')).filter(n=>/^day-\d{2}\.html$/.test(n));
+const selected=process.argv.slice(2).length?process.argv.slice(2):dayFiles.map(n=>n.match(/\d{2}/)[0]).filter(n=>Number(n)>=3).sort();
 const totalStops=dayFiles.reduce((sum,f)=>sum+(fs.readFileSync(path.join(__dirname,'../days',f),'utf8').match(/class="stop"/g)||[]).length,0);
 for(const width of [320,390,820,1180])for(const n of selected){
 await page.setViewportSize({width,height:1000});await page.goto('file:///E:/japan-travel/days/day-'+n+'.html');

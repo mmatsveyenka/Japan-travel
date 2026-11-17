@@ -6,6 +6,64 @@ const dayFiles=fs.readdirSync(path.join(root,'days')).filter(n=>/^day-\d{2}\.htm
 const files=['index.html','brochure.html',...dayFiles,'reference.html'];
 const sourceCss=fs.readFileSync(path.join(root,'reference.html'),'utf8').match(/<style>([\s\S]*?)<\/style>/)[1];
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
+require('./verify-day-12.cjs');
+require('./verify-day-13.cjs');
+require('./verify-day-14.cjs');
+require('./verify-day-15.cjs');
+require('./verify-day-16.cjs');
+const eleventh=require('./day-11.cjs')[0];
+const day11Times=['10:15','11:00','13:40','15:15','16:00','16:35','вечер','вечер','вечер'];
+const day11Order=['東本願寺','京都鉄道博物館','錦市場','八坂神社','霊山観音','清水寺','太秦映画村','寺町京極商店街・新京極商店街','先斗町・木屋町・鴨川'];
+assert.equal(eleventh.title,'Киото');
+assert.equal(eleventh.date,'пятница, 21 мая');
+assert.equal(eleventh.color,'#B4442C');
+assert.equal(eleventh.stops.length,9,'Day 11 has nine cards, including three optional places');
+assert.deepEqual(eleventh.stops.map(s=>s.jp),day11Order,'Day 11 user order');
+assert.deepEqual(eleventh.stops.map(s=>s.time),day11Times,'Day 11 card times');
+assert.deepEqual(eleventh.rows.map(s=>s.time),day11Times,'Day 11 evening confirmed by user');
+assert.deepEqual(eleventh.rows.map(s=>s.cardIndex),[0,1,2,3,4,5,6,7,8]);
+assert.deepEqual(eleventh.stops.map((s,i)=>s.optional?i:null).filter(i=>i!==null),[4,7,8]);
+assert.deepEqual(eleventh.rows.map(s=>!!s.optional),eleventh.stops.map(s=>!!s.optional));
+assert(eleventh.coverBrief&&eleventh.stops.every(s=>s.photoBrief),'Ten photo briefs required');
+assert(!eleventh.beforeStops&&!eleventh.stops.some(s=>s.duration||s.after),'No transfers or durations supplied');
+assert.deepEqual(eleventh.stops[1].practical,['10:00–17:00','¥1 900','16:30'],'Museum announced tariff from March 2027');
+assert.deepEqual(eleventh.stops[4].practical,['8:40–16:20','¥300','16:00'],'Ryozen admission closes at user arrival time');
+assert.deepEqual(eleventh.stops[6].practical,['10:00–21:00','Не указана','20:00'],'Do not carry pre-renewal tariff into May 2027');
+for(const s of eleventh.stops){
+ assert(s.jp&&s.kana&&s.en&&s.city&&s.address&&s.type&&s.vertical);
+ assert.equal(s.practical.length,3);
+ assert.equal(s.quick.length,3);
+ assert(s.quick.every(p=>p.split(/\s+/).length<=15),'Day 11 summary over 15 words');
+ assert(s.find.length&&s.advice.length&&s.body,'Incomplete day 11 text');
+ assert(s.ch.split(/\s+/).length<=7,'Day 11 plan description too long');
+}
+if(eleventh.status==='awaiting_photos'){
+ assert(!fs.existsSync(path.join(root,'days/day-11.html')),'Unfinished day 11 must not be published');
+ assert(!/id="day-11"|href="(?:days\/day-11\.html)?#day-11"/.test(read('brochure.html')+read('index.html')),'Unfinished day 11 activated');
+ assert.equal(eleventh.cover,null);
+ assert(eleventh.stops.every(s=>s.image===null&&s.alt===null),'No invented photographs or alt texts');
+ console.log('OK day 11 preparation; ten user photographs awaited.');
+}else{
+ assert.equal(eleventh.status,'ready');
+ const html=read('days/day-11.html');
+ assert(html.includes('День 11 · пятница, 21 мая'));
+ assert(html.includes('<h1 class="city">Киото</h1>'));
+ assert.deepEqual([...html.matchAll(/class="tm(?: g)?">([^<]+)</g)].map(m=>m[1]),day11Times);
+ assert.equal((html.match(/class="stop"/g)||[]).length,9);
+ assert.equal((html.match(/class="optb"/g)||[]).length,3);
+ assert.equal((html.match(/class="back"/g)||[]).length,2);
+ const articles=[...html.matchAll(/<article class="stop"[\s\S]*?<\/article>/g)].map(m=>m[0]);
+ assert.deepEqual(articles.map((a,i)=>a.includes('class="optb"')?i:null).filter(i=>i!==null),[4,7,8]);
+ const plan=html.match(/<div class="rows">([\s\S]*?)<\/section>/)[1];
+ assert.deepEqual([...plan.matchAll(/<a class="row" href="([^"]+)"/g)].map(m=>m[1]),Array.from({length:9},(_,i)=>'#d11-s'+String(i+1).padStart(2,'0')));
+ assert.equal((plan.match(/class="opt"/g)||[]).length,3);
+ for(let i=1;i<=9;i++)assert(html.includes('Остановка '+i+' из 9'));
+ const names=[...html.matchAll(/src="\.\.\/assets\/photos\/([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(names.length,10);
+ assert.equal(new Set(names).size,10,'Day 11 photographs must be different');
+ const photoManifest=JSON.parse(read('tools/photo-manifest.json'));
+ for(const name of names){const p=photoManifest.find(x=>x.name===name);assert(p&&p.day===11&&p.providedByUser===true,'Day 11 requires user photo '+name);assert(p.outputWidth<=p.width&&p.outputHeight<=p.height,'Upscaled day 11 image');}
+}
 const tenth=require('./day-10.cjs')[0];
 const day10Times=['8:00','утро','утро','утро','утро','9:30','12:00','13:10','днём','16:00','19:00'];
 const day10Order=['原爆ドーム','原爆の子の像','平和の灯','平和記念公園','原爆死没者慰霊碑','広島平和記念資料館','姫路城','好古園','八坂の塔・東山・祇園'];

@@ -26,10 +26,16 @@ if(width===820||width===1180)for(let i=0;i<await page.locator('.stop').count();i
 await page.goto('file:///E:/japan-travel/index.html');assert.equal(await page.locator('.tile').count(),21);assert.equal(await page.locator('.tile.on').count(),dayFiles.length);
 for(const n of selected){
 await page.goto('file:///E:/japan-travel/index.html');await page.locator('a[href*="day-'+n+'"]').click();
-const last=await page.locator('.plan a.row').last().getAttribute('href');await page.locator('.plan a.row').last().click();assert(page.url().endsWith(last));
+const planLinks=page.locator('.plan a.row');
+if(await planLinks.count()){
+ const last=await planLinks.last().getAttribute('href');await planLinks.last().click();assert(page.url().endsWith(last));
+}else assert.equal(await page.locator('.stop').count(),0,'Travel day has no sightseeing cards');
 await page.locator('.back').last().click();assert(page.url().endsWith('index.html#index'));
 await page.goto('file:///E:/japan-travel/brochure.html');await page.locator('a.tile[href="#day-'+n+'"]').click();assert(page.url().endsWith('#day-'+n));assert.equal(await page.locator('.stop').count(),totalStops);
-const first=await page.locator('#d'+n+'-plan a.row').first().getAttribute('href');await page.locator('#d'+n+'-plan a.row').first().click();assert(page.url().endsWith(first));
+const combinedLinks=page.locator('#d'+n+'-plan a.row');
+if(await combinedLinks.count()){
+ const first=await combinedLinks.first().getAttribute('href');await combinedLinks.first().click();assert(page.url().endsWith(first));
+}else assert.equal(await page.locator('#day-'+n+' .stop').count(),0,'Combined travel day has no sightseeing cards');
 await page.locator('#day-'+n+' .back').last().click();assert(page.url().endsWith('#index'));
 assert.equal(await page.locator('a[href*="photo-credits.html"]').count(),0,'Removed photo link in brochure');
 await page.goto('file:///E:/japan-travel/days/day-'+n+'.html');

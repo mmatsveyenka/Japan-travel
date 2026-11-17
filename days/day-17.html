@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Личный путеводитель по Японии · 11–31 мая 2027"><title>День 17 · Саппоро → Токио · 27 мая 2027</title><style>
+@font-face{font-family:"NumSerif";font-style:normal;font-weight:400 700;src:local("Cambria"),local("Times New Roman"),local("Noto Serif"),local("Droid Serif"),local("Times");unicode-range:U+0030-0039}
+@font-face{font-family:"NumSerif";font-style:italic;font-weight:400 700;src:local("Cambria Italic"),local("Cambria-Italic"),local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Noto Serif Italic"),local("Droid Serif Italic"),local("Times-Italic");unicode-range:U+0030-0039}
+:root{
+  --paper:#F4EFE4;  --paper-2:#ECE4D3;
+  --ink:#1E1E1E;    --ink-soft:#5F5A54;
+  --accent:#B4442C; --navy:#26344D;
+  --gold:#C49A4A;   --rule:#D8CFBD;
+  --t-temple:#B4442C;
+  --t-shrine:#D2562B;
+  --t-culture:#26344D;
+  --t-street:#C49A4A;
+  --t-nature:#5E7B5A;
+  --t-modern:#6B6F7A;
+  --serif: "NumSerif", Georgia, "Noto Serif", "PT Serif", serif;
+  --sans: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --jp: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", "Noto Serif JP", serif;
+  --jp-sans: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.65;
+  font-variant-numeric:lining-nums;
+  -webkit-text-size-adjust:100%;
+}
+.day,#index,section[id]{scroll-margin-top:12px}
+a{color:inherit;text-decoration:none}
+
+/* ---------- INDEX (4.1) ---------- */
+#index{
+  max-width:480px;margin:0 auto;
+  padding:40px 22px 56px;
+}
+.cap{
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);
+}
+.ix-title{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:44px;line-height:1.05;margin:10px 0 0;
+}
+.ix-jp{
+  font-family:var(--jp);font-size:26px;letter-spacing:.1em;
+  color:var(--accent);margin:6px 0 0;
+}
+.ix-dates{
+  font-family:var(--serif);font-style:italic;font-size:20px;
+  color:var(--ink-soft);margin:14px 0 0;
+}
+.ix-route{
+  font-family:var(--serif);font-size:15px;line-height:1.55;
+  color:var(--ink-soft);margin:14px 0 0;
+  padding-bottom:22px;border-bottom:1px solid var(--rule);
+}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:26px;
+}
+@media (max-width:359px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+.tile{
+  position:relative;display:flex;flex-direction:column;
+  min-height:150px;padding:14px 10px 12px;
+  border:1px solid var(--rule);border-top:4px solid var(--city);
+  background:transparent;
+}
+.tile .n{
+  font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);
+}
+.tile .d{
+  font-family:var(--sans);font-size:12px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.35;
+}
+.tile .c{
+  font-family:var(--serif);font-size:15px;line-height:1.2;
+  margin-top:8px;color:var(--ink);overflow-wrap:anywhere;
+}
+.tile .j{
+  font-family:var(--jp);font-size:13px;color:var(--accent);
+  margin-top:3px;
+}
+.tile .s{
+  margin-top:auto;padding-top:8px;
+  font-family:var(--sans);font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-soft);
+}
+/* неактивная */
+.tile.off{opacity:.4}
+/* активная (день готов): <div> меняется на <a href="#day-XX"> */
+a.tile.on{
+  background:var(--paper);border:1px solid var(--ink);
+  border-top:4px solid var(--city);
+  opacity:1;min-height:150px;
+}
+
+
+
+/* ---------- DAY ---------- */
+.day{padding-bottom:48px}
+.in{max-width:480px;margin:0 auto;padding:0 22px}
+.back{display:inline-flex;align-items:center;min-height:40px;font:13px var(--sans);color:var(--navy)}
+.photo{position:relative;width:100%;aspect-ratio:4/3;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo img[src$="fukugi-tunnel.jpg"],.photo img[src$="okinawa-fukugi-cover.jpg"]{object-position:center bottom}
+.photo img[src$="bisezaki-coast.jpg"]{object-position:left top}
+.city{font:italic 400 42px/1.05 var(--serif);margin:6px 0 0}
+.cjp{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.lead{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:12px 0 0}
+.cvr{padding-top:20px}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:16px;row-gap:2px}
+.day-head .back{margin-left:auto;white-space:nowrap}
+.plan{padding-top:44px}
+.h-it{font:italic 400 32px/1.1 var(--serif);margin:6px 0 0}
+.plan .lead{margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);min-height:40px}
+.row .tm{flex:0 0 64px;font:700 20px var(--sans);color:var(--navy)}
+.row .tm.g{color:var(--gold)}
+.row .tx{flex:1}
+.row .nm{font:22px/1.2 var(--serif)}
+.row .jp{font:16px var(--jp);color:var(--ink-soft)}
+.row .ch{font-style:italic;font-size:15px;color:var(--ink-soft)}
+.row .ar{color:var(--rule);font-size:26px}
+.opt{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);font:11px/18px var(--sans);vertical-align:middle}
+.stop{padding-top:44px;scroll-margin-top:12px}
+.hero{position:relative;margin-bottom:44px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.35),transparent 40%);pointer-events:none}
+.plate{position:absolute;z-index:2;left:22px;bottom:-32px;background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);box-shadow:0 3px 14px rgba(0,0,0,.18);padding:10px 16px 8px}
+.plate .t{font:700 32px/1.1 var(--sans);color:var(--ink)}
+.vt{position:absolute;z-index:2;top:16px;right:16px;writing-mode:vertical-rl;font:36px/1.1 var(--jp);letter-spacing:.08em;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.vt.sm{font-size:28px}
+.vt.dk{color:var(--navy);text-shadow:none}
+.optb{position:absolute;z-index:2;top:16px;left:16px;background:var(--accent);color:#fff;font:11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px}
+.mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pill{color:#fff;font:11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
+.nm2{font:italic 400 40px/1.05 var(--serif);margin:12px 0 0}
+.jp2{font:26px var(--jp);letter-spacing:.1em;color:var(--accent);margin-top:4px}
+.ann{font:italic 20px/1.4 var(--serif);color:var(--ink-soft);margin:10px 0 0}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;align-items:start}
+.btn,details.loc>summary{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;height:40px;padding:0 8px;border:1px solid var(--navy);color:var(--navy);font:14px var(--sans);cursor:pointer;list-style:none;background:transparent}
+details.loc>summary::-webkit-details-marker{display:none}
+.btns .btn{grid-column:1;grid-row:1}
+details.loc{grid-column:1/-1;grid-row:1;pointer-events:none}
+details.loc>summary{width:calc(50% - 5px);margin-left:auto;pointer-events:auto}
+.lb{pointer-events:auto}
+.lb{margin-top:10px;background:#fff;border:1px solid var(--rule);padding:20px;text-align:center}
+.l1{font:44px/1.2 var(--jp);color:var(--ink)}
+.l2{font:18px var(--jp);color:var(--ink-soft)}
+.l3{font:14px var(--sans)}
+.l4{font:15px/1.5 var(--jp);color:var(--ink-soft);margin-top:6px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip>div{padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.strip>div:first-child{border-left:0;padding-left:0}
+.strip .k{font:12px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft)}
+.strip .v{font:18px/1.25 var(--serif);margin-top:4px}
+.s30{margin-top:22px;border:1px solid var(--rule);padding:16px}
+.s30 p{margin:10px 0 0;font-size:16px;line-height:1.5}
+.s30 b{font:700 13px var(--sans);margin-right:6px}
+.body p{margin:18px 0 0}
+.drop::first-letter{float:left;font:italic 400 3.3em/.82 var(--serif);color:var(--accent);margin:6px 8px 0 0}
+.sh{display:flex;align-items:center;gap:12px;margin-top:32px}
+.sh::after{content:"";flex:1;height:1px;background:var(--rule)}
+.leg{background:var(--navy);color:var(--paper);padding:22px;margin-top:32px}
+.leg .cap{color:var(--gold)}
+.leg p{margin:10px 0 0;font-size:16px}
+.hist{list-style:none;margin:18px 0 0;padding:0 0 0 22px;border-left:1px solid var(--gold)}
+.hist li{position:relative;padding:0 0 14px;line-height:1.45}
+.hist li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border:1.5px solid var(--accent);border-radius:50%;background:var(--paper)}
+.hist b{font-family:var(--sans);color:var(--navy)}
+.fact{margin-top:28px;border-left:3px solid var(--accent);padding-left:16px}
+.fact p{margin:8px 0 0}
+.find{margin-top:32px}
+.here{background:var(--paper-2);padding:18px;margin-top:32px}
+.here .cap{color:var(--navy)}
+.here ul{margin:10px 0 0;padding-left:18px}
+.here li{margin:6px 0;font-size:16px;line-height:1.5}
+.way{margin-top:44px;padding-top:24px;border-top:1px solid var(--rule)}
+.way .cap{color:var(--gold)}
+.way p{margin:8px 0 0;font-size:16px;line-height:1.6}
+/* ---------- DESKTOP (от 900px; телефон не меняется) ---------- */
+@media (min-width:900px){
+  #index{max-width:1100px;padding:64px 40px 80px}
+  .ix-title{font-size:64px}
+  .ix-route{max-width:760px}
+  .grid{grid-template-columns:repeat(7,1fr);gap:14px}
+  .day{max-width:1100px;margin:0 auto;padding-bottom:80px}
+  .in{max-width:1100px;padding:0 40px}
+  .photo{aspect-ratio:16/9}
+  .photo.cv{aspect-ratio:16/9}
+  .city{font-size:64px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+  .plate{left:40px}
+  .vt{font-size:44px;top:28px;right:28px}
+  .vt.sm{font-size:34px}
+  .optb{top:28px;left:28px}
+  .cols{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:start}
+  .c2 .body p.drop{margin-top:0}
+  .way{max-width:640px;margin-left:calc(400px + 56px)}
+}
+/* Согласованная структура v2.0 */
+.strip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
+.find ul{margin:10px 0 0;padding-left:20px}
+.find li{padding:6px 0;font-size:16px;line-height:1.5}
+.story{margin-top:26px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0}
+.story>summary{min-height:40px;display:list-item;align-content:center;padding:8px 0;cursor:pointer;font:17px/1.4 var(--sans);color:var(--navy)}
+.story[open]{padding-bottom:20px}
+.story[open]>summary{margin-bottom:16px}
+.story .body p.drop{margin-top:0}
+.l4{overflow-wrap:anywhere}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Практическая полоса v2.2: только три горизонтальные ячейки */
+.practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+.practical>div{min-width:0;padding:10px 8px 12px;border-left:1px solid var(--rule)}
+.practical>div:first-child{padding-left:0;border-left:0}
+.practical .k{font:11px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+.practical .v{margin-top:5px;font:17px/1.25 var(--serif);overflow-wrap:normal}
+@media(max-width:359px){.practical .k{font-size:10px;letter-spacing:.03em}.practical .v{font-size:15px}}
+</style></head><body>
+<!-- DAY-17 START -->
+<section class="day" id="day-17"><div class="photo cv"><img src="../assets/photos/d17-sapporo-user-cover.jpg" alt="Телебашня Саппоро над газоном и цветниками парка Одори, вывеска SAPPORO и деревья" decoding="async"></div><div class="in cvr"><div class="day-head"><div class="cap">День 17 · четверг, 27 мая</div><a class="back" href="../index.html#index">← Все дни</a></div><h1 class="city">Саппоро → Токио</h1><div class="cjp">札幌 → 東京</div><p class="lead">Утро на рынке Нидзё и в парке Одори, затем шоколадный парк, лесное святилище и история пива Саппоро. Вечером — перелёт в Токио и заселение.</p></div><section class="in plan" id="d17-plan"><div class="cap">План дня</div><h2 class="h-it">Маршрут по часам</h2><p class="lead">Пять остановок в Саппоро перед перелётом. Вылет — в 18:15, заселение в Токио — в 20:50.</p><div class="rows"><a class="row" href="#d17-s01"><div class="tm">9:20</div><div class="tx"><div class="nm">Рынок Нидзё</div><div class="jp">二条市場</div><div class="ch">Морепродукты у реки Сосэй</div></div><div class="ar">›</div></a><a class="row" href="#d17-s02"><div class="tm">10:10</div><div class="tx"><div class="nm">Парк Одори</div><div class="jp">大通公園</div><div class="ch">Зелёная полоса в городской сетке</div></div><div class="ar">›</div></a><a class="row" href="#d17-s03"><div class="tm">11:00</div><div class="tx"><div class="nm">Парк «Сирой Койбито»</div><div class="jp">白い恋人パーク</div><div class="ch">Шоколад, двор и британские фасады<br>💡 Chocotopia House и другие экспозиции<br>💡 Chocolate Lounge OXFORD<br>💡 Прогулка по двору, саду и фотографии</div></div><div class="ar">›</div></a><a class="row" href="#d17-s04"><div class="tm">12:40</div><div class="tx"><div class="nm">Хоккайдо-дзингу</div><div class="jp">北海道神宮</div><div class="ch">Святилище среди леса Маруямы</div></div><div class="ar">›</div></a><a class="row" href="#d17-s05"><div class="tm">13:45</div><div class="tx"><div class="nm">Музей пива Саппоро</div><div class="jp">サッポロビール博物館</div><div class="ch">Промышленная история и три сорта пива<br>💡 Самостоятельный осмотр музея<br>💡 Дегустация трёх сортов пива<br>💡 Сувенирный магазин<br>💡 Покушать в Kessel Hall / Kaitakushi-kan баранину Jingisukan</div></div><div class="ar">›</div></a><div class="row"><div class="tm">18:15</div><div class="tx"><div class="nm">✈️ Летим в Токио</div><div class="jp">東京</div><div class="ch"></div></div></div><div class="row"><div class="tm">20:50</div><div class="tx"><div class="nm">🏨 Заселяемся в Токио</div><div class="jp">東京</div><div class="ch"></div></div></div></div></section><article class="stop" id="d17-s01"><div class="hero"><div class="photo"><img src="../assets/photos/d17-nijo-user-market.jpg" alt="Прилавок с крабами и морепродуктами под крышей торгового прохода с вывеской «二条かに市場»" loading="lazy" style="object-position:left center" decoding="async"></div><div class="vt">二条市場</div><div class="plate"><div class="cap">Остановка 1 из 5</div><div class="t">9:20</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-street)">🍢 Улица / рынок</span><span class="cap">Саппоро · рыбный рынок</span></div><h2 class="nm2">Рынок Нидзё</h2><div class="jp2">二条市場</div><p class="ann">Крабы, лосось и икра на прилавках небольшого рынка у реки Сосэй: морская сторона Хоккайдо в центре города.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%BA%8C%E6%9D%A1%E5%B8%82%E5%A0%B4%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%973%E6%9D%A1%E6%9D%B11%E4%B8%81%E7%9B%AE%E3%80%9C%E6%9D%B12%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">二条市場</div><div class="l2" lang="ja">にじょういちば</div><div class="l3">Nijo Market</div><div class="l4" lang="ja">札幌市<br>北海道札幌市中央区南3条東1丁目〜東2丁目</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">По заведениям</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Рыбный рынок в центре Саппоро, рядом с рекой Сосэй.</p><p><b>Главное</b>Лавки с морепродуктами и небольшие рыбные столовые.</p><p><b>Не пропустите</b>Внутренние проходы за торговыми фасадами.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Прилавки с крабами, лососем и икрой — в рыбных лавках вдоль улиц рынка.</li><li>Внутренние торговые проходы — за входами со стороны реки Сосэй.</li><li>Норэн-ёкотё — крытый проход с небольшими заведениями внутри рыночного квартала.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Перед покупкой уточните, за штуку, порцию или вес указана цена.</li><li>Для фотографий прилавка сначала спросите продавца; не перекрывайте покупателям проход.</li><li>Если решите поесть на рынке, выбирайте открытое заведение по его меню: у лавок разные часы и выходные.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Нидзё устроен в масштабе нескольких городских улиц: продавцы стоят рядом с открытыми прилавками, за витринами видны крабы, рыба и баночки икры. Здесь полезно смотреть не только на самые крупные морепродукты. Упаковки сушёной и солёной рыбы, овощи, фрукты и небольшие столовые показывают, как рынок соединяет торговлю продуктами и готовую еду.</p><div class="sh"><span class="cap">Рыба в растущем городе</span></div><p>Происхождение рынка связывают с рыбаками с побережья Исикари, которые в начале эпохи Мэйдзи стали продавать здесь свежий улов. Это рассказ о постепенном появлении торговли, а не точная дата основания всех нынешних лавок. По мере роста Саппоро к рыбным рядам присоединялись другие продавцы и заведения. Сегодня рынок продолжает работать среди обычной городской застройки.</p><div class="sh"><span class="cap">За линией прилавков</span></div><p>Фасады вдоль улицы — только часть рынка. Внутри квартала есть другие торговые помещения и Норэн-ёкотё: «ёкотё» называют небольшой переулок или проход с тесно стоящими заведениями, а «норэн» — тканевую занавесь перед входом. Часть заведений ориентирована на вечер, поэтому утренняя прогулка не означает, что открыта каждая дверь. Интерес места — в соседстве рыбной торговли, еды и повседневного движения города.</p></div></details></div></div></div></article>
+<article class="stop" id="d17-s02"><div class="hero"><div class="photo"><img src="../assets/photos/d17-odori-user-flowers.jpg" alt="Жёлтые, розовые и фиолетовые цветы в парке Одори, фонтан и телебашня Саппоро" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">大通公園</div><div class="plate"><div class="cap">Остановка 2 из 5</div><div class="t">10:10</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-nature)">🌿 Сад / природа</span><span class="cap">Саппоро · городской парк</span></div><h2 class="nm2">Парк Одори</h2><div class="jp2">大通公園</div><p class="ann">Газоны, цветники и деревья вытянуты между городскими улицами, а телебашня обозначает восточный конец зелёной полосы.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E8%A5%BF3%E4%B8%81%E7%9B%AE%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A7%E9%80%9A%E8%A5%BF3%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">大通公園</div><div class="l2" lang="ja">おおどおりこうえん</div><div class="l3">Odori Park</div><div class="l4" lang="ja">札幌市<br>北海道札幌市中央区大通西3丁目</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">24 часа</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">—</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Длинный общественный парк в центре Саппоро.</p><p><b>Главное</b>Открытая перспектива среди регулярной городской застройки.</p><p><b>Не пропустите</b>Цветники и вид на телебашню с центральных участков.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Перспективу в сторону телебашни — на восток от участка Ниси-3-тёмэ.</li><li>Газоны и цветники — в центральной части парка, между пересекающими его улицами.</li><li>Информационные схемы — у прогулочных дорожек; на них видна последовательность кварталов.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Между участками парка проходят городские улицы; переходите их по переходам.</li><li>Для фотографии зелёной полосы используйте открытые дорожки и не заходите в цветники.</li><li>Рассматривайте парк с уровня земли: подъём на телебашню в эту остановку не включён.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Одори особенно ясно показывает устройство Саппоро: длинная зелёная полоса пересекает городскую сетку, а отдельные участки разделены улицами. На близком расстоянии это газон, скамейки и цветники; в общей перспективе — заметная ось города. Парк тянется примерно на полтора километра, но для его понимания не обязательно проходить всю длину.</p><div class="sh"><span class="cap">Пространство против огня</span></div><p>В 1871 году здесь устроили широкую противопожарную полосу между северной административной частью города и южными жилыми и торговыми кварталами. Свободная территория должна была мешать распространению пожара. Позже она стала местом прогулок и городских мероприятий. В 1909 году для её благоустройства пригласили ландшафтного мастера Нагаоку Ясухэя; к 1911 году относится важный этап формирования паркового облика.</p><div class="sh"><span class="cap">Город ухаживает за цветниками</span></div><p>Цветники поддерживают не только службы парка: в их истории заметны работа местных садоводов, компаний и добровольцев. В 1952 году пятнадцать городских цветоводческих фирм начали устраивать клумбы на добровольной основе. Так бывшее свободное пространство стало садом, который горожане постоянно обновляют. В конце весны здесь уместно смотреть на зелень и рисунок посадок; точное цветение зависит от сезона.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1871</b> — создана противопожарная полоса — основа будущего парка.</li><li><b>1911</b> — этап благоустройства, столетие которого парк отметил в 2011 году.</li><li><b>1952</b> — местные цветоводы начинают добровольное устройство клумб.</li></ul></details></div></div></div></article>
+<article class="stop" id="d17-s03"><div class="hero"><div class="photo"><img src="../assets/photos/d17-shiroikoibito-user-courtyard.jpg" alt="Кирпичная башня, фахверковые фасады, переходы и сад во дворе парка «Сирой Койбито»" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">白い恋人</div><div class="plate"><div class="cap">Остановка 3 из 5</div><div class="t">11:00</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Саппоро · кондитерский парк</span></div><h2 class="nm2">Парк «Сирой Койбито»</h2><div class="jp2">白い恋人パーク</div><p class="ann">Британские фасады и двор с часами окружают шоколадные экспозиции: знакомое печенье становится поводом поговорить о какао и кондитерском деле.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF%20%E3%80%92063-0052%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%AE%AE%E3%81%AE%E6%B2%A22%E6%9D%A12%E4%B8%81%E7%9B%AE11-36" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">白い恋人パーク</div><div class="l2" lang="ja">しろいこいびとぱーく</div><div class="l3">Shiroi Koibito Park</div><div class="l4" lang="ja">札幌市<br>〒063-0052 北海道札幌市西区宮の沢2条2丁目11-36</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">10:00–18:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 200</div></div><div><div class="k">Последний вход</div><div class="v">16:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Кондитерский тематический парк ISHIYA, производителя печенья «Сирой Койбито».</p><p><b>Главное</b>Chocotopia House, Chocolate Lounge OXFORD и прогулка по саду.</p><p><b>Не пропустите</b>Коллекцию шоколадных чашек и детали дворовых фасадов.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Chocotopia House — экспозицию с видеорассказом и проекциями об истории шоколада.</li><li>Коллекцию шоколадных чашек — в Collection Room внутри Chocotopia House.</li><li>Chocolate Lounge OXFORD — в платной зоне, на четвёртом этаже «Сирой Койбито-хаус».</li><li>Часы и сад — во дворе между зданиями комплекса.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Chocotopia House и другие экспозиции</li><li>💡 Chocolate Lounge OXFORD</li><li>💡 Прогулка по двору, саду и фотографии</li><li>Chocotopia House и OXFORD находятся в платной зоне; еда и напитки в лаунже оплачиваются отдельно от входного билета.</li><li>Во дворе ищите общий ракурс зданий и часы; не рассчитывайте на цветущие розы в конце мая — их основной раннелетний сезон начинается позже.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">В «Сирой Койбито» соседствуют две сцены: снаружи — двор с британскими фасадами, часами и садом, внутри — рассказ о шоколаде и фирменных сладостях ISHIYA. Архитектура намеренно создаёт сказочное настроение, но за ней стоит современное кондитерское производство и история конкретного продукта. В вашем плане экспозиции, лаунж и двор остаются частями одной остановки.</p><div class="sh"><span class="cap">Печенье, ставшее сувениром</span></div><p>«Сирой Койбито» выпускают с 1976 года. Это две тонкие пластинки печенья ланг-де-ша с шоколадной начинкой; название французского печенья буквально означает «кошачий язык». Для классического варианта используется белый шоколад. Сочетание хрупкого печенья и готовой порции шоколада превратило сладость в удобный дорожный подарок. Сам парк открылся в 1995 году как шоколадная фабрика для посетителей.</p><div class="sh"><span class="cap">История шоколада как представление</span></div><p>Chocotopia House построен вокруг вымышленного учёного, увлечённого шоколадом. Через видео и проекционные сцены посетителям рассказывают о переменах, которые привели к современному шоколаду. Это театрализованный способ подачи истории, а персонаж не является реальным изобретателем печенья. В Collection Room можно рассмотреть чашки для шоколада — напоминание о времени, когда его прежде всего пили.</p><div class="sh"><span class="cap">Лаунж и двор</span></div><p>В Chocolate Lounge OXFORD сладости и напитки продолжают тему экспозиции; большие окна связывают интерьер с видом на комплекс. После него двор возвращает внимание к архитектурным деталям и саду. Посадки меняются по сезону: у оператора розовый сад прежде всего связан с июнем, поэтому конец мая не стоит представлять как гарантированное розовое цветение. Для фотографий интересны и сами здания, и соотношение их масштаба с небольшим двором.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1976</b> — начинается выпуск печенья «Сирой Койбито».</li><li><b>1995</b> — открывается предшественник парка — шоколадная фабрика для посетителей.</li></ul></details></div></div></div></article>
+<article class="stop" id="d17-s04"><div class="hero"><div class="photo"><img src="../assets/photos/d17-hokkaidojingu-user-shrine.jpg" alt="Главное здание Хоккайдо-дзингу с золотыми деталями крыши и белой занавесью перед местом молитвы" loading="lazy" style="object-position:center top" decoding="async"></div><div class="vt">北海道神宮</div><div class="plate"><div class="cap">Остановка 4 из 5</div><div class="t">12:40</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-shrine)">⛩ Святилище</span><span class="cap">Саппоро · синтоистское святилище</span></div><h2 class="nm2">Хоккайдо-дзингу</h2><div class="jp2">北海道神宮</div><p class="ann">Лесной подход выводит к воротам и открытому двору святилища, история которого связана с созданием современного Саппоро.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%AE%AE%E3%82%B1%E4%B8%98474" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">北海道神宮</div><div class="l2" lang="ja">ほっかいどうじんぐう</div><div class="l3">Hokkaido Jingu Shrine</div><div class="l4" lang="ja">札幌市<br>北海道札幌市中央区宮ケ丘474</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">6:00–17:00</div></div><div><div class="k">Стоимость</div><div class="v">Бесплатно</div></div><div><div class="k">Последний вход</div><div class="v">Не указан</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Синтоистское святилище у Маруямы, основанное в начале эпохи Мэйдзи.</p><p><b>Главное</b>Лесной подход, ворота и двор перед главным зданием.</p><p><b>Не пропустите</b>Памятник Симе Ёситакэ, связанному с планировкой Саппоро.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Тории и широкую дорогу к святилищу — на подходе через лесную территорию.</li><li>Ворота синмон — перед внутренним двором главного святилища.</li><li>Статую Симы Ёситакэ — на территории, по схеме святилища.</li><li>Садзарэ-иси, камни из сросшихся мелких обломков, — перед зданием канцелярии.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>Перед тории можно слегка поклониться; по подходу держитесь края, оставляя середину свободной.</li><li>Если следуете обряду, перед молитвой очистите руки у павильона омовения; выполняйте действующие указания на месте.</li><li>У молитвенного места приняты два поклона, два хлопка и заключительный поклон.</li><li>Не мешайте церемониям и соблюдайте местные ограничения на съёмку.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">После улиц Саппоро подход к Хоккайдо-дзингу меняет масштаб: деревья закрывают город, а дорога собирает взгляд на воротах. За ними находится двор перед главным святилищем. Здесь можно увидеть не только архитектуру, но и обычный ритм действующего синтоистского места — поклоны, короткие молитвы и семейные посещения.</p><div class="sh"><span class="cap">Святилище нового города</span></div><p>Начало святилища относят к 1869 году: по воле императора Мэйдзи в Токио провели обряд почитания трёх божеств — покровителей освоения Хоккайдо. В 1871 году святилище, получившее имя Саппоро-дзиндзя, разместилось на нынешней территории у Маруямы. Этот выбор связывают с Симой Ёситакэ, участвовавшим в планировании Саппоро. История места относится к государственной политике эпохи Мэйдзи, а не к древней обители, существовавшей здесь много столетий.</p><div class="sh"><span class="cap">Четыре почитаемых божества</span></div><p>Первоначально здесь почитали Окунитама, Онамути и Сукунахикона — божеств земли, её устроения и врачевания. В 1964 году к ним добавили императора Мэйдзи; тогда же название сменилось на Хоккайдо-дзингу. Современное святилище продолжает участвовать в повседневной жизни: сюда приходят на семейные обряды и праздники.</p><div class="sh"><span class="cap">Детали в стороне от главного фасада</span></div><p>Памятник Симе Ёситакэ напоминает о городской истории, а садзарэ-иси перед канцелярией предлагают другой масштаб наблюдения: маленькие камни, соединённые в крупный камень. Ворота синмон обозначают вход во внутренний двор; тории на подходе — более раннюю границу священного пространства. Различая эти элементы, легче увидеть устройство территории за общим видом фасада.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1869</b> — обряд в Токио считается началом святилища.</li><li><b>1871</b> — Саппоро-дзиндзя переносится на нынешнюю территорию у Маруямы.</li><li><b>1964</b> — добавлено почитание Мэйдзи; принято название Хоккайдо-дзингу.</li></ul></details></div></div></div></article>
+<article class="stop" id="d17-s05"><div class="hero"><div class="photo"><img src="../assets/photos/d17-beermuseum-user-building.jpg" alt="Краснокирпичное здание Музея пива Саппоро со звёздами, арочными окнами и трубой за фасадом" loading="lazy" style="object-position:center bottom" decoding="async"></div><div class="vt">麦酒博物館</div><div class="plate"><div class="cap">Остановка 5 из 5</div><div class="t">13:45</div></div></div>
+<div class="in"><div class="cols"><div class="c1"><div class="mrow"><span class="pill" style="background:var(--t-culture)">🎭 Культура</span><span class="cap">Саппоро · музей пивоварения</span></div><h2 class="nm2">Музей пива Саппоро</h2><div class="jp2">サッポロビール博物館</div><p class="ann">Красный кирпич, звезда на фасаде и история пивоварения Хоккайдо; после самостоятельного осмотра — три сорта на пробу и баранина дзингисукан.</p>
+<div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E6%9D%B1%E5%8C%BA%E5%8C%977%E6%9D%A1%E6%9D%B19%E4%B8%81%E7%9B%AE1-1" target="_blank" rel="noopener">📍 Открыть в Картах</a><details class="loc"><summary>🇯🇵 Показать местному</summary><div class="lb"><div class="l1" lang="ja">サッポロビール博物館</div><div class="l2" lang="ja">さっぽろびーるはくぶつかん</div><div class="l3">Sapporo Beer Museum</div><div class="l4" lang="ja">札幌市<br>北海道札幌市東区北7条東9丁目1-1</div></div></details></div><section class="practical" aria-label="Часы и стоимость"><div><div class="k">Часы работы</div><div class="v">11:00–18:00</div></div><div><div class="k">Стоимость</div><div class="v">¥1 000</div></div><div><div class="k">Последний вход</div><div class="v">17:30</div></div></section><div class="s30"><div class="cap">За 30 секунд</div><p><b>Что это</b>Музей истории Sapporo Beer в бывшем промышленном здании.</p><p><b>Главное</b>Самостоятельный осмотр и отдельная дегустация трёх сортов.</p><p><b>Не пропустите</b>Арочный рисунок окон и звезду на краснокирпичном фасаде.</p></div></div>
+<div class="c2"><div class="find"><div class="cap">Найдите на месте</div><ul><li>Краснокирпичный фасад, арочные окна и звезду — снаружи музейного здания.</li><li>Исторические материалы — в галерее, на самостоятельном маршруте по музею.</li><li>Tasting Hall — на первом этаже, после экспозиции.</li><li>Музейный магазин — на первом этаже; ресторан Kaitakushi-kan — в комплексе пивного сада.</li></ul></div><div class="here"><div class="cap">На месте</div><ul><li>💡 Самостоятельный осмотр музея</li><li>💡 Дегустация трёх сортов пива</li><li>💡 Сувенирный магазин</li><li>💡 Покушать в Kessel Hall / Kaitakushi-kan баранину Jingisukan</li><li>Входной билет относится к самостоятельному осмотру; набор трёх сортов в Tasting Hall стоит отдельно ¥1 200.</li><li>Для аудиогида возьмите смартфон и наушники; доступен английский язык.</li><li>Обед в Kaitakushi-kan оплачивается отдельно; при бронировании укажите нужный зал и проверьте свободные места.</li></ul></div><details class="story"><summary>История и подробности</summary><div class="body"><p class="drop">Кирпичные стены и высокая труба делают музей частью промышленного пейзажа даже после прекращения производства. Арочные проёмы и звезда на фасаде сохраняют узнаваемый облик старого комплекса. Внутри история Sapporo Beer рассказывается через материалы разных эпох; затем самостоятельный маршрут приводит к дегустационному залу и магазину.</p><div class="sh"><span class="cap">Здание старше музея</span></div><p>В 1890 году здесь построили сахарный завод. Позднее его приспособили для изготовления солода — пророщенного и высушенного зерна, необходимого пивоварению. Музей открылся в 1987 году. Поэтому история самого здания и история марки — разные линии: пивоваренное дело Sapporo берёт начало в 1876 году, раньше строительства этих стен. Сохранённая оболочка бывшей фабрики позволяет рассматривать архитектуру вместе с экспозицией.</p><div class="sh"><span class="cap">Самостоятельный маршрут и дегустация</span></div><p>Для вашего плана подходит самостоятельный осмотр: отдельная экскурсия с гидом не требуется. После обновления 2026 года он стал платным. В Tasting Hall предлагают набор из трёх сортов: Kuro Label, Sapporo Classic и Kaitakushi Beer. Это отдельный заказ, а не часть входного билета. Музейный магазин находится на первом этаже. Действующее производство расположено в другом месте; эта остановка посвящена музейной истории.</p><div class="sh"><span class="cap">Kessel Hall / Kaitakushi-kan</span></div><p>Kaitakushi-kan, или «Кайтакуси-кан», — историческое здание ресторанной части Sapporo Beer Garden; Kessel Hall — название его известного пивного зала. Здесь уместен ваш обед с дзингисуканом: баранину и овощи жарят на специальной выпуклой жаровне. Музей и ресторан находятся в одном комплексе; вход в музей и ресторанный заказ оплачиваются отдельно.</p></div><div class="sh"><span class="cap">История и даты</span></div><ul class="hist"><li><b>1876</b> — начало пивоваренного дела, от которого ведёт историю Sapporo Beer.</li><li><b>1890</b> — построен сахарный завод — предшественник нынешнего музейного здания.</li><li><b>1987</b> — открывается Музей пива Саппоро.</li><li><b>2026</b> — с 1 июля самостоятельный осмотр становится платным.</li></ul></details></div></div></div></article><div class="in"><div class="way"><div class="cap">Перелёт → Токио</div><p>18:15 — ✈️ Летим в Токио.<br>20:50 — 🏨 Заселяемся в Токио.</p></div></div><div class="in"><div class="way"><a class="back" href="../index.html#index">← Все дни</a></div></div></section>
+<!-- DAY-17 END -->
+</body></html>
